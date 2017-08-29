@@ -13,7 +13,7 @@ gem 'puma',       '~> 3.7'
 
 gem 'bcrypt',     '3.1.11'
 
-gem 'foundation-rails'
+gem 'bootstrap-sass'
 
 gem 'haml'
 gem 'sass-rails', '~> 5.0'
