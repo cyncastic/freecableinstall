@@ -1,2 +1,30 @@
-.text-center=image_tag 'logo.png'
+.jumbotron
+  .container
+    %h1.display-3 Hello, world!
+    %p.lead Free installation of business internet, tv or telephone / Free business telephone system.
+
+.container
+  .row
+
+    .col
+      .card
+
+        -# %img.card-img-top{ alt: 'Card image cap', src: '#' }/
+        .card-img-top=image_tag 'internet.jpg', style: 'height:10em;'
+        .card-body
+          %h4.card-title Internet
+          %p.card-text.lead Some quick example text to build on the card title and make up the bulk of the card's content.
+          %a.btn.btn-primary.center-text{ href: '#' } Click Here for Business Class Internet
+
+    .col
+      .card
+
+        -# %img.card-img-top{ alt: 'Card image cap', src: '#' }/
+        .card-img-top=image_tag 'polycom.jpg', style: 'height:10em;'
+        .card-body
+          %h4.card-title Voice Over IP
+          %p.card-text.lead Some quick example text to build on the card title and make up the bulk of the card's content.
+          %a.btn.btn-primary=link_to "Click Here for Business Telephone System", internet_path
+
+
 

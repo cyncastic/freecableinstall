@@ -7,4 +7,10 @@ class StaticController < ApplicationController
 
   def styles
   end
+
+  def cable
+  end
+
+  def phones
+  end
 end
