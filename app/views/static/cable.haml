@@ -1,0 +1,105 @@
+.jumbotron
+  .container
+    %h1.display-4 Business Cable
+    %p.lead Get your business internet installed completely free!  Even if your local provider charges a fee.
+
+%form
+
+  .form-group
+    / Cable Company
+    %label.control-label{ for: 'state_id' } Cable Provider
+    %select#state_id.form-control
+      %option{ value: 'Comcast', 'data-thumbnail': "logo.png" } Comcast
+      %option{ value: 'Optimum' } Optimum
+      %option{ value: 'Spectrum' } Spectrum
+      %option{ value: 'Verizon FIOS' } Verizon FIOS
+
+  .form-group
+    / Full Name
+    %label.control-label{ for: 'full_name_id' } Full Name
+    %input#full_name_id.form-control{ name: 'full_name', placeholder:  'John Doe', type: 'text' }/
+
+  .form-group
+    / Business Name
+    %label.control-label{ for: 'full_name_id' } Business Name
+    %input#full_name_id.form-control{ name: 'full_name', placeholder:  'Acme Co.', type: 'text' }/
+
+  .form-group
+    / Street 1
+    %label.control-label{ for: 'street1_id' } Street Address 1
+    %input#street1_id.form-control{ name: 'street1', placeholder: 'Street address, P.O. box, company name, c/o', type: 'text' }/
+
+  .form-group
+    / Street 2
+    %label.control-label{ for: 'street2_id' } Street Address 2
+    %input#street2_id.form-control{:name => 'street2', :placeholder => 'Apartment, suite, unit, building, floor, etc.', type: 'text' }/
+
+  .form-group
+    / City
+    %label.control-label{ for: 'city_id' } City
+    %input#city_id.form-control{ name: 'city', placeholder: 'Smallville', type: 'text' }/
+
+  .form-group
+    / State Button
+    %label.control-label{:for => "state_id"} State
+    %select#state_id.form-control.selectpicker
+      %option{ value: 'AL' } Alabama
+      %option{ value: 'AK' } Alaska
+      %option{ value: 'AZ' } Arizona
+      %option{ value: 'AR' } Arkansas
+      %option{ value: 'CA' } California
+      %option{ value: 'CO' } Colorado
+      %option{ value: 'CT' } Connecticut
+      %option{ value: 'DE' } Delaware
+      %option{ value: 'DC' } District Of Columbia
+      %option{ value: 'FL' } Florida
+      %option{ value: 'GA' } Georgia
+      %option{ value: 'HI' } Hawaii
+      %option{ value: 'ID' } Idaho
+      %option{ value: 'IL' } Illinois
+      %option{ value: 'IN' } Indiana
+      %option{ value: 'IA' } Iowa
+      %option{ value: 'KS' } Kansas
+      %option{ value: 'KY' } Kentucky
+      %option{ value: 'LA' } Louisiana
+      %option{ value: 'ME' } Maine
+      %option{ value: 'MD' } Maryland
+      %option{ value: 'MA' } Massachusetts
+      %option{ value: 'MI' } Michigan
+      %option{ value: 'MN' } Minnesota
+      %option{ value: 'MS' } Mississippi
+      %option{ value: 'MO' } Missouri
+      %option{ value: 'MT' } Montana
+      %option{ value: 'NE' } Nebraska
+      %option{ value: 'NV' } Nevada
+      %option{ value: 'NH' } New Hampshire
+      %option{ value: 'NJ' } New Jersey
+      %option{ value: 'NM' } New Mexico
+      %option{ value: 'NY' } New York
+      %option{ value: 'NC' } North Carolina
+      %option{ value: 'ND' } North Dakota
+      %option{ value: 'OH' } Ohio
+      %option{ value: 'OK' } Oklahoma
+      %option{ value: 'OR' } Oregon
+      %option{ value: 'PA' } Pennsylvania
+      %option{ value: 'RI' } Rhode Island
+      %option{ value: 'SC' } South Carolina
+      %option{ value: 'SD' } South Dakota
+      %option{ value: 'TN' } Tennessee
+      %option{ value: 'TX' } Texas
+      %option{ value: 'UT' } Utah
+      %option{ value: 'VT' } Vermont
+      %option{ value: 'VA' } Virginia
+      %option{ value: 'WA' } Washington
+      %option{ value: 'WV' } West Virginia
+      %option{ value: 'WI' } Wisconsin
+      %option{ value: 'WY' } Wyoming
+
+  .form-group
+    / Zip Code
+    %label.control-label{ for: 'zip_id' } Zip Code
+    %input#zip_id.form-control{ name: 'zip', placeholder: '#####', :type => 'text' }/
+
+  .form-group
+    / Submit Button
+    %button.btn.btn-primary.lead{ type: 'submit' } Send Inquiry

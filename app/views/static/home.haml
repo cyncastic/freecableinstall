@@ -14,7 +14,7 @@
         .card-body
           %h4.card-title Internet
           %p.card-text.lead Some quick example text to build on the card title and make up the bulk of the card's content.
-          %a.btn.btn-primary.center-text{ href: '#' } Click Here for Business Class Internet
+          =link_to "Click Here for Business Class Internet", static_cable_path, class: 'btn btn-primary'
 
     .col
       .card
@@ -24,7 +24,7 @@
         .card-body
           %h4.card-title Voice Over IP
           %p.card-text.lead Some quick example text to build on the card title and make up the bulk of the card's content.
-          %a.btn.btn-primary=link_to "Click Here for Business Telephone System", internet_path
+          =link_to "Click Here for Business Telephone System", static_phones_path, class: 'btn btn-primary'
 
 
 
