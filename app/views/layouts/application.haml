@@ -3,7 +3,7 @@
   %head
 
     %meta{ content: 'text/html; charset=UTF-8', 'http-equiv': 'Content-Type' }/
-    %title Maxsip Inventory
+    %title Free Cable Install
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     %link{ crossorigin: 'anonymous', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css', integrity: 'sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M', rel: 'stylesheet' }/
@@ -18,9 +18,30 @@
 
     .container=yield
 
-    %footer
+    %footer.m-5
       .container
-        %p.text-center Powered by Maxsip &copy; | Terms and Condition
+        %p.text-center Powered by Maxsip &copy; | <a href="#" data-toggle="modal" data-target="#exampleModalLong">Terms and Condition</a>
+
+    / Modal
+    #exampleModalLong.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLongTitle", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-header
+            %h5#exampleModalLongTitle.modal-title Terms and Conditions
+            %button.close{ 'aria-label': 'Close', 'data-dismiss': 'modal', type: 'button' }
+              %span{'aria-hidden': 'true' } ×
+          .modal-body
+            %ol
+              %li The Intellectual Property disclosure will inform users that the contents, logo and other visual media you created is your property and is protected by copyright laws.
+              %li A Termination clause will inform that users’ accounts on your website and mobile app or users’ access to your website and mobile (if users can’t have an account with you) can be terminated in case of abuses or at your sole discretion.
+              %li A Governing Law will inform users which laws govern the agreement. This should the country in which your company is headquartered or the country from which you operate your website and mobile app.
+              %li A Links To Other Web Sites clause will inform users that you are not responsible for any third party websites that you link to. This kind of clause will generally inform users that they are responsible for reading and agreeing (or disagreeing) with the Terms and Conditions or Privacy Policies of these third parties.
+              %li If your website or mobile app allows users to create content and make that content public to other users, a Content section will inform users that they own the rights to the content they have created.
+              %li The “Content” clause usually mentions that users must give you (the website or mobile app developer) a license so that you can share this content on your website/mobile app and to make it available to other users.
+              %li Because the content created by users is public to other users, a DMCA notice clause (or Copyright Infringement ) section is helpful to inform users and copyright authors that, if any content is found to be a copyright infringement, you will respond to any DMCA takedown notices received and you will take down the content.
+              %li A Limit What Users Can Do clause can inform users that by agreeing to use your service, they’re also agreeing to not do certain things. This can be part of a very long and thorough list in your Terms and Conditions agreements so as to encompass the most amount of negative uses.
+          .modal-footer
+            %button.btn.btn-primary{ 'data-dismiss': 'modal', type: 'button' } Close
 
     %script{ crossorigin: 'anonymous', integrity: 'sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', src: 'https://code.jquery.com/jquery-3.2.1.slim.min.js' }
     %script{ crossorigin: 'anonymous', integrity: 'sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4', src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js'}

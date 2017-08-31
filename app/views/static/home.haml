@@ -6,21 +6,21 @@
 .container
   .row
 
-    .col
+    .col.mb-2
       .card
 
         -# %img.card-img-top{ alt: 'Card image cap', src: '#' }/
-        .card-img-top=image_tag 'internet.jpg', style: 'height:10em;'
+        =image_tag 'internet.jpg', style: 'height:10em;', class: 'card-img-top'
         .card-body
           %h4.card-title Internet
           %p.card-text.lead Some quick example text to build on the card title and make up the bulk of the card's content.
           =link_to "Click Here for Business Class Internet", static_cable_path, class: 'btn btn-primary'
 
-    .col
+    .col.mb-2
       .card
 
         -# %img.card-img-top{ alt: 'Card image cap', src: '#' }/
-        .card-img-top=image_tag 'polycom.jpg', style: 'height:10em;'
+        =image_tag 'polycom.jpg', style: 'height:10em;', class: 'card-img-top'
         .card-body
           %h4.card-title Voice Over IP
           %p.card-text.lead Some quick example text to build on the card title and make up the bulk of the card's content.
