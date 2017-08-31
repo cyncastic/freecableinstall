@@ -18,6 +18,17 @@
 
     .container=yield
 
+    .container.partners.p-4
+      %h1.text-center.text-secondary.mt-5.mb-3 Our Partners
+      %ul.d-flex.justify-content-around
+        %li=image_tag 'logos/att.svg'
+        %li=image_tag 'logos/charter.svg'
+        %li=image_tag 'logos/comcast.svg'
+        %li=image_tag 'logos/cox.svg'
+        %li=image_tag 'logos/optimum.svg'
+        %li=image_tag 'logos/twc.svg'
+        %li=image_tag 'logos/verizon.svg'
+
     %footer.m-5
       .container
         %p.text-center Powered by Maxsip &copy; | <a href="#" data-toggle="modal" data-target="#exampleModalLong">Terms and Condition</a>
