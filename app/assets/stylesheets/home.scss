@@ -6,8 +6,11 @@
 .partners{
   img{
     height: 40px;
+    margin: 0 10px;
+    min-width: 20px;
   }
   ul{
     list-style: none;
+    li{ margin: 1rem; }
   }
 }
