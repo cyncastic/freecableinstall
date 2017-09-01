@@ -1,0 +1,10 @@
+          <a href="/dish"><img class="providers dish" src="/images/ctv_responsive/providers_logos/dish.svg" alt="dish logo" /></a>
+          <a href="/charter"><img class="providers charter-spectrum" src="/images/ctv_responsive/providers_logos/charter-spectrum.svg" alt="charter logo" /></a>
+          <a href="/frontier"><img class="providers frontier-auth" src="/images/ctv_responsive/providers_logos/frontier-auth.svg" alt="frontier logo" /></a>
+          <a href="/mediacom"> <img class="providers mediacom" src="/images/ctv_responsive/providers_logos/mediacom.svg" alt="mediacom logo" /></a>
+          <a href="/centurylink"> <img class="providers centurylink" src="/images/ctv_responsive/providers_logos/centurylink.svg" alt="centurylink logo" /></a>
+          <a href="/cox"><img class="providers cox" src="/images/ctv_responsive/providers_logos/cox.svg" alt="cox logo" /></a>
+          <a href="/optimum"><img class="providers optimum" src="/images/ctv_responsive/providers_logos/optimum.svg" alt="optimum logo" /></a>
+          <a href="/rcn"><img class="providers rcn" src="/images/ctv_responsive/providers_logos/rcn.svg" alt="rcn logo" /></a>
+          <a href="/xfinity"><img class="providers xfinity" src="/images/ctv_responsive/providers_logos/xfinity.svg" alt="xfinity logo" /></a>
+          <a href="/time-warner"><img class="providers spectrum" src="/images/ctv_responsive/providers_logos/spectrum.svg" alt="Spectrum logo" /></a>

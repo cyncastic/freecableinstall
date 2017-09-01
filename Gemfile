@@ -16,8 +16,11 @@ gem 'bcrypt',     '3.1.11'
 gem 'haml'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier',   '>= 1.3.0'
-
+gem "autoprefixer-rails"
 gem 'coffee-rails'
+
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'jquery-rails'
 
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
