@@ -13,10 +13,17 @@
 
   %body
 
-    %header.masthead
-      .overlay
-        .container
-          .text-center=link_to image_tag('logo.png'), static_home_path
+    %nav.fixed-top
+      %header
+        .text-center=link_to image_tag('logo2.png'), root_path
+
+      %ul.nav.justify-content-center
+        %li.nav-item=link_to 'Home',        root_path,      class: 'nav-link'
+        %li.nav-item=link_to 'Order Cable', cable_path,     class: 'nav-link'
+        %li.nav-item=link_to 'Order VOIP',  phones_path,    class: 'nav-link'
+        %li.nav-item=link_to 'Order VOIP',  polycoms_path,  class: 'nav-link'
+        %li.nav-item=link_to 'Test',        test_path,      class: 'nav-link'
+        %li.nav-item=link_to 'Styles',      styles_path,    class: 'nav-link'
 
     .container=yield
 

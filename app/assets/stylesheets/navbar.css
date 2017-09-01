@@ -1,0 +1,28 @@
+
+body{
+  padding-top: 14em;
+}
+
+nav{
+  background: white;
+  background: rgba(255,255,255,.95);
+  header{
+    padding-top: 3em;
+    transition: padding ease-out .1s;
+    .text-center a img{
+      height: 131px;
+      transition: height ease-in .1s;
+    }
+  }
+}
+
+.shrink{
+  header{
+    padding-top: .25em;
+    transition: padding ease-in .1s;
+    .text-center a img{
+      height: 51px;
+      transition: height ease-out .1s;
+    }
+  }
+}

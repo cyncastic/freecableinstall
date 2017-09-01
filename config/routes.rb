@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'static/home'
+  root :to => 'static#home'
 
-  get 'static/cable'
-  get 'static/phones'
+  get 'cable'     => 'static#cable'
+  get 'phones'    => 'static#phones'
+  get 'polycoms'  => 'static#polycoms'
+  get 'test'      => 'static#test'
+  get 'styles'    => 'static#styles'
 
-  get 'static/test'
-  get 'static/styles'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
