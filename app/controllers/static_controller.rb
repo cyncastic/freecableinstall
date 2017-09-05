@@ -8,7 +8,7 @@ class StaticController < ApplicationController
   def styles
   end
 
-  def cable
+  def internet
   end
 
   def phones
