@@ -3,9 +3,23 @@
     height: 40px;
     margin: 0 10px;
     min-width: 20px;
+    @include media-breakpoint-up(sm) {
+      height: 20px;
+    }
   }
   ul{
     list-style: none;
-    li{ margin: 1rem; }
+    li{
+      margin: 1rem;
+      @include media-breakpoint-up(sm) {
+        margin: .5rem;
+      }
+    }
+  }
+}
+
+.polycomslead{
+  @include media-breakpoint-up(sm) {
+    font-size: .5em;
   }
 }
