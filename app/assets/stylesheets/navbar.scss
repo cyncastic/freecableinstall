@@ -5,14 +5,15 @@ body{
 
 nav{
   background: white;
-  background: rgba(255,255,255,.97);
+  transition: background .33s cubic-bezier(0.770, -.125, 0.175, 1.000);
   header{
     padding-top: 1em;
     transition: all .33s cubic-bezier(0.770, -.125, 0.175, 1.000);
     .text-center a svg{
       height: 6em;
-      transition: all .33s cubic-bezier(0.770, -.125, 0.175, 1.000);
+      transition: height .33s cubic-bezier(0.770, -.125, 0.175, 1.000);
       .logobox, .logof, .logoname{
+        will-change: transform;
         transition: all .33s cubic-bezier(0.770, -.125, 0.175, 1.000);
       }
     }
@@ -20,6 +21,7 @@ nav{
 }
 
 .shrink{
+  background: rgba(240,240,240,.95);
   header{
     padding-top: 0;
     padding-bottom: 0;
@@ -28,10 +30,12 @@ nav{
       height: 2em;
       .logobox{
         transform: translatey(40px);
+        stroke-width: 10;
       }
       .logoname{
         color: white;
         transform: translatey(-150px);
+        opacity: 0;
       }
     }
   }

@@ -12,6 +12,7 @@ body{
     min-width: 20px;
     @include media-breakpoint-up(sm) {
       height: 20px;
+      display: none;
     }
   }
   ul{
