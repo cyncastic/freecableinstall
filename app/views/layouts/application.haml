@@ -18,12 +18,12 @@
         .text-center=link_to image_tag('logo2.png'), root_path
 
       %ul.nav.justify-content-center.hidden
-        %li.nav-item=link_to 'Home',            root_path,      class: 'nav-link'
-        %li.nav-item=link_to 'Internet',  internet_path,     class: 'nav-link'
-        %li.nav-item=link_to 'VOIP',      phones_path,    class: 'nav-link'
-        %li.nav-item=link_to 'Polycoms',        polycoms_path,  class: 'nav-link'
-        -# %li.nav-item=link_to 'Test',            test_path,      class: 'nav-link'
-        -# %li.nav-item=link_to 'Styles',          styles_path,    class: 'nav-link'
+        -# %li.nav-item=link_to 'Home',     root_path,     class: 'nav-link'
+        %li.nav-item=link_to 'Internet',    internet_path, class: 'nav-link'
+        %li.nav-item=link_to 'VOIP',        phones_path,   class: 'nav-link'
+        %li.nav-item=link_to 'Free Phones', polycoms_path, class: 'nav-link'
+        -# %li.nav-item=link_to 'Test',     test_path,     class: 'nav-link'
+        -# %li.nav-item=link_to 'Styles',   styles_path,   class: 'nav-link'
 
     .container=yield
 

@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'info@freecableinstall.com'
+  default from: 'from@example.com'
   layout 'mailer'
 end
