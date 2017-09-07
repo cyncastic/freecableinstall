@@ -10,7 +10,7 @@ nav{
     padding-top: 1em;
     transition: all .33s cubic-bezier(0.770, -.125, 0.175, 1.000);
     .text-center a svg{
-      height: 131px;
+      height: 6em;
       transition: all .33s cubic-bezier(0.770, -.125, 0.175, 1.000);
       .logobox, .logof, .logoname{
         transition: all .33s cubic-bezier(0.770, -.125, 0.175, 1.000);
@@ -25,13 +25,13 @@ nav{
     padding-bottom: 0;
     box-shadow: 0 0 0 1px rgba(0,0,0,.15);
     .text-center a svg{
-      height: 50px;
+      height: 2em;
       .logobox{
-        transform: translatey(2em);
+        transform: translatey(40px);
       }
       .logoname{
         color: white;
-        transform: translatey(-4em);
+        transform: translatey(-150px);
       }
     }
   }
