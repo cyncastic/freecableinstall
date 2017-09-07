@@ -15,7 +15,19 @@
 
     %nav.fixed-top
       %header
-        .text-center=link_to image_tag('logo2.png'), root_path
+        .text-center
+          -# =link_to image_tag('logo2.png'), root_path
+          %a{ href: '/' }
+            %svg{ version: '1.1', viewbox: '0 0 310 130', width: '310', height: '130', style: 'box-shadow: 0 0 0 1px white;' }
+              %rect{ x: '115', y:   '5', fill: 'NONE', width: '80', height: '80', stroke: 'black', 'stroke-width': '0' }
+              %g.logobox{ 'stroke-width': '5', fill: 'none' }
+                %polyline{ points: '114,35  114, 4  145, 4', stroke: '#E9572C' }
+                %polyline{ points: '165, 4  196, 4  196,35', stroke: '#89C138' }
+                %polyline{ points: '196,55  196,86  165,86', stroke: '#4CBFD8' }
+                %polyline{ points: '145,86  114,86  114,55', stroke: '#69C7B5' }
+              %text.logof{ x: '142', y:  '64', fill: '#FAB30E', 'font-size': '52', 'font-weight': 'bold', 'font-family': 'roboto' } F
+              %text.logoname{ x:   '6', y: '128', fill: '#FAB30E', 'font-size': '37', 'font-family': 'Crete Round', 'letter-spacing': '2px;' } Free Cable Install
+
 
       %ul.nav.justify-content-center.hidden
         -# %li.nav-item=link_to 'Home',     root_path,     class: 'nav-link'
