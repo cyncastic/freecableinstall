@@ -8,12 +8,11 @@ nav{
   background: rgba(255,255,255,.97);
   header{
     padding-top: 1em;
-    transition: padding ease-out .1;
+    transition: all .33s cubic-bezier(0.770, -.125, 0.175, 1.000);
     .text-center a svg{
       height: 131px;
-      transition: height ease-in .1s;
+      transition: all .33s cubic-bezier(0.770, -.125, 0.175, 1.000);
       .logobox, .logof, .logoname{
-        transform-origin: 50% 50%; /*SVG center point.*/
         transition: all .33s cubic-bezier(0.770, -.125, 0.175, 1.000);
       }
     }
@@ -24,18 +23,14 @@ nav{
   header{
     padding-top: 0;
     padding-bottom: 0;
-    transition: padding ease-in .1s;
     box-shadow: 0 0 0 1px rgba(0,0,0,.15);
     .text-center a svg{
       height: 50px;
-      transition: height ease-out .1s;
       .logobox{
-        transform: rotate(90deg) translate(2em);
-      }
-      .logof{
-        transform: translatey(.6em);
+        transform: translatey(2em);
       }
       .logoname{
+        color: white;
         transform: translatey(-4em);
       }
     }
