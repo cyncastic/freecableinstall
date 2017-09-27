@@ -4,8 +4,8 @@
   .container
     %h1.display-3 Business Cable
     %p.lead Complete business internet solutions.
-    %p.lead Get free business telephone (PBX, hosted) system.
-    %p.lead Order cable internet, TV, and telephone services installation is free with us.
+    %p.lead.tandcapply Get free business telephone (PBX, hosted) system.
+    %p.lead.tandcapply Order cable internet, TV, and telephone services installation is free with us.
 
 %form.needs-validation{ novalidate: false }
 
@@ -20,18 +20,18 @@
 
   .form-group
     %input#full_name_id.form-control{ name: 'otehr', placeholder:  'Other Provider', type: 'email', required: false }/
+    %small#passwordHelpBlock.form-text.text-muted Please provide the name of the ISP if it is not on the above list.
 
-  %hr/
 
   .form-row
     .form-group.col-md-6
       / First Name
-      %label.control-label{ for: 'full_name_id' } Full Name
+      %label.control-label{ for: 'full_name_id' } First Name
       %input#full_name_id.form-control{ name: 'first_name', placeholder:  'John', type: 'text' }/
 
     .form-group.col-md-6
       / Last Name
-      %label.control-label{ for: 'full_name_id' } Full Name
+      %label.control-label{ for: 'full_name_id' } Last Name
       %input#full_name_id.form-control{ name: 'last_name', placeholder:  'Doe', type: 'text' }/
 
   .form-group
