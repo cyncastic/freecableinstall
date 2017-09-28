@@ -9,7 +9,7 @@
 
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application'
 
   %body
 
@@ -30,12 +30,11 @@
 
 
       %ul.nav.justify-content-center.hidden
-        -# %li.nav-item=link_to 'Home',     root_path,     class: 'nav-link'
         %li.nav-item=link_to 'Internet',    internet_path, class: 'nav-link'
         %li.nav-item=link_to 'VOIP',        phones_path,   class: 'nav-link'
         %li.nav-item=link_to 'Free Phones', polycoms_path, class: 'nav-link tandcapply'
-        -# %li.nav-item=link_to 'Test',     test_path,     class: 'nav-link'
-        -# %li.nav-item=link_to 'Styles',   styles_path,   class: 'nav-link'
+        %li.nav-item=link_to 'Test',     test_path,     class: 'nav-link'
+        %li.nav-item=link_to 'Styles',   styles_path,   class: 'nav-link'
 
     .container=yield
 

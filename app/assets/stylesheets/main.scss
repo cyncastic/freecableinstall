@@ -4,7 +4,6 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
-
 .partners{
   img{
     height: 40px;
@@ -19,15 +18,13 @@ body{
   }
 }
 
-
-.tandcapply::after{
-  content: "*";
-  color: #E9572C;
+.tandcapply, .required{
+  &::after{
+  content: " *";
   font-size: .75em;
   vertical-align: super;
+  position: absolute;
+  }
 }
-
-
-
-
-#EZ2Cdh8-1506532711191{ display: none; }
+.tandcapply::after{ color: #69C7B5; }
+.required::after{   color: #E9572C; }

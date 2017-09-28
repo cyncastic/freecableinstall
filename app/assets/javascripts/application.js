@@ -45,3 +45,28 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
   s1.setAttribute('crossorigin','*');
   s0.parentNode.insertBefore(s1,s0);
 })();
+
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  "use strict";
+  console.log('function called');
+
+  $(document).on('turbolinks:load', function() {
+
+
+    var form = document.getElementById("needs-validation");
+
+    form.addEventListener("submit", function(event) {
+      console.log('event listened');
+      if (form.checkValidity() == false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add("was-validated");
+    }, false);
+
+  });
+
+
+}());

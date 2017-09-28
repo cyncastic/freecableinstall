@@ -3,38 +3,38 @@
     %h1.display-3 Voice Over IP
     %p.lead.tandcapply Get a full featured Voice over IP telephone system for your business free today!
 
-%form.needs-validation{ novalidate: false }
+%form#needs-validation.container{ novalidate: ""}
 
   .form-row
     .form-group.col-md-6
       / First Name
-      %label.control-label{ for: 'full_name_id' } First Name
+      %label.control-label.required{ for: 'full_name_id' } First Name
       %input#full_name_id.form-control{ name: 'first_name', placeholder:  'John', type: 'text', required: true }/
 
     .form-group.col-md-6
       / Last Name
-      %label.control-label{ for: 'full_name_id' } Last Name
+      %label.control-label.required{ for: 'full_name_id' } Last Name
       %input#full_name_id.form-control{ name: 'last_name', placeholder:  'Doe', type: 'text', required: true }/
 
   .form-group
     / Email
-    %label.control-label{ for: 'full_name_id' } Email
+    %label.control-label.required{ for: 'full_name_id' } Email
     %input#full_name_id.form-control{ name: 'phone', placeholder:  'john@example.com', type: 'email', required: true }/
 
   .form-group
     / Phone
-    %label.control-label{ for: 'full_name_id' } Phone Number
+    %label.control-label.required{ for: 'full_name_id' } Phone Number
     %input#full_name_id.form-control{ name: 'phone', placeholder:  '555-555-555', type: 'tel', required: true }/
 
   .form-group
     / Business Name
-    %label.control-label{ for: 'full_name_id' } Business Name
+    %label.control-label.required{ for: 'full_name_id' } Business Name
     %input#full_name_id.form-control{ name: 'full_name', placeholder:  'Acme Co.', type: 'text', required: true }/
 
   .form-group
     / Number of phones
     %label.control-label{ for: 'number_employees' } Number of Telephones
-    %select#state_id.form-control{ required: true }
+    %select#state_id.form-control
       %option{ value: '1-5' } 1&mdash;5
       %option{ value: '6-15' } 6&mdash;15
       %option{ value: '16-30' } 16&mdash;30
@@ -42,23 +42,23 @@
 
   .form-group
     / Street 1
-    %label.control-label{ for: 'street1_id' } Street Address 1
+    %label.control-label.required{ for: 'street1_id' } Street Address 1
     %input#street1_id.form-control{ name: 'street1', placeholder: 'Street address, P.O. box, company name, c/o', type: 'text', required: true }/
 
   .form-group
     / Street 2
-    %label.control-label{ for: 'street2_id' } Street Address 2
+    %label.control-label.required{ for: 'street2_id' } Street Address 2
     %input#street2_id.form-control{:name => 'street2', :placeholder => 'Apartment, suite, unit, building, floor, etc.', type: 'text', required: true }/
 
   .form-row
     .form-group.col-md-6
       / City
-      %label.control-label{ for: 'city_id' } City
+      %label.control-label.required{ for: 'city_id' } City
       %input#city_id.form-control{ name: 'city', placeholder: 'Smallville', type: 'text', required: 'true' }/
 
     .form-group.col-md-4
       / State Button
-      %label.control-label{:for => "state_id"} State
+      %label.control-label.required{ for: 'state_id' } State
       %select#state_id.form-control.selectpicker{ required: true }
         %option{ value: 'AL' } Alabama
         %option{ value: 'AK' } Alaska
@@ -114,20 +114,20 @@
 
     .form-group.col-md-2
       / Zip Code
-      %label.control-label{ for: 'zip_id' } Zip Code
+      %label.control-label.required{ for: 'zip_id' } Zip Code
       %input#zip_id.form-control{ name: 'zip', placeholder: '#####', type: 'text', required: true }/
 
 
   .form-row
     .form-group.col-md-6
       %label.control-label{:for => "state_id"} Best Time To Contact You
-      %select.form-control.selectpicker{ required: true }
+      %select.form-control.selectpicker
         %option{ value: 'morning'   } Morning
         %option{ value: 'afternoon' } Afternoon
         %option{ value: 'evening'   } Evening
     .form-group.col-md-6
       %label.control-label{:for => "state_id"} Best Way To Contact You
-      %select.form-control.selectpicker{ required: true }
+      %select.form-control.selectpicker
         %option{ value: 'phone' } Phone
         %option{ value: 'email' } Email
 
