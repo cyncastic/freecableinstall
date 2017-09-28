@@ -1,24 +1,20 @@
-
-
 .jumbotron
   .container
     %h1.display-3 Easy Internet Solutions!
     %p.lead  freecableinstall.com is partnered with the biggest brands in cable and internet, to provide you with the best for your office.
 
-.row
-
-  .col-sm.mb-2
-    .card
-      =image_tag 'internet.jpg', style: 'height:10em;', class: 'card-img-top'
-      .card-body
-        %h4.card-title Internet
-        %p.card-text.lead.tandcapply Order now: internet, TV, telephone with no installation charge.
-        =link_to "Sign Up", internet_path, class: 'btn btn-primary btn-lg w-100'
-
-  .col-sm.mb-2
-    .card
-      =image_tag 'polycom.jpg', style: 'height:10em;', class: 'card-img-top'
-      .card-body
-        %h4.card-title VOIP
-        %p.card-text.lead.tandcapply Order your free business telephone (hosted, PBX) system.
-        =link_to "Sign Up", phones_path, class: 'btn btn-primary btn-lg w-100'
+.card-deck
+  .card
+    =image_tag 'internet.jpg', class: 'card-img-top'
+    .card-body
+      %h4.card-title Internet
+      %p.card-text.lead.tandcapply Order now: internet, TV, telephone with no installation charge.
+    .card-footer
+      =link_to "Sign Up", internet_path, class: 'btn btn-primary btn-lg w-100'
+  .card
+    =image_tag 'polycom.jpg', class: 'card-img-top'
+    .card-body
+      %h4.card-title VOIP
+      %p.card-text.lead.tandcapply Order free business telephone (hosted, PBX) system.
+    .card-footer
+      =link_to "Sign Up", phones_path, class: 'btn btn-primary btn-lg w-100'
