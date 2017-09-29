@@ -9,7 +9,7 @@
 
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
 
@@ -30,11 +30,11 @@
 
 
       %ul.nav.justify-content-center.hidden
-        %li.nav-item=link_to 'Internet',    internet_path, class: 'nav-link'
-        %li.nav-item=link_to 'VOIP',        phones_path,   class: 'nav-link'
-        %li.nav-item=link_to 'Free Phones', polycoms_path, class: 'nav-link tandcapply'
-        %li.nav-item=link_to 'Test',     test_path,     class: 'nav-link'
-        %li.nav-item=link_to 'Styles',   styles_path,   class: 'nav-link'
+        %li.nav-item=link_to 'Internet',    internet_path, class: 'text-warning nav-link'
+        %li.nav-item=link_to 'VOIP',        phones_path,   class: 'text-warning nav-link'
+        %li.nav-item=link_to 'Free Phones', polycoms_path, class: 'text-warning nav-link tandcapply'
+        %li.nav-item=link_to 'Test',     test_path,        class: 'text-warning nav-link'
+        %li.nav-item=link_to 'Styles',   styles_path,      class: 'text-warning nav-link'
 
     .container=yield
 
@@ -55,9 +55,13 @@
         %li=image_tag 'logos/verizon.svg'
         -# %li=image_tag 'logos/xfinity.svg'
 
-    %footer.m-5
+    %footer.mt-5
       .container
-        %p.text-center Powered by <a href="http://maxsip.com">Maxsip</a> &copy; | <a href="#" data-toggle="modal" data-target="#exampleModalLong">Terms and Condition</a>
+        %p.text-center.text-muted
+          Powered by
+          %a.text-info{ href: 'http://maxsip.com' } Maxsip
+          &copy; |
+          %a.text-info{ href: '#', 'data-toggle': 'modal', 'data-target': '#exampleModalLong' } Terms and Condition
 
     / Modal
     #exampleModalLong.modal.fade{ 'aria-hidden': 'true', 'aria-labelledby': 'exampleModalLongTitle', role: 'dialog', tabindex: '-1' }
@@ -87,4 +91,4 @@
               %li Integer mattis tortor eget justo vestibulum fringilla.
               %li Nulla id nibh vel felis facilisis mattis eu et erat.
           .modal-footer
-            %button.btn.btn-primary{ 'data-dismiss': 'modal', type: 'button' } Close
+            %button.btn.btn-info{ 'data-dismiss': 'modal', type: 'button' } Close
