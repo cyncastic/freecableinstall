@@ -10,30 +10,35 @@
       / First Name
       %label.control-label.required{ for: 'full_name_id' } First Name
       %input#full_name_id.form-control{ name: 'first_name', placeholder:  'John', type: 'text', required: true }/
+      .invalid-feedback Please provide your First Name
 
     .form-group.col-md-6
       / Last Name
       %label.control-label.required{ for: 'full_name_id' } Last Name
       %input#full_name_id.form-control{ name: 'last_name', placeholder:  'Doe', type: 'text', required: true }/
+      .invalid-feedback Please provide your Last Name
 
   .form-group
     / Email
     %label.control-label.required{ for: 'full_name_id' } Email
     %input#full_name_id.form-control{ name: 'phone', placeholder:  'john@example.com', type: 'email', required: true }/
+    .invalid-feedback Please provide your Email
 
   .form-group
     / Phone
     %label.control-label.required{ for: 'full_name_id' } Phone Number
     %input#full_name_id.form-control{ name: 'phone', placeholder:  '555-555-555', type: 'tel', required: true }/
+    .invalid-feedback Please provide your Phone Number
 
   .form-group
     / Business Name
     %label.control-label.required{ for: 'full_name_id' } Business Name
     %input#full_name_id.form-control{ name: 'full_name', placeholder:  'Acme Co.', type: 'text', required: true }/
+    .invalid-feedback Please provide the Business Name
 
   .form-group
     / Number of phones
-    %label.control-label{ for: 'number_employees' } Number of Telephones
+    %label.control-label{ for: 'number_telephones' } Number of Telephones
     %select#state_id.form-control
       %option{ value: '1-5' } 1&mdash;5
       %option{ value: '6-15' } 6&mdash;15
@@ -44,6 +49,7 @@
     / Street 1
     %label.control-label.required{ for: 'street1_id' } Street Address 1
     %input#street1_id.form-control{ name: 'street1', placeholder: 'Street address, P.O. box, company name, c/o', type: 'text', required: true }/
+    .invalid-feedback Please provide the Street Address
 
   .form-group
     / Street 2
@@ -54,7 +60,8 @@
     .form-group.col-md-6
       / City
       %label.control-label.required{ for: 'city_id' } City
-      %input#city_id.form-control{ name: 'city', placeholder: 'Smallville', type: 'text', required: 'true' }/
+      %input#city_id.form-control{ name: 'city', placeholder: 'Smallville', type: 'text', required: true }/
+      .invalid-feedback Please provide the City
 
     .form-group.col-md-4
       / State Button
@@ -111,11 +118,13 @@
         %option{ value: 'WV' } West Virginia
         %option{ value: 'WI' } Wisconsin
         %option{ value: 'WY' } Wyoming
+      .invalid-feedback Please provide the State
 
     .form-group.col-md-2
       / Zip Code
       %label.control-label.required{ for: 'zip_id' } Zip Code
       %input#zip_id.form-control{ name: 'zip', placeholder: '#####', type: 'text', required: true }/
+      .invalid-feedback Please provide the Zip
 
 
   .form-row

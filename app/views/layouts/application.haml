@@ -8,7 +8,7 @@
     %title Free Cable Install
 
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
@@ -32,27 +32,27 @@
       %ul.nav.justify-content-center.hidden
         %li.nav-item=link_to 'Internet',    internet_path, class: 'text-warning nav-link'
         %li.nav-item=link_to 'VOIP',        phones_path,   class: 'text-warning nav-link'
-        %li.nav-item=link_to 'Free Phones', polycoms_path, class: 'text-warning nav-link tandcapply'
-        %li.nav-item=link_to 'Test',     test_path,        class: 'text-warning nav-link'
-        %li.nav-item=link_to 'Styles',   styles_path,      class: 'text-warning nav-link'
+        -# %li.nav-item=link_to 'Free Phones', polycoms_path, class: 'text-warning nav-link'
+        %li.nav-item=link_to 'Resellers',   resellers_path,      class: 'text-warning nav-link'
+        -# %li.nav-item=link_to 'Test',     test_path,        class: 'text-warning nav-link'
 
     .container=yield
 
     .container.partners.pt-4
       %h1.text-center.text-secondary.mt-5.mb-3 Our Partners
       %ul.d-flex.justify-content-around.flex-wrap
+        %li=image_tag 'logos/verizon.svg'
+        %li=image_tag 'logos/charter-spectrum.svg'
+        %li=image_tag 'logos/optimum.svg'
         %li=image_tag 'logos/att.svg'
         %li=image_tag 'logos/centurylink.svg'
-        %li=image_tag 'logos/charter-spectrum.svg'
         %li=image_tag 'logos/cogent.svg'
         %li=image_tag 'logos/comcast.svg'
         %li=image_tag 'logos/cox.svg'
         %li=image_tag 'logos/frontier-auth.svg'
         -# %li=image_tag 'logos/lightpath.svg'
         %li=image_tag 'logos/mediacom.svg'
-        %li=image_tag 'logos/optimum.svg'
         %li=image_tag 'logos/rcn.svg'
-        %li=image_tag 'logos/verizon.svg'
         -# %li=image_tag 'logos/xfinity.svg'
 
     %footer.mt-5
@@ -61,7 +61,7 @@
           Powered by
           %a.text-info{ href: 'http://maxsip.com' } Maxsip
           &copy; |
-          %a.text-info{ href: '#', 'data-toggle': 'modal', 'data-target': '#exampleModalLong' } Terms and Condition
+          %a.text-info.tandcapply{ href: '#', 'data-toggle': 'modal', 'data-target': '#exampleModalLong' } Terms and Condition
 
     / Modal
     #exampleModalLong.modal.fade{ 'aria-hidden': 'true', 'aria-labelledby': 'exampleModalLongTitle', role: 'dialog', tabindex: '-1' }

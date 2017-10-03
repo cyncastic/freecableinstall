@@ -21,7 +21,6 @@
 //= require_tree .
 
 
-
 // Copyright 2014-2017 The Bootstrap Authors
 // Copyright 2014-2017 Twitter, Inc.
 // Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -36,6 +35,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 }
 
 
+// Tawk snippet for adding the option to talk with customers on site
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -50,23 +50,26 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   "use strict";
-  console.log('function called');
-
   $(document).on('turbolinks:load', function() {
-
-
     var form = document.getElementById("needs-validation");
-
     form.addEventListener("submit", function(event) {
-      console.log('event listened');
       if (form.checkValidity() == false) {
         event.preventDefault();
         event.stopPropagation();
       }
       form.classList.add("was-validated");
     }, false);
-
   });
-
-
 }());
+
+// Form interactivity
+$(function(){
+  $("select[name='isp']").change(function(){
+  console.log('function called');
+    if ($(this).val() == "Other"){
+      $("#otherisp").addClass("show");
+    }else{
+      $("#otherisp").removeClass("show");
+    }
+  });
+});
