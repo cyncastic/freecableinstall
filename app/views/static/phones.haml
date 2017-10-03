@@ -40,6 +40,7 @@
     / Number of phones
     %label.control-label{ for: 'number_telephones' } Number of Telephones
     %select#state_id.form-control
+      %option{ value: '', disabled: true, selected: true} Please Choose One
       %option{ value: '1-5' } 1&mdash;5
       %option{ value: '6-15' } 6&mdash;15
       %option{ value: '16-30' } 16&mdash;30
@@ -67,6 +68,7 @@
       / State Button
       %label.control-label.required{ for: 'state_id' } State
       %select#state_id.form-control.selectpicker{ required: true }
+        %option{ value: '', disabled: true, selected: true} Please Choose One
         %option{ value: 'AL' } Alabama
         %option{ value: 'AK' } Alaska
         %option{ value: 'AZ' } Arizona
@@ -131,12 +133,14 @@
     .form-group.col-md-6
       %label.control-label{:for => "state_id"} Best Time To Contact You
       %select.form-control.selectpicker
+        %option{ value: '', disabled: true, selected: true} Please Choose One
         %option{ value: 'morning'   } Morning
         %option{ value: 'afternoon' } Afternoon
         %option{ value: 'evening'   } Evening
     .form-group.col-md-6
       %label.control-label{:for => "state_id"} Best Way To Contact You
       %select.form-control.selectpicker
+        %option{ value: '', disabled: true, selected: true} Please Choose One
         %option{ value: 'phone' } Phone
         %option{ value: 'email' } Email
 
