@@ -1,30 +1,26 @@
-.polycomslead.row.m-2.mb-5
-  %p.display-4.lead Sign up for <abbr class="initialism" title="Voice Over IP">VOIP</abbr> service and receive free phones!  You can choose from the following:
+.card-deck
+  .card.bg-light.border-light.mb-4
+    =image_tag 'vvx-301.jpg', alt: 'polycom vvx 301', class: 'card-img-top'
+    .card-body
+      %h4.card-title
+        Polycom
+        %small.text-muted VVX 301
+      %p.card-text.lead A powerful entry-level Business Media phone for today's cubicle workers
+      %p.card-text Give your cubicle worker the best experience with this high quality UC Business Media Phone. Designed for a broad range of environments for small and medium businesses.
+    .card-footer
+      %label.form-check-label{ for: 'full_name_id' }
+        %input.form-check-input{ name: 'first_name', placeholder:  'John', type: 'radio' }/
+        Choose
 
-.row.m-2
-  .col-md-5.text-center
-    %figure.figure
-      =image_tag 'vvx-301.jpg', alt: 'polycom vvx 301', class: 'figure-img img-fluid rounded', style: 'max-height: 20rem;'
-      %figcaption.figure-caption A caption for the above image
-  .col-md-7
-    %h1.display-4
-      Polycom
-      %small.text-muted VVX 301
-    %p.lead A powerful entry-level Business Media phone for today's cubicle workers
-    %p Give your cubicle worker the best experience with this high quality UC Business Media Phone. Designed for a broad range of environments for small and medium businesses.
-    %a.btn.btn-primary{ href: '#' } Learn More
-
-%hr/
-
-.row.m-2
-  .col-md-5.text-center
-    %figure.figure
-      =image_tag 'vvx-401.jpg', alt: 'polycom vvx 401', class: 'figure-img img-fluid rounded', style: 'max-height: 20rem;'
-      %figcaption.figure-caption A caption for the above image
-  .col-md-7
-    %h2.display-4
-      Polycom
-      %small.text-muted VVX 401
-    %p.lead A color mid-range Business Media phone for enhanced call handling.
-    %p Give your call attendant a high-quality, cost effective UC solution that will handle their moderate  call volume and provide them with the advanced telephony features they expect from a modern media phone.
-    %a.btn.btn-primary{ href: '#' } Learn More
+  .card.bg-light.border-light.mb-4
+    =image_tag 'vvx-401.jpg', alt: 'polycom vvx 401', class: 'card-img-top'
+    .card-body
+      %h4.card-title
+        Polycom
+        %small.text-muted VVX 401
+      %p.card-text.lead A color mid-range Business Media phone for enhanced call handling.
+      %p.card-text Give your call attendant a high-quality, cost effective UC solution that will handle their moderate  call volume and provide them with the advanced telephony features they expect from a modern media phone.
+    .card-footer
+      %label.form-check-label{ for: 'full_name_id' }
+        %input.form-check-input{ name: 'first_name', placeholder:  'John', type: 'radio' }/
+        Choose
