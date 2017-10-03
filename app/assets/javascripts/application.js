@@ -35,7 +35,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 }
 
 
-// Tawk snippet for adding the option to talk with customers on site
+
 
 
 
@@ -44,6 +44,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
   "use strict";
   $(document).on('turbolinks:load', function() {
 
+    // Tawk snippet for adding the option to talk with customers on site
     window.$_Tawk = undefined;
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
