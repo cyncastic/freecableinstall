@@ -12,7 +12,7 @@
 //
 //
 //= require rails-ujs
-//= require turbolinks
+// = require turbolinks
 //
 //= require jquery3
 //= require popper
@@ -47,29 +47,37 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 })();
 
 
+
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   "use strict";
   $(document).on('turbolinks:load', function() {
+
+
     var form = document.getElementById("needs-validation");
-    form.addEventListener("submit", function(event) {
-      if (form.checkValidity() == false) {
-        event.preventDefault();
-        event.stopPropagation();
+    if(form){
+      console.log('function called');
+      form.addEventListener("submit", function(event) {
+        if (form.checkValidity() == false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add("was-validated");
+      }, false);
+    }
+
+
+    // Form interactivity
+    $("select[name='isp']").change(function(){
+      if ($(this).val() == "Other"){
+        $("#otherisp").addClass("show");
+      }else{
+        $("#otherisp").removeClass("show");
       }
-      form.classList.add("was-validated");
-    }, false);
+    });
+
+
   });
 }());
 
-// Form interactivity
-$(function(){
-  $("select[name='isp']").change(function(){
-  console.log('function called');
-    if ($(this).val() == "Other"){
-      $("#otherisp").addClass("show");
-    }else{
-      $("#otherisp").removeClass("show");
-    }
-  });
-});
+

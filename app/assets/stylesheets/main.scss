@@ -2,6 +2,7 @@
 
 body{
   font-family: 'Roboto', sans-serif;
+  font-display: swap;
 }
 
 .partners{
@@ -26,11 +27,11 @@ body{
   position: absolute;
   }
 }
-.tandcapply::after{ color: #69C7B5; }
+
 .required::after{   color: #E9572C; }
+.tandcapply::after{ color: #4CBFD8; }
 
-
-.bg-fred   { background: #E9572C; }
-.bg-fgreen { background: #89C138; }
-.bg-fblue  { background: #4CBFD8; }
-.bg-fteal  { background: #69C7B5; }
+.bg-fred   { background: #E9572C; .tandcapply::after{ color: #FFFFFF; } }
+.bg-fgreen { background: #89C138; .tandcapply::after{ color: #FFFFFF; } }
+.bg-fblue  { background: #4CBFD8; .tandcapply::after{ color: #FFFFFF; } }
+.bg-fteal  { background: #69C7B5; .tandcapply::after{ color: #FFFFFF; } }
