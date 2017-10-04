@@ -10,10 +10,24 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    -# Captcha
     %script{ src: 'https://www.google.com/recaptcha/api.js' }
 
+    -# Google Tag Manager
+    :javascript
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MTB2KDG');
 
   %body
+
+    / Google Tag Manager (noscript)
+    %noscript
+      %iframe{ height: 0, width: 0, src: 'https://www.googletagmanager.com/ns.html?id=GTM-MTB2KDG', style: 'display:none;visibility:hidden' }
+    / End Google Tag Manager (noscript)
 
     %nav.fixed-top
       %header
@@ -29,7 +43,6 @@
                 %polyline{ points: '145,86  114,86  114,55', stroke: '#69C7B5' }
                 %text.logof{ x: '142', y:  '64', fill: '#FAB30E', 'font-size': '52', 'font-weight': 'bold', 'font-family': 'roboto' } F
               %text.logoname{ x:   '6', y: '128', fill: '#FAB30E', 'font-size': '37', 'font-family': 'Crete Round', 'letter-spacing': '2px;' } Free Cable Install
-
 
       %ul.nav.justify-content-center.hidden
         %li.nav-item=link_to 'Internet',    internet_path, class: 'text-warning nav-link'
@@ -65,7 +78,7 @@
           &copy; |
           %a.text-info.tandcapply{ href: '#', 'data-toggle': 'modal', 'data-target': '#exampleModalLong' } Terms and Condition
 
-    / Modal
+    / Terms and Conditions Modal
     #exampleModalLong.modal.fade{ 'aria-hidden': 'true', 'aria-labelledby': 'exampleModalLongTitle', role: 'dialog', tabindex: '-1' }
       .modal-dialog.modal-lg{ role: 'document' }
         .modal-content
@@ -83,10 +96,6 @@
               %li In pretium tellus non velit malesuada hendrerit.
               %li Morbi eleifend eros in enim finibus, vitae aliquam sem eleifend.
               %li Suspendisse id ante sollicitudin, tempus dui vel, vulputate nisl.
-              %li Sed vel tortor vulputate, ornare nisi id, commodo lectus.
-              %li Phasellus lobortis est sodales est blandit blandit.
-              %li Donec vulputate orci ornare felis condimentum, a dapibus quam scelerisque.
-              %li Quisque posuere lectus quis dolor elementum tempor.
               %li Phasellus convallis libero vitae mi molestie pulvinar.
               %li Donec sit amet nisl nec nisl molestie finibus ac sit amet ipsum.
               %li Pellentesque nec nisi nec purus eleifend interdum vel vel lectus.
@@ -94,3 +103,11 @@
               %li Nulla id nibh vel felis facilisis mattis eu et erat.
           .modal-footer
             %button.btn.btn-info{ 'data-dismiss': 'modal', type: 'button' } Close
+
+    / Global Site Tag (gtag.js) - Google Analytics
+    %script{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=UA-107489713-1' }
+    :javascript
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+      gtag('config', 'UA-107489713-1');
