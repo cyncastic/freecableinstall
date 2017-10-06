@@ -12,11 +12,9 @@
         Free Cable Install
 
     - if yield(:meta_description).present?
-      %meta{ content: '#{yield(:meta_description)}', name: 'description' }/
+      %meta{ content: yield(:meta_description), name: 'description' }/
     - else
       %meta{ content: 'Complete Business Internet and Telephone (Hosted PBX) Solutions!', name: 'description' }/
-
-
 
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
