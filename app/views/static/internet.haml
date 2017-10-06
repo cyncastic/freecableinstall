@@ -1,3 +1,4 @@
+- title 'Free Internet Installation'
 
 .jumbotron.bg-fgreen.text-white
   .container
@@ -20,6 +21,15 @@
   .form-group#otherisp.collapse
     %input#full_name_id.form-control{ name: 'otehr', placeholder:  'Other Provider', type: 'email', required: false }/
     %small#passwordHelpBlock.form-text.text-muted Please provide the name of the ISP if it is not on the above list.
+
+  .form-group
+    %label.control-label{ for: 'number_employees' } Number of Computers
+    %select#state_id.form-control
+      %option{ value: '', disabled: true, selected: true} Please Choose One
+      %option{ value: '1-5' } 1&mdash;5
+      %option{ value: '6-15' } 6&mdash;15
+      %option{ value: '16-30' } 16&mdash;30
+      %option{ value: '30+S' } 30+
 
   .form-row
     .form-group.col-md-6.has-danger
@@ -90,7 +100,7 @@
       %input#city_id.form-control{ name: 'city', placeholder: 'Smallville', type: 'text', required: true }/
       .invalid-feedback Please provide the City
 
-    .form-group.col-md-4
+    .form-group.col-md-3
       / State Button
       %label.control-label.required{:for => "state_id"} State
       %select#state_id.form-control.selectpicker{ required: true }
@@ -148,25 +158,15 @@
         %option{ value: 'WY' } Wyoming
       .invalid-feedback Please provide the State
 
-    .form-group.col-md-2
+    .form-group.col-md-3
       / Zip Code
       %label.control-label.required{ for: 'zip_id' } Zip Code
       %input#zip_id.form-control{ name: 'zip', placeholder: '#####', type: 'text', required: true }/
       .invalid-feedback Please provide the Zip
 
   .form-group
-    / Number of phones
-    %label.control-label{ for: 'number_employees' } Number of Computers
-    %select#state_id.form-control
-      %option{ value: '', disabled: true, selected: true} Please Choose One
-      %option{ value: '1-5' } 1&mdash;5
-      %option{ value: '6-15' } 6&mdash;15
-      %option{ value: '16-30' } 16&mdash;30
-      %option{ value: '30+S' } 30+
-
-  .form-group
-    %label.form-check-label{ for: 'full_name_id' }
-      %input.form-check-input{ name: 'first_name', placeholder:  'John', type: 'checkbox' }/
+    %label.form-check-label{ for: 'interested' }
+      %input.form-check-input#interested{ name: 'interested', placeholder:  'John', type: 'checkbox' }/
       I Am Also Interested In A Free Telephone System
 
   .form-group
@@ -175,3 +175,6 @@
   .form-group
     / Submit Button
     %button.btn.btn-info.btn-lg{ type: 'submit' } Send Request
+
+
+17186668970

@@ -1,3 +1,5 @@
+- title 'Free VOIP Phones'
+
 .jumbotron.bg-fred.text-white
   .container
     %h1.display-3 Voice Over IP
@@ -16,8 +18,8 @@
         %p.card-text.lead A powerful entry-level Business Media phone for today's cubicle workers
         %p.card-text Give your cubicle worker the best experience with this high quality UC Business Media Phone. Designed for a broad range of environments for small and medium businesses.
       .card-footer
-        %label.form-check-label{ for: 'full_name_id' }
-          %input.form-check-input{ name: 'first_name', placeholder:  'John', type: 'radio' }/
+        %label.form-check-label.w-100{ for: 'vvx301' }
+          %input.form-check-input#vvx301{ name: 'phone', placeholder:  'John', type: 'radio' }/
           Choose
 
     .card.bg-light.border-light.mb-4
@@ -29,8 +31,8 @@
         %p.card-text.lead A color mid-range Business Media phone for enhanced call handling.
         %p.card-text Give your call attendant a high-quality, cost effective UC solution that will handle their moderate  call volume and provide them with the advanced telephony features they expect from a modern media phone.
       .card-footer
-        %label.form-check-label{ for: 'full_name_id' }
-          %input.form-check-input{ name: 'first_name', placeholder:  'John', type: 'radio' }/
+        %label.form-check-label.w-100{ for: 'vvx401' }
+          %input.form-check-input#vvx401{ name: 'phone', placeholder:  'John', type: 'radio' }/
           Choose
 
   %hr/
@@ -96,7 +98,7 @@
       %input#city_id.form-control{ name: 'city', placeholder: 'Smallville', type: 'text', required: true }/
       .invalid-feedback Please provide the City
 
-    .form-group.col-md-4
+    .form-group.col-md-3
       / State Button
       %label.control-label.required{ for: 'state_id' } State
       %select#state_id.form-control.selectpicker{ required: true }
@@ -154,7 +156,7 @@
         %option{ value: 'WY' } Wyoming
       .invalid-feedback Please provide the State
 
-    .form-group.col-md-2
+    .form-group.col-md-3
       / Zip Code
       %label.control-label.required{ for: 'zip_id' } Zip Code
       %input#zip_id.form-control{ name: 'zip', placeholder: '#####', type: 'text', required: true }/

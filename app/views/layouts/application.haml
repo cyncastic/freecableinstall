@@ -5,7 +5,18 @@
     %meta{ charset: 'utf-8' }/
     %meta{ content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport' }/
 
-    %title Free Cable Install
+    %title
+      - if yield(:title).present?
+        = yield(:title) + ' | Free Cable Install'
+      - else
+        Free Cable Install
+
+    - if yield(:meta_description).present?
+      %meta{ content: '#{yield(:meta_description)}', name: 'description' }/
+    - else
+      %meta{ content: 'Complete Business Internet and Telephone (Hosted PBX) Solutions!', name: 'description' }/
+
+
 
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
