@@ -8,4 +8,8 @@ module ApplicationHelper
     content_for(:meta_description) { page_text }
   end
 
+  def meta_keywords(keywords_text)
+    content_for(:meta_keywords) { keywords_text }
+  end
+
 end

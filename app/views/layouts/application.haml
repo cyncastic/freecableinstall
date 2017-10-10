@@ -16,6 +16,11 @@
     - else
       %meta{ content: 'Complete Business Internet and Telephone (Hosted PBX) Solutions!', name: 'description' }/
 
+    - if yield(:meta_keywords).present?
+      %meta{ content: yield(:meta_keywords), 'http-equiv': 'keywords' }/
+    - else
+      %meta{ content: '', 'http-equiv': 'keywords' }/
+
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
@@ -65,19 +70,19 @@
     .container.partners.pt-4
       %h1.text-center.text-secondary.mt-5.mb-3 Our Partners
       %ul.d-flex.justify-content-around.flex-wrap
-        %li=image_tag 'logos/verizon.svg'
-        %li=image_tag 'logos/charter-spectrum.svg'
-        %li=image_tag 'logos/optimum.svg'
-        %li=image_tag 'logos/att.svg'
-        %li=image_tag 'logos/centurylink.svg'
-        %li=image_tag 'logos/cogent.svg'
-        %li=image_tag 'logos/comcast.svg'
-        %li=image_tag 'logos/cox.svg'
-        %li=image_tag 'logos/frontier-auth.svg'
-        -# %li=image_tag 'logos/lightpath.svg'
-        %li=image_tag 'logos/mediacom.svg'
-        %li=image_tag 'logos/rcn.svg'
-        -# %li=image_tag 'logos/xfinity.svg'
+        %li=image_tag 'logos/verizon.svg', alt: 'Verizon'
+        %li=image_tag 'logos/charter-spectrum.svg', alt: 'Spectrum'
+        %li=image_tag 'logos/optimum.svg', alt: 'Optimum'
+        %li=image_tag 'logos/att.svg', alt: 'AT&am;T'
+        %li=image_tag 'logos/centurylink.svg', alt: 'Centrury Link'
+        %li=image_tag 'logos/cogent.svg', alt: 'Cogent'
+        %li=image_tag 'logos/comcast.svg', alt: 'Comcast'
+        %li=image_tag 'logos/cox.svg', alt: 'Cox'
+        %li=image_tag 'logos/frontier-auth.svg', alt: 'Frontier'
+        -# %li=image_tag 'logos/lightpath.svg', alt: 'Lightpath'
+        %li=image_tag 'logos/mediacom.svg', alt: 'Mediacom'
+        %li=image_tag 'logos/rcn.svg', alt: 'RCN'
+        -# %li=image_tag 'logos/xfinity.svg', alt: 'Xfinity'
 
     %footer.mt-5
       .container
@@ -95,21 +100,7 @@
             %h5#exampleModalLongTitle.modal-title Terms and Conditions
             %button.close{ 'aria-label': 'Close', 'data-dismiss': 'modal', type: 'button' }
               %span{'aria-hidden': 'true' } ×
-          .modal-body
-            %ol
-              %li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              %li Pellentesque imperdiet lectus ut feugiat accumsan.
-              %li In fringilla nisi vitae sapien faucibus gravida.
-              %li Vestibulum fringilla lorem ut dui hendrerit, imperdiet aliquet risus bibendum.
-              %li Aliquam eget ligula id magna dictum sollicitudin.
-              %li In pretium tellus non velit malesuada hendrerit.
-              %li Morbi eleifend eros in enim finibus, vitae aliquam sem eleifend.
-              %li Suspendisse id ante sollicitudin, tempus dui vel, vulputate nisl.
-              %li Phasellus convallis libero vitae mi molestie pulvinar.
-              %li Donec sit amet nisl nec nisl molestie finibus ac sit amet ipsum.
-              %li Pellentesque nec nisi nec purus eleifend interdum vel vel lectus.
-              %li Integer mattis tortor eget justo vestibulum fringilla.
-              %li Nulla id nibh vel felis facilisis mattis eu et erat.
+          .modal-body= render partial: '/layouts/tos'
           .modal-footer
             %button.btn.btn-info{ 'data-dismiss': 'modal', type: 'button' } Close
 
