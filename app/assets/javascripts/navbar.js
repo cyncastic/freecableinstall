@@ -1,9 +1,17 @@
+
+var prevscroll = $(document).scrollTop();
+
 $(window).scroll(function() {
 
-  if ($(document).scrollTop() > 50) {
+  console.log(prevscroll + " / " + $(document).scrollTop());
+
+  if ($(document).scrollTop() > prevscroll) {
     $('nav').addClass('shrink');
+
   } else {
     $('nav').removeClass('shrink');
   }
+
+  prevscroll = $(document).scrollTop();
 
 });

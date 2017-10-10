@@ -56,8 +56,6 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
       s0.parentNode.insertBefore(s1,s0);
     })();
 
-
-
     var form = document.getElementById("needs-validation");
     if(form){
       console.log('function called');
@@ -70,7 +68,6 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
       }, false);
     }
 
-
     // Form interactivity
     $("select[name='isp']").change(function(){
       if ($(this).val() == "Other"){
@@ -79,7 +76,6 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
         $("#otherisp").removeClass("show");
       }
     });
-
 
   });
 }());
