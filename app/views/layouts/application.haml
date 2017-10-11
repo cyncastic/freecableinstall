@@ -5,32 +5,23 @@
     %meta{ charset: 'utf-8' }/
     %meta{ content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport' }/
 
-    %title
-      - if yield(:title).present?
-        = yield(:title) + ' | Free Cable Install'
-      - else
-        Free Cable Install
+    -# Variable Meta Data
+    = render partial: '/layouts/meta'
 
-    - if yield(:meta_description).present?
-      %meta{ content: yield(:meta_description), name: 'description' }/
-    - else
-      %meta{ content: 'Complete Business Internet and Telephone (Hosted PBX) Solutions!', name: 'description' }/
+    -# Favicons
+    %link{ href: '/assets/favicon.ico', rel: 'icon', type: 'image/x-icon' }/
 
-    - if yield(:meta_keywords).present?
-      %meta{ content: yield(:meta_keywords), 'http-equiv': 'keywords' }/
-    - else
-      %meta{ content: '', 'http-equiv': 'keywords' }/
-
+    -# Rails imports
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
 
-    / Google Tag Manager (noscript)
-    %noscript
-      %iframe{ height: 0, width: 0, src: 'https://www.googletagmanager.com/ns.html?id=GTM-MTB2KDG', style: 'display:none;visibility:hidden' }
-    / End Google Tag Manager (noscript)
+    -# / Google Tag Manager (noscript)
+    -# %noscript
+    -#   %iframe{ height: 0, width: 0, src: 'https://www.googletagmanager.com/ns.html?id=GTM-MTB2KDG', style: 'display:none;visibility:hidden' }
+    -# / End Google Tag Manager (noscript)
 
     %nav.fixed-top
       %header
@@ -50,7 +41,7 @@
       %ul.nav.justify-content-center.hidden
         %li.nav-item=link_to 'Internet',    internet_path, class: 'text-warning nav-link'
         %li.nav-item=link_to 'VOIP',        phones_path,   class: 'text-warning nav-link'
-        -# %li.nav-item=link_to 'Free Phones', polycoms_path, class: 'text-warning nav-link'
+        %li.nav-item=link_to 'Thank You', thankyou_path, class: 'text-warning nav-link'
         %li.nav-item=link_to 'Resellers',   resellers_path,      class: 'text-warning nav-link'
         -# %li.nav-item=link_to 'Test',     test_path,        class: 'text-warning nav-link'
 

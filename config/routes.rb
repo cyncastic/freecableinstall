@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get 'polycoms',  to: 'static#polycoms'
   get 'test',      to: 'static#test'
   get 'resellers',    to: 'static#resellers'
+  get 'thankyou',    to: 'static#thankyou'
 
 end

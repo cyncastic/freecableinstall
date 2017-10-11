@@ -12,4 +12,8 @@ module ApplicationHelper
     content_for(:meta_keywords) { keywords_text }
   end
 
+  def meta_canonical(canonical_text)
+    content_for(:meta_canonical) { canonical_text }
+  end
+
 end

@@ -1,0 +1,58 @@
+
+-(0..3).each do |i|
+  <!-- ----------------Meta Data Start---------------- -->
+
+%title
+  - if yield(:title).present?
+    = yield(:title)
+    &bull; FreeCableInstall.com
+  - else
+    Free Cable Install
+
+<!-- --------------------------------------------------------------- -->
+
+- if yield(:meta_description).present?
+  %meta{ name: 'description', content: yield(:meta_description) }/
+- else
+  %meta{ name: 'description', content: 'Complete Business Internet and Telephone (Hosted PBX) Solutions!' }/
+
+- if yield(:meta_keywords).present?
+  %meta{ content: yield(:meta_keywords), 'http-equiv': 'keywords' }/
+
+- if yield(:meta_canonical).present?
+  %link{ href: yield(:meta_canonical), rel: 'canonical' }/
+
+<!-- --------------------------------------------------------------- -->
+
+%meta{ property: 'og:locale',         content: 'en_US', }/
+%meta{ property: 'og:type',           content: 'website'}/
+%meta{ property: 'og:site_name',      content: 'FreeCableInstall.com' }/
+%meta{ property: 'og:image',          content: '/assets/internet.jpg' }
+
+- if yield(:meta_canonical).present?
+  %meta{ property: 'og:url',          content: yield(:meta_canonical) }/
+
+- if yield(:title).present?
+  %meta{ property: 'og:title',        content: yield(:title) + ' • FreeCableInstall.com' }/
+
+- if yield(:meta_description).present?
+  %meta{ property: 'og:description',  content: yield(:meta_description) }/
+
+<!-- --------------------------------------------------------------- -->
+
+%meta{ name: 'twitter:card',          content: 'summary' }/
+%meta{ name: 'twitter:site',          content: '@maxsip' }/
+%meta{ name: 'twitter:creator',       content: '@maxsip' }/
+
+- if yield(:meta_description).present?
+  %meta{ name: 'twitter:description', content: yield(:meta_description) }/
+
+- if yield(:title).present?
+  %meta{ name: 'twitter:title',       content: yield(:title) + ' • FreeCableInstall.com' }/
+
+<!-- --------------------------------------------------------------- -->
+
+%meta{ name: 'original-source', content: 'https://maxsip.com/' }/
+
+-(0..3).each do |i|
+  <!-- ----------------Meta Data End---------------- -->

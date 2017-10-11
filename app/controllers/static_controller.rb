@@ -1,4 +1,5 @@
 class StaticController < ApplicationController
+
   def home
   end
 
@@ -13,4 +14,8 @@ class StaticController < ApplicationController
 
   def phones
   end
+
+  def thankyou
+  end
+
 end
