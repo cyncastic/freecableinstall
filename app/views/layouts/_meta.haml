@@ -1,6 +1,6 @@
 
 -(0..3).each do |i|
-  <!-- ----------------Meta Data Start---------------- -->
+  <!-- ================Meta Data Start================================= -->
 
 %title
   - if yield(:title).present?
@@ -9,7 +9,7 @@
   - else
     Free Cable Install
 
-<!-- --------------------------------------------------------------- -->
+<!-- ================================================================== -->
 
 - if yield(:meta_description).present?
   %meta{ name: 'description', content: yield(:meta_description) }/
@@ -17,12 +17,12 @@
   %meta{ name: 'description', content: 'Complete Business Internet and Telephone (Hosted PBX) Solutions!' }/
 
 - if yield(:meta_keywords).present?
-  %meta{ content: yield(:meta_keywords), 'http-equiv': 'keywords' }/
+  %meta{ content: yield(:meta_keywords), 'name': 'keywords' }/
 
 - if yield(:meta_canonical).present?
   %link{ href: yield(:meta_canonical), rel: 'canonical' }/
 
-<!-- --------------------------------------------------------------- -->
+<!-- ================================================================== -->
 
 %meta{ property: 'og:locale',         content: 'en_US', }/
 %meta{ property: 'og:type',           content: 'website'}/
@@ -38,7 +38,7 @@
 - if yield(:meta_description).present?
   %meta{ property: 'og:description',  content: yield(:meta_description) }/
 
-<!-- --------------------------------------------------------------- -->
+<!-- ================================================================== -->
 
 %meta{ name: 'twitter:card',          content: 'summary' }/
 %meta{ name: 'twitter:site',          content: '@maxsip' }/
@@ -51,9 +51,9 @@
 - if yield(:title).present?
   %meta{ name: 'twitter:title',       content: yield(:title) + ' • FreeCableInstall.com' }/
 
-<!-- --------------------------------------------------------------- -->
+<!-- ================================================================== -->
 
 %meta{ name: 'original-source', content: 'https://maxsip.com/' }/
 
 -(0..3).each do |i|
-  <!-- ----------------Meta Data End---------------- -->
+  <!-- =======================Meta Data End============================ -->
