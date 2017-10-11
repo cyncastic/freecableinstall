@@ -11,6 +11,9 @@
     -# Favicons
     %link{ href: '/assets/favicon.ico', rel: 'icon', type: 'image/x-icon' }/
 
+    %link{ rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' }
+    %link{ rel: 'dns-prefetch', href: '//fonts.googleapis.com' }
+
     -# Rails imports
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
@@ -18,10 +21,10 @@
 
   %body
 
-    -# / Google Tag Manager (noscript)
-    -# %noscript
-    -#   %iframe{ height: 0, width: 0, src: 'https://www.googletagmanager.com/ns.html?id=GTM-MTB2KDG', style: 'display:none;visibility:hidden' }
-    -# / End Google Tag Manager (noscript)
+    / Google Tag Manager (noscript)
+    %noscript
+      %iframe{ height: 0, width: 0, src: 'https://www.googletagmanager.com/ns.html?id=GTM-MTB2KDG', style: 'display:none;visibility:hidden' }
+    / End Google Tag Manager (noscript)
 
     %nav.fixed-top
       %header
@@ -39,11 +42,11 @@
               %text.logoname{ x:   '6', y: '128', fill: '#FAB30E', 'font-size': '37', 'font-family': 'Crete Round', 'letter-spacing': '2px;' } Free Cable Install
 
       %ul.nav.justify-content-center.hidden
-        %li.nav-item=link_to 'Internet',    internet_path, class: 'text-warning nav-link'
-        %li.nav-item=link_to 'VOIP',        phones_path,   class: 'text-warning nav-link'
-        %li.nav-item=link_to 'Thank You', thankyou_path, class: 'text-warning nav-link'
-        %li.nav-item=link_to 'Resellers',   resellers_path,      class: 'text-warning nav-link'
-        -# %li.nav-item=link_to 'Test',     test_path,        class: 'text-warning nav-link'
+        %li.nav-item=link_to 'Internet',    internet_path,  class: 'text-warning nav-link'
+        %li.nav-item=link_to 'VOIP',        phones_path,    class: 'text-warning nav-link'
+        %li.nav-item=link_to 'Thank You',   thankyou_path,  class: 'text-warning nav-link'
+        %li.nav-item=link_to 'Resellers',   resellers_path, class: 'text-warning nav-link'
+        -# # %li.nav-item=link_to 'Test',     test_path,        class: 'text-warning nav-link'
 
     .container=yield
 
