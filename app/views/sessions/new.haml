@@ -1,0 +1,12 @@
+= form_for(:session, url: login_path) do |f|
+  .form-row.justify-content-center
+    .form-group.col-md-6
+      = f.label :email
+      = f.email_field :email, class: 'form-control'
+  .form-row.justify-content-center
+    .form-group.col-md-6
+      = f.label :password
+      = f.password_field :password, class: 'form-control'
+  .form-row.justify-content-center.mt-4
+    .form-group.col-md-3
+      = f.submit 'Log in', class: 'btn btn-primary w-100'

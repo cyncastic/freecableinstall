@@ -43,12 +43,22 @@
 
       %ul.nav.justify-content-center.hidden
         %li.nav-item=link_to 'Internet',    new_internet_path,  class: 'text-warning nav-link'
-        %li.nav-item=link_to 'VOIP',        phones_path,    class: 'text-warning nav-link'
-        %li.nav-item=link_to 'Thank You',   thankyou_path,  class: 'text-warning nav-link'
-        %li.nav-item=link_to 'Resellers',   resellers_path, class: 'text-warning nav-link'
+        %li.nav-item=link_to 'VOIP',        phones_path,        class: 'text-warning nav-link'
+        %li.nav-item=link_to 'Thank You',   thankyou_path,      class: 'text-warning nav-link'
+        %li.nav-item=link_to 'Resellers',   resellers_path,     class: 'text-warning nav-link'
         -# # %li.nav-item=link_to 'Test',     test_path,        class: 'text-warning nav-link'
+        - if logged_in?
+          %li.nav-item=link_to 'Logoff', logout_path, method: :delete, class: 'text-warning nav-link'
 
-    .container=yield
+    .container
+
+      - if flash[:danger]
+        .alert.alert-danger.alert-dismissible.fade.show{ role: 'alert' }
+          = flash[:danger]
+          %button.close{ 'aria-label': 'Close', 'data-dismiss': 'alert', type: 'button' }
+            %span{ 'aria-hidden': true } ×
+
+      =yield
 
     .container.partners.pt-4
       %h1.text-center.text-secondary.mt-5.mb-3 Our Partners
