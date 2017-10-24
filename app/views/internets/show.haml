@@ -1,0 +1,52 @@
+%p#notice= notice
+%p
+  %strong Cable provider:
+  = @internet.cable_provider
+%p
+  %strong Number computers:
+  = @internet.number_computers
+%p
+  %strong First name:
+  = @internet.first_name
+%p
+  %strong Last name:
+  = @internet.last_name
+%p
+  %strong Email:
+  = @internet.email
+%p
+  %strong Phone:
+  = @internet.phone
+%p
+  %strong Best time:
+  = @internet.best_time
+%p
+  %strong Best way:
+  = @internet.best_way
+%p
+  %strong Business name:
+  = @internet.business_name
+%p
+  %strong Business phone:
+  = @internet.business_phone
+%p
+  %strong Street address 1:
+  = @internet.street_address_1
+%p
+  %strong Street address 2:
+  = @internet.street_address_2
+%p
+  %strong City:
+  = @internet.city
+%p
+  %strong State:
+  = @internet.state
+%p
+  %strong Zip:
+  = @internet.zip
+%p
+  %strong Interested:
+  = @internet.interested
+= link_to 'Edit', edit_internet_path(@internet)
+|
+= link_to 'Back', internets_path

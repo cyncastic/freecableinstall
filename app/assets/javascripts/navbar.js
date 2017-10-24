@@ -3,7 +3,7 @@ var prevscroll = $(document).scrollTop();
 
 $(window).scroll(function() {
 
-  console.log(prevscroll + " / " + $(document).scrollTop());
+  // console.log(prevscroll + " / " + $(document).scrollTop());
 
   if ($(document).scrollTop() > prevscroll) {
     $('nav').addClass('shrink');

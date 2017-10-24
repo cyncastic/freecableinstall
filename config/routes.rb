@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
+
+  resources :providers
   root 'static#home'
 
-  get 'internet',    to: 'static#internet'
-  post 'internet',  to: 'static#internet'
+  # get 'internet',    to: 'static#internet'
+  resources :internets
 
   get 'phones',     to: 'static#phones'
-  post 'phones',    to: 'static#phones'
 
   get 'polycoms',  to: 'static#polycoms'
   get 'test',      to: 'static#test'

@@ -7,7 +7,6 @@
     // Disable default behavior if it aint valid
     var form = document.getElementById("needs-validation");
     if(form){
-      console.log('function called');
       form.addEventListener("submit", function(event) {
         if (form.checkValidity() == false) {
           event.preventDefault();
@@ -19,8 +18,9 @@
 
 
     // Form interactivity for #otherisp
-    $("select[name='isp']").change(function(){
-      if ($(this).val() == "Other"){
+    $("#isps select").change(function(){
+      console.log($(this).val());
+      if ($(this).val() == "4"){
         $("#otherisp").addClass("show");
       }else{
         $("#otherisp").removeClass("show");
