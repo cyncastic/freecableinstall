@@ -41,14 +41,7 @@
                 %text.logof{ x: '142', y:  '64', fill: '#FAB30E', 'font-size': '52', 'font-weight': 'bold', 'font-family': 'roboto' } F
               %text.logoname{ x:   '6', y: '128', fill: '#FAB30E', 'font-size': '37', 'font-family': 'Crete Round', 'letter-spacing': '2px;' } Free Cable Install
 
-      %ul.nav.justify-content-center.hidden
-        %li.nav-item=link_to 'Internet',    new_internet_path,  class: 'text-warning nav-link'
-        %li.nav-item=link_to 'VOIP',        phones_path,        class: 'text-warning nav-link'
-        %li.nav-item=link_to 'Thank You',   thankyou_path,      class: 'text-warning nav-link'
-        %li.nav-item=link_to 'Resellers',   resellers_path,     class: 'text-warning nav-link'
-        -# # %li.nav-item=link_to 'Test',     test_path,        class: 'text-warning nav-link'
-        - if logged_in?
-          %li.nav-item=link_to 'Logoff', logout_path, method: :delete, class: 'text-warning nav-link'
+      = render partial: '/layouts/nav'
 
     .container
 

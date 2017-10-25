@@ -1,46 +1,44 @@
 %p#notice= notice
+
 %h1 Internets
-%table
-  %thead
+
+%table.table.table-sm.table-hover
+  %thead.thead-inverse
     %tr
-      %th Cable provider
-      %th Number computers
-      %th First name
-      %th Last name
+      %th ISP
+      %th Computers
+      %th Name
       %th Email
       %th Phone
       %th Best time
       %th Best way
       %th Business name
-      %th Business phone
-      %th Street address 1
-      %th Street address 2
-      %th City
-      %th State
-      %th Zip
-      %th Interested
-      %th{:colspan => "3"}
+      -# %th Business phone
+      -# %th Street address 1
+      -# %th Street address 2
+      %th Location
+      -# %th Zip
+      %th VOIP?
+      %th
   %tbody
     - @internets.each do |internet|
       %tr
         %td= internet.cable_provider
         %td= internet.number_computers
-        %td= internet.first_name
-        %td= internet.last_name
+        %td= internet.first_name + ' ' + internet.last_name
         %td= internet.email
         %td= internet.phone
         %td= internet.best_time
         %td= internet.best_way
         %td= internet.business_name
-        %td= internet.business_phone
-        %td= internet.street_address_1
-        %td= internet.street_address_2
-        %td= internet.city
-        %td= internet.state
-        %td= internet.zip
+        -# %td= internet.business_phone
+        -# %td= internet.street_address_1
+        -# %td= internet.street_address_2
+        %td= internet.city + ', ' + internet.state
+        -# %td= internet.zip
         %td= internet.interested
-        %td= link_to 'Show', internet
-        %td= link_to 'Edit', edit_internet_path(internet)
-        %td= link_to 'Destroy', internet, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Internet', new_internet_path
+        %td
+          = link_to 'Show', internet, class: 'btn btn-warning'
+          -# = link_to 'Edit', edit_internet_path(internet)
+          = link_to 'Destroy', internet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+

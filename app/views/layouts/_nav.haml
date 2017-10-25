@@ -1,0 +1,39 @@
+%ul.nav.justify-content-center.hidden
+
+  - if logged_in?
+    %li.nav-item.dropdown
+      %a#navbarDropdown.nav-link.dropdown-toggle.text-warning{ 'aria-expanded': false, 'aria-haspopup': true, 'data-toggle': 'dropdown', href: '#', role: 'button' }
+        Internet
+      .dropdown-menu{ 'aria-labelledby': 'navbarDropdown' }
+        %a.dropdown-item=link_to 'Internet', new_internet_path,  class: 'text-warning nav-link'
+        .dropdown-divider
+        %a.dropdown-item=link_to 'Sign Ups', internets_path,  class: 'text-warning nav-link'
+        .dropdown-divider
+        %a.dropdown-item=link_to 'Providers', providers_path,  class: 'text-warning nav-link'
+  -else
+    %li.nav-item=link_to 'Internet',    new_internet_path,  class: 'text-warning nav-link'
+
+  - if logged_in?
+    %li.nav-item.dropdown
+      %a#navbarDropdown.nav-link.dropdown-toggle.text-warning{ 'aria-expanded': false, 'aria-haspopup': true, 'data-toggle': 'dropdown', href: '#', role: 'button' }
+        VOIP
+      .dropdown-menu{ 'aria-labelledby': 'navbarDropdown' }
+        %a.dropdown-item=link_to 'VOIP', phones_path, class: 'text-warning nav-link'
+        .dropdown-divider
+        %a.dropdown-item=link_to 'Sign Ups', voips_path, class: 'text-warning nav-link'
+  -else
+    %li.nav-item=link_to 'VOIP', phones_path, class: 'text-warning nav-link'
+
+  %li.nav-item=link_to 'Resellers',   resellers_path,     class: 'text-warning nav-link'
+
+  - if logged_in?
+    %li.nav-item.dropdown
+      %a#navbarDropdown.nav-link.dropdown-toggle.text-warning{ 'aria-expanded': false, 'aria-haspopup': true, 'data-toggle': 'dropdown', href: '#', role: 'button' }
+        Admin
+      .dropdown-menu{ 'aria-labelledby': 'navbarDropdown' }
+        %a.dropdown-item=link_to 'Polycoms', polycoms_path, class: 'text-warning nav-link'
+        %a.dropdown-item=link_to 'Thank You', thankyou_path, class: 'text-warning nav-link'
+        %a.dropdown-item=link_to 'Test', test_path, class: 'text-warning nav-link'
+        .dropdown-divider
+        %a.dropdown-item=link_to 'Logoff', logout_path, method: :delete, class: 'text-danger nav-link'
+
