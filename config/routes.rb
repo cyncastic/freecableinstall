@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :voips
   get 'users/new'
 
   get    '/login',   to: 'sessions#new'

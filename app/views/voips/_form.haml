@@ -1,0 +1,117 @@
+= form_with(model: voip, local: true, class: 'container', id: 'needs-validation', :html => {:novalidate => true}) do |form|
+
+  - if voip.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(voip.errors.count, "error")
+        prohibited this voip from being saved:
+      %ul
+        - voip.errors.full_messages.each do |message|
+          %li= message
+
+
+
+  %h2 Choose a Phone:
+  .card-deck
+    .card.bg-light.border-light.mb-4
+      =image_tag 'vvx-301.jpg', alt: 'polycom vvx 301', class: 'card-img-top'
+      .card-body
+        %h4.card-title
+          Polycom
+          %small.text-muted VVX 301
+        %p.card-text.lead A powerful entry-level Business Media phone for today's cubicle workers
+        %p.card-text Give your cubicle worker the best experience with this high quality UC Business Media Phone. Designed for a broad range of environments for small and medium businesses.
+      .card-footer
+        = form.label :phone_choice_vvx301, class: 'form-check-label w-100' do
+          =radio_button_tag :voip_phone_choice, 'vvx301', class: 'form-check-input', checked: false
+          VVX 301
+
+    .card.bg-light.border-light.mb-4
+      =image_tag 'vvx-401.jpg', alt: 'polycom vvx 401', class: 'card-img-top'
+      .card-body
+        %h4.card-title
+          Polycom
+          %small.text-muted VVX 401
+        %p.card-text.lead A color mid-range Business Media phone for enhanced call handling.
+        %p.card-text Give your call attendant a high-quality, cost effective UC solution that will handle their moderate  call volume and provide them with the advanced telephony features they expect from a modern media phone.
+      .card-footer
+        = form.label :phone_choice_vvx401, class: 'form-check-label w-100' do
+          =radio_button_tag :voip_phone_choice, 'vvx401', class: 'form-check-input', checked: false
+          VVX 401
+
+  .form-group
+    = form.label :number_phones, class: 'control-label required'
+    = form.number_field :number_phones, min: 1, id: :voip_number_phones, class: 'form-control', required: true
+
+  %hr/
+
+  .form-row
+    .form-group.col-md-6
+      = form.label :first_name, class: 'control-label required'
+      = form.text_field :first_name, id: :voip_first_name, class: 'form-control', required: true
+    .form-group.col-md-6
+      = form.label :last_name, class: 'control-label required'
+      = form.text_field :last_name, id: :voip_last_name, class: 'form-control', required: true
+
+
+  .form-row
+    .form-group.col-md-6
+      = form.label :email, class: 'control-label required'
+      = form.text_field :email, id: :voip_email, class: 'form-control', required: true
+    .form-group.col-md-6
+      = form.label :phone, class: 'control-label required'
+      = form.telephone_field :phone, id: :voip_phone, class: 'form-control', required: true
+
+  .form-row
+    .form-group.col-md-6
+      = form.label :best_time
+      = select_tag :best_time,
+                    options_for_select([ ['Morning', 1], ['Afternoon', 2], ['Evening', 2] ]),
+                    include_blank: 'Please Choose',
+                    class: 'form-control selectpicker'
+    .form-group.col-md-6
+      = form.label :best_way
+      = select_tag :best_way,
+                    options_for_select([ ['Phone', 1], ['Email', 2] ]),
+                    include_blank: 'Please Choose',
+                    class: 'form-control selectpicker'
+
+  %hr/
+
+  .form-group
+    = form.label :business_name, class: 'control-label required'
+    = form.text_field :business_name, id: :voip_business_name, class: 'form-control', required: true
+
+
+  .form-group
+    = form.label :street_address_1, class: 'control-label required'
+    = form.text_field :street_address_1, id: :voip_street_address_1, class: 'form-control', required: true
+  .form-group
+    = form.label :street_address_2, class: 'control-label'
+    = form.text_field :street_address_2, id: :voip_street_address_2, class: 'form-control'
+
+  .form-row
+    .form-group.col-md-6
+      = form.label :city, class: 'control-label required'
+      = form.text_field :city, id: :voip_city, class: 'form-control', required: true
+    .form-group.col-md-3
+      = form.label :state, class: 'control-label required'
+      = form.select :state, options_for_select(us_states), {}, {id: :internet_state, class: 'form-control selectpicker'}
+    .form-group.col-md-3
+      = form.label :zip, class: 'control-label required'
+      = form.text_field :zip, id: :voip_zip, class: 'form-control', required: true
+
+
+
+  .form-group
+    = form.label :also_interested, class: 'form-check-label' do
+      = form.check_box :also_interested, id: :voip_also_interested, class: 'form-check-input'
+      I Am Also Interested In A Free Cable Installation
+
+  .form-group
+    .g-recaptcha{ 'data-sitekey': '6LelDDMUAAAAAGBBqJVyTMwgh2UpnhwhGJKR6w3d' }
+    -# Captcha
+    %script{ src: 'https://www.google.com/recaptcha/api.js' }
+
+  .form-group
+    = form.submit 'Send Request', class: 'btn btn-primary btn-lg'

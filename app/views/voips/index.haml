@@ -1,0 +1,44 @@
+%p#notice= notice
+%h1 Voips
+%table
+  %thead
+    %tr
+      %th Phone choice
+      %th First name
+      %th Last name
+      %th Email
+      %th Phone
+      %th Business name
+      %th Number phones
+      %th Street address 1
+      %th Street address 2
+      %th City
+      %th State
+      %th Zip
+      %th Best time
+      %th Best way
+      %th Also interested
+      %th{:colspan => "3"}
+  %tbody
+    - @voips.each do |voip|
+      %tr
+        %td= voip.phone_choice
+        %td= voip.first_name
+        %td= voip.last_name
+        %td= voip.email
+        %td= voip.phone
+        %td= voip.business_name
+        %td= voip.number_phones
+        %td= voip.street_address_1
+        %td= voip.street_address_2
+        %td= voip.city
+        %td= voip.state
+        %td= voip.zip
+        %td= voip.best_time
+        %td= voip.best_way
+        %td= voip.also_interested
+        %td= link_to 'Show', voip
+        %td= link_to 'Edit', edit_voip_path(voip)
+        %td= link_to 'Destroy', voip, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Voip', new_voip_path
