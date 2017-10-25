@@ -28,7 +28,7 @@ class VoipsController < ApplicationController
 
     respond_to do |format|
       if @voip.save
-        format.html { redirect_to thankyou_path, notice: 'Voip was successfully created.' }
+        format.html { redirect_to thankyou_path, from: 'voip' }
         format.json { render :show, status: :created, location: @voip }
       else
         format.html { render :new }

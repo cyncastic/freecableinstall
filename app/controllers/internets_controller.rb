@@ -28,7 +28,7 @@ class InternetsController < ApplicationController
 
     respond_to do |format|
       if @internet.save
-        format.html { redirect_to @internet, notice: 'Internet was successfully created.' }
+        format.html { redirect_to thankyou_path, from: 'internet' }
         format.json { render :show, status: :created, location: @internet }
       else
         format.html { render :new }
