@@ -23,7 +23,7 @@
         %p.card-text Give your cubicle worker the best experience with this high quality UC Business Media Phone. Designed for a broad range of environments for small and medium businesses.
       .card-footer
         = form.label :phone_choice_vvx301, class: 'form-check-label w-100' do
-          =radio_button_tag :voip_phone_choice, 'vvx301', class: 'form-check-input', checked: false
+          =form.radio_button :phone_choice, 'vvx301', class: 'form-check-input', checked: false
           VVX 301
 
     .card.bg-light.border-light.mb-4
@@ -36,7 +36,7 @@
         %p.card-text Give your call attendant a high-quality, cost effective UC solution that will handle their moderate  call volume and provide them with the advanced telephony features they expect from a modern media phone.
       .card-footer
         = form.label :phone_choice_vvx401, class: 'form-check-label w-100' do
-          =radio_button_tag :voip_phone_choice, 'vvx401', class: 'form-check-input', checked: false
+          =form.radio_button :phone_choice, 'vvx401', class: 'form-check-input', checked: false
           VVX 401
 
   .form-group
@@ -65,17 +65,16 @@
   .form-row
     .form-group.col-md-6
       = form.label :best_time
-      = select_tag :best_time,
-                    options_for_select([ ['Morning', 1], ['Afternoon', 2], ['Evening', 2] ]),
-                    include_blank: 'Please Choose',
-                    class: 'form-control selectpicker'
+      = form.select :best_time,
+                    options_for_select([ ['Morning', 'Morning'], ['Afternoon', 'Afternoon'], ['Evening', 'Evening'] ]),
+                    {include_blank: 'Please Choose'},
+                    {class: 'form-control selectpicker'}
     .form-group.col-md-6
       = form.label :best_way
-      = select_tag :best_way,
-                    options_for_select([ ['Phone', 1], ['Email', 2] ]),
-                    include_blank: 'Please Choose',
-                    class: 'form-control selectpicker'
-
+      = form.select :best_way,
+                    options_for_select([ ['Phone', 'Phone'], ['Email', 'Email'] ]),
+                    {include_blank: 'Please Choose'},
+                    {class: 'form-control selectpicker'}
   %hr/
 
   .form-group

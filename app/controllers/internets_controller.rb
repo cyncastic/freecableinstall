@@ -15,7 +15,6 @@ class InternetsController < ApplicationController
   # GET /internets/new
   def new
     @internet = Internet.new
-    @providers = Provider.all
   end
 
   # GET /internets/1/edit

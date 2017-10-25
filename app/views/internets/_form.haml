@@ -2,7 +2,7 @@
   -# Show errors as needed
   - if internet.errors.any?
     #error_explanation
-      %h2
+      %h4
         = pluralize(internet.errors.count, "error")
         prohibited this internet from being saved:
       %ul
@@ -15,19 +15,17 @@
   .form-row
     .form-group.col-md-6
       = form.label :cable_provider, class: 'control-label required'
-      #isps= form.collection_select :cable_provider,
-                                @providers,
-                                :id, :name,  { prompt: true } ,
-                                { class: 'form-control selectpicker' }
+      #isps= form.collection_select :cable_provider, Provider.all, :id, :name,  { prompt: true }, { class: 'form-control selectpicker' }
 
 
     .form-group.col-md-6
       = form.label :number_computers
       -# = form.range_field :number_computers, id: :internet_number_computers, in:1..50, class: 'form-control'
-      = select_tag :number_computers,
+      = form.select :number_computers,
                     options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 5] ]),
-                    include_blank: 'Please Choose',
-                    class: 'form-control selectpicker'
+                    { include_blank: 'Please Choose' },
+                    { class: 'form-control selectpicker'}
+
 
     .form-group.col-md-6#otherisp.collapse
       %input.form-control{ name: 'other', placeholder:  'Other Provider', type: 'email', placeholder: '' }/
@@ -53,19 +51,24 @@
     = form.label :phone, class: 'control-label required'
     = form.telephone_field :phone, id: :internet_phone, class: 'form-control', required: true
 
-  .form-row
+ .form-row
     .form-group.col-md-6
       = form.label :best_time
-      = select_tag :best_time,
-                    options_for_select([ ['Morning', 1], ['Afternoon', 2], ['Evening', 2] ]),
-                    include_blank: 'Please Choose',
-                    class: 'form-control selectpicker'
+      = form.select :best_time,
+                    options_for_select([ ['Morning', 'Morning'], ['Afternoon', 'Afternoon'], ['Evening', 'Evening'] ]),
+                    {include_blank: 'Please Choose'},
+                    {class: 'form-control selectpicker'}
     .form-group.col-md-6
       = form.label :best_way
-      = select_tag :best_way,
-                    options_for_select([ ['Phone', 1], ['Email', 2] ]),
-                    include_blank: 'Please Choose',
-                    class: 'form-control selectpicker'
+      = form.select :best_way,
+                    options_for_select([ ['Phone', 'Phone'], ['Email', 'Email'] ]),
+                    {include_blank: 'Please Choose'},
+                    {class: 'form-control selectpicker'}
+
+
+
+
+
 
   %hr/
 

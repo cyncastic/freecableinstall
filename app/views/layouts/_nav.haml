@@ -18,11 +18,11 @@
       %a#navbarDropdown.nav-link.dropdown-toggle.text-warning{ 'aria-expanded': false, 'aria-haspopup': true, 'data-toggle': 'dropdown', href: '#', role: 'button' }
         VOIP
       .dropdown-menu{ 'aria-labelledby': 'navbarDropdown' }
-        %a.dropdown-item=link_to 'VOIP', phones_path, class: 'text-warning nav-link'
+        %a.dropdown-item=link_to 'VOIP', new_voip_path, class: 'text-warning nav-link'
         .dropdown-divider
         %a.dropdown-item=link_to 'Sign Ups', voips_path, class: 'text-warning nav-link'
   -else
-    %li.nav-item=link_to 'VOIP', phones_path, class: 'text-warning nav-link'
+    %li.nav-item=link_to 'VOIP', new_voip_path, class: 'text-warning nav-link'
 
   %li.nav-item=link_to 'Resellers',   resellers_path,     class: 'text-warning nav-link'
 
