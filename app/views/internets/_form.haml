@@ -12,26 +12,53 @@
   -# Begnining of form
     -# <%= f.select :country_id, grouped_options_for_select(@continents.map{ |group| [group.name, group.countries.map{ |c| [c.name, c.id, {'data-currency_code'=>c.currency_code}] } ] }, selected_key = f.object.country_id) %>
 
+  .form-group
+    = form.label :cable_provider, class: 'control-label required'
+    #isps= form.select :cable_provider_id,
+                options_for_select(Provider.all.map { |obj| [obj['name'], obj['id']] } + [['Other', 999]] ),
+                 { prompt: true, }, { class: 'form-control selectpicker' }
+
+  .form-group#otherisp.collapse
+    %input.form-control{ name: 'other', placeholder:  'Other Provider' }/
+    %small.form-text.text-muted Please provide the name of the ISP if it is not on the above list.
+
+
   .form-row
-    .form-group.col-md-6
-      = form.label :cable_provider, class: 'control-label required'
-      #isps= form.collection_select :cable_provider, Provider.all, :id, :name,  { prompt: true }, { class: 'form-control selectpicker' }
-
-
-    .form-group.col-md-6
-      = form.label :number_computers
+    .from-group.col-md-4
+      = form.label :want_internet, class: 'form-check-label' do
+        = form.check_box :want_internet, id: :internet_want_internet, class: 'form-check-input'
+        Internet
+      -# = form.label :number_computers
       -# = form.range_field :number_computers, id: :internet_number_computers, in:1..50, class: 'form-control'
       = form.select :number_computers,
                     options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 5] ]),
-                    { include_blank: 'Please Choose' },
-                    { class: 'form-control selectpicker'}
+                    { include_blank: 'Number of Computers' },
+                    { class: 'form-control selectpicker collapse', id: :number_computers}
+
+    .from-group.col-md-4
+      = form.label :want_television, class: 'form-check-label' do
+        = form.check_box :want_television, id: :internet_want_television, class: 'form-check-input'
+        Television
+      -# = form.label :number_televisions
+      -# = form.range_field :number_computers, id: :internet_number_computers, in:1..50, class: 'form-control'
+      = form.select :number_televisions,
+                    options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 5] ]),
+                    { include_blank: 'Number of Televisions' },
+                    { class: 'form-control selectpicker collapse', id: :number_televisions}
+
+    .from-group.col-md-4
+      = form.label :want_phone, class: 'form-check-label' do
+        = form.check_box :want_phone, id: :internet_want_phone, class: 'form-check-input'
+        Phones
+      -# = form.label :number_phones, 'adsf'
+      -# = form.range_field :number_computers, id: :internet_number_computers, in:1..50, class: 'form-control'
+      = form.select :number_phones,
+                    options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 5] ]),
+                    { include_blank: 'Number of Phones' },
+                    { class: 'form-control selectpicker collapse' , id: :number_phones}
 
 
-    .form-group.col-md-6#otherisp.collapse
-      %input.form-control{ name: 'other', placeholder:  'Other Provider', type: 'email', placeholder: '' }/
-      %small.form-text.text-muted Please provide the name of the ISP if it is not on the above list.
-
-  %hr/
+  %hr.my-5/
 
   .form-row
     .form-group.col-md-6
@@ -65,12 +92,7 @@
                     {include_blank: 'Please Choose'},
                     {class: 'form-control selectpicker'}
 
-
-
-
-
-
-  %hr/
+  %hr.my-5/
 
   .form-group
     = form.label :business_name, class: 'control-label required'
@@ -95,7 +117,6 @@
       = form.label :state, class: 'control-label required'
       = form.select :state, options_for_select(us_states), {}, {id: :internet_state, class: 'form-control selectpicker'}
 
-
     .form-group.col-md-3
       = form.label :zip, class: 'control-label required'
       = form.text_field :zip, id: :internet_zip, class: 'form-control'
@@ -105,10 +126,10 @@
       = form.check_box :interested, id: :internet_interested, class: 'form-check-input'
       I Am Also Interested In A Free Telephone System
 
-  .form-group
-    .g-recaptcha{ 'data-sitekey': '6LelDDMUAAAAAGBBqJVyTMwgh2UpnhwhGJKR6w3d' }
-    -# Captcha
-    %script{ src: 'https://www.google.com/recaptcha/api.js' }
+  -# .form-group
+  -#   .g-recaptcha{ 'data-sitekey': '6LelDDMUAAAAAGBBqJVyTMwgh2UpnhwhGJKR6w3d' }
+  -#   -# Captcha
+  -#   %script{ src: 'https://www.google.com/recaptcha/api.js' }
 
   .form-group
     = form.submit 'Send Request', class: 'btn btn-info btn-lg'

@@ -2,7 +2,7 @@
 
 %h1 VOIP Sign Ups
 
-%table.table.table-sm.table-hover
+%table.table.table.table-hover
   %thead.thead-inverse
     %tr
       %th Phone
@@ -15,27 +15,27 @@
       -# %th Street address 2
       %th Location
       -# %th Zip
-      %th Best time
-      %th Best way
+      -# %th Best time
+      -# %th Best way
       %th ISP?
-      %th
+      %th{ style: 'width: 1%; white-space: no-wrap;' }
   %tbody
     - @voips.each do |voip|
       %tr
         %td= voip.phone_choice
         %td= voip.number_phones
-        %td= voip.first_name + ' ' + voip.last_name
-        %td= voip.email
-        %td= voip.phone
+        %td= link_to voip.first_name + ' ' + voip.last_name, voip
+        %td= mail_to voip.email
+        %td= tel_to voip.phone
         %td= voip.business_name
         -# %td= voip.street_address_1
         -# %td= voip.street_address_2
         %td= voip.city + ', ' + voip.state
         -# %td= voip.zip
-        %td= voip.best_time
-        %td= voip.best_way
+        -# %td= voip.best_time
+        -# %td= voip.best_way
         %td= voip.also_interested
         %td
-          = link_to 'Show', voip, class: 'btn btn-warning'
+          -# = link_to 'Show', voip, class: 'btn btn-warning btn-sm'
           -# = link_to 'Edit', edit_voip_path(voip)
-          = link_to 'Destroy', voip, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+          = link_to 'Destroy', voip, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'

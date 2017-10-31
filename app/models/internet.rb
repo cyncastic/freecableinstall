@@ -1,6 +1,7 @@
 class Internet < ApplicationRecord
+  has_one :provider
 
-  validates :cable_provider, presence: true
+  validates :cable_provider_id, presence: true
   validates :number_computers, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true

@@ -15,6 +15,7 @@ class InternetsController < ApplicationController
   # GET /internets/new
   def new
     @internet = Internet.new
+    @provideroptions = Provider.all
   end
 
   # GET /internets/1/edit
@@ -69,6 +70,6 @@ class InternetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def internet_params
-      params.require(:internet).permit(:cable_provider, :number_computers, :first_name, :last_name, :email, :phone, :best_time, :best_way, :business_name, :business_phone, :street_address_1, :street_address_2, :city, :state, :zip, :interested)
+      params.require(:internet).permit(:cable_provider_id, :number_computers, :first_name, :last_name, :email, :phone, :best_time, :best_way, :business_name, :business_phone, :street_address_1, :street_address_2, :city, :state, :zip, :interested)
     end
 end

@@ -2,43 +2,46 @@
 
 %h1 Internets
 
-%table.table.table-sm.table-hover
+%table.table.table.table-hover
   %thead.thead-inverse
     %tr
       %th ISP
       %th Computers
+      %th VOIP?
       %th Name
       %th Email
       %th Phone
-      %th Best time
-      %th Best way
+      -# %th Best time
+      -# %th Best way
       %th Business name
       -# %th Business phone
       -# %th Street address 1
       -# %th Street address 2
       %th Location
       -# %th Zip
-      %th VOIP?
-      %th
+      %th{ style: 'width: 1%; white-space: no-wrap;' }
   %tbody
     - @internets.each do |internet|
       %tr
-        %td= internet.cable_provider
+        %td= internet.cable_provider_id
         %td= internet.number_computers
-        %td= internet.first_name + ' ' + internet.last_name
-        %td= internet.email
-        %td= internet.phone
-        %td= internet.best_time
-        %td= internet.best_way
+        %td= internet.interested
+        %td= link_to internet.first_name + ' ' + internet.last_name, internet
+        -# %td= internet.first_name + ' ' + internet.last_name
+        %td= mail_to internet.email
+        %td= tel_to internet.phone
+        -# %td= internet.best_time
+        -# %td= internet.best_way
         %td= internet.business_name
         -# %td= internet.business_phone
         -# %td= internet.street_address_1
         -# %td= internet.street_address_2
         %td= internet.city + ', ' + internet.state
         -# %td= internet.zip
-        %td= internet.interested
         %td
-          = link_to 'Show', internet, class: 'btn btn-warning'
+          -# = link_to 'Show', internet, class: 'btn btn-warning'
           -# = link_to 'Edit', edit_internet_path(internet)
-          = link_to 'Destroy', internet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+          = link_to 'Destroy', internet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'
+
+
 

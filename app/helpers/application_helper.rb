@@ -16,4 +16,9 @@ module ApplicationHelper
     content_for(:meta_canonical) { canonical_text }
   end
 
+  def tel_to(text)
+    groups = text.to_s.scan(/(?:^\+)?\d+/)
+    link_to text, "tel:#{groups.join '-'}"
+  end
+
 end
