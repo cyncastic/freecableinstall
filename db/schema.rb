@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171031161804) do
+ActiveRecord::Schema.define(version: 20171102203032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,14 +33,12 @@ ActiveRecord::Schema.define(version: 20171031161804) do
     t.boolean "interested"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "provider_id"
-    t.integer "cable_provider_id"
     t.boolean "want_internet"
     t.boolean "want_television"
     t.boolean "want_phone"
     t.integer "number_televisions"
     t.integer "number_phones"
-    t.index ["provider_id"], name: "index_internets_on_provider_id"
+    t.integer "provider_id"
   end
 
   create_table "providers", force: :cascade do |t|

@@ -70,7 +70,7 @@ class InternetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def internet_params
-      params.require(:internet).permit(:cable_provider_id,
+      params.require(:internet).permit(:provider_id,
                                        :first_name, :last_name,
                                        :email,
                                        :phone,

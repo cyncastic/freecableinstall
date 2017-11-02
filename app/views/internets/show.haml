@@ -1,10 +1,7 @@
 -# = link_to 'Back', internets_path
 %h1
-  = @internet.first_name + ' ' + @internet.last_name
-  = ' – ' + @internet.business_name unless @internet.business_name == ''
-%hr/
-
-%p= 'Wants ' + @internet.cable_provider_id.to_s + ' for ' + @internet.number_computers.to_s + ' computers. '
+  = @internet.provider.name + ' order for ' + @internet.first_name + ' ' + @internet.last_name
+  = ' at ' + @internet.business_name unless @internet.business_name == ''
 
 %ul
   %li=@internet.want_internet

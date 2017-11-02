@@ -21,7 +21,7 @@
   %tbody
     - @internets.each do |internet|
       %tr
-        %td= internet.cable_provider_id
+        %td= internet.provider.name
         %td= internet.number_computers
         %td= internet.interested
         %td= link_to internet.first_name + ' ' + internet.last_name, internet
