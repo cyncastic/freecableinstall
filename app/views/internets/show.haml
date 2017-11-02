@@ -3,13 +3,16 @@
   = @internet.provider.name + ' order for ' + @internet.first_name + ' ' + @internet.last_name
   = ' at ' + @internet.business_name unless @internet.business_name == ''
 
-%ul
-  %li=@internet.want_internet
-  %li=@internet.number_computers
-  %li=@internet.want_television
-  %li=@internet.number_televisions
-  %li=@internet.want_phone
-  %li=@internet.number_phones
+%dl.row.p-2
+  - if @internet.want_internet
+    %dt.col-sm-1 Computers:
+    %dd.col-sm-11= @internet.number_computers
+  - if @internet.want_television
+    %dt.col-sm-1 Televisions
+    %dd.col-sm-11=@internet.number_televisions
+  - if @internet.want_phone
+    %dt.col-sm-1 Phones
+    %dd.col-sm-11=@internet.number_phones
 
 %p
   Is
