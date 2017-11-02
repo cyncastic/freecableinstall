@@ -30,18 +30,8 @@
       %header
         .text-center
           -# =link_to image_tag('logo2.png'), root_path
-          %a{ href: '/' }
-            %svg{ version: '1.1', viewbox: '0 0 310 130', width: '310', height: '130' }
-              %rect{ x: '115', y:   '5', fill: 'NONE', width: '80', height: '80', stroke: 'black', 'stroke-width': '0' }
-              %g.logobox{ 'stroke-width': '5', fill: 'none' }
-                %polyline{ points: '114,35  114,4  145,4', stroke: '#E9572C' }
-                %polyline{ points: '165,4  196,4  196,35', stroke: '#89C138' }
-                %polyline{ points: '196,55  196,86  165,86', stroke: '#4CBFD8' }
-                %polyline{ points: '145,86  114,86  114,55', stroke: '#69C7B5' }
-                %text.logof{ x: '142', y:  '64', fill: '#FAB30E', 'font-size': '52', 'font-weight': 'bold', 'font-family': 'roboto' } F
-              %text.logoname{ x:   '6', y: '128', fill: '#FAB30E', 'font-size': '37', 'font-family': 'Crete Round', 'letter-spacing': '2px;' } Free Cable Install
-
-      = render partial: '/layouts/nav'
+          %a{ href: '/' }= render partial: '/layouts/svglogo'
+        = render partial: '/layouts/nav'
 
     .container
 
@@ -51,25 +41,12 @@
           %button.close{ 'aria-label': 'Close', 'data-dismiss': 'alert', type: 'button' }
             %span{ 'aria-hidden': true } ×
 
+      - if notice
+        .alert.alert-success{ role: 'alert' }= notice
+
       =yield
 
-    .container.partners.pt-4
-      %h1.text-center.text-secondary.mt-5.mb-3 Our Partners
-      %ul.d-flex.justify-content-around.flex-wrap
-        %li=image_tag 'logos/polycom.svg', alt: 'Polycom'
-        %li=image_tag 'logos/verizon.svg', alt: 'Verizon'
-        %li=image_tag 'logos/charter-spectrum.svg', alt: 'Spectrum'
-        %li=image_tag 'logos/optimum.svg', alt: 'Optimum'
-        %li=image_tag 'logos/att.svg', alt: 'AT&am;T'
-        -# %li=image_tag 'logos/centurylink.svg', alt: 'Centrury Link'
-        -# %li=image_tag 'logos/cogent.svg', alt: 'Cogent'
-        %li=image_tag 'logos/comcast.svg', alt: 'Comcast'
-        -# %li=image_tag 'logos/cox.svg', alt: 'Cox'
-        -# %li=image_tag 'logos/frontier-auth.svg', alt: 'Frontier'
-        -# %li=image_tag 'logos/lightpath.svg', alt: 'Lightpath'
-        -# %li=image_tag 'logos/mediacom.svg', alt: 'Mediacom'
-        -# %li=image_tag 'logos/rcn.svg', alt: 'RCN'
-        -# %li=image_tag 'logos/xfinity.svg', alt: 'Xfinity'
+    .container.partners.pt-4= render partial: '/layouts/partners'
 
     %footer.mt-5
       .container

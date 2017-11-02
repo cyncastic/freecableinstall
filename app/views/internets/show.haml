@@ -1,52 +1,45 @@
-%p#notice= notice
+-# = link_to 'Back', internets_path
+%h1
+  = @internet.first_name + ' ' + @internet.last_name
+  = ' – ' + @internet.business_name unless @internet.business_name == ''
+%hr/
+
+%p= 'Wants ' + @internet.cable_provider_id.to_s + ' for ' + @internet.number_computers.to_s + ' computers. '
+
+%ul
+  %li=@internet.want_internet
+  %li=@internet.number_computers
+  %li=@internet.want_television
+  %li=@internet.number_televisions
+  %li=@internet.want_phone
+  %li=@internet.number_phones
+
 %p
-  %strong Cable provider:
-  = @internet.cable_provider_id
-%p
-  %strong Number computers:
-  = @internet.number_computers
-%p
-  %strong First name:
-  = @internet.first_name
-%p
-  %strong Last name:
-  = @internet.last_name
-%p
-  %strong Email:
-  = @internet.email
-%p
-  %strong Phone:
-  = @internet.phone
-%p
-  %strong Best time:
-  = @internet.best_time
-%p
-  %strong Best way:
-  = @internet.best_way
-%p
-  %strong Business name:
-  = @internet.business_name
-%p
-  %strong Business phone:
-  = @internet.business_phone
-%p
-  %strong Street address 1:
-  = @internet.street_address_1
-%p
-  %strong Street address 2:
-  = @internet.street_address_2
-%p
-  %strong City:
-  = @internet.city
-%p
-  %strong State:
-  = @internet.state
-%p
-  %strong Zip:
-  = @internet.zip
-%p
-  %strong Interested:
-  = @internet.interested
-= link_to 'Edit', edit_internet_path(@internet)
-|
-= link_to 'Back', internets_path
+  Is
+  = ' NOT ' unless @internet.interested
+  intersested in VOIP.
+
+%hr/
+
+.row
+  .col-md-6
+    %h2 Contact
+    %ul.list-unstyled
+      %li= @internet.first_name + ' ' + @internet.last_name
+      %li= mail_to @internet.email
+      %li= tel_to @internet.phone
+
+  .col-md-6
+    %h2 Business Info
+    %ul.list-unstyled
+      %li= @internet.business_name
+      %li= @internet.business_phone
+      %li= @internet.street_address_1
+      - unless  @internet.street_address_2 == ''
+        %li= @internet.street_address_2
+      %li= @internet.city + ', ' + @internet.state + ' ' + @internet.zip
+
+%hr/
+
+= link_to 'Edit', edit_internet_path(@internet), class: 'btn btn-success'
+= link_to 'Destroy', @internet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'

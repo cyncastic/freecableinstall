@@ -10,11 +10,10 @@
           %li= message
 
   -# Begnining of form
-    -# <%= f.select :country_id, grouped_options_for_select(@continents.map{ |group| [group.name, group.countries.map{ |c| [c.name, c.id, {'data-currency_code'=>c.currency_code}] } ] }, selected_key = f.object.country_id) %>
 
   .form-group
-    = form.label :cable_provider, class: 'control-label required'
-    #isps= form.select :cable_provider_id,
+    = form.label :cable_provider_id, class: 'control-label required'
+    #isps= form.select :provider_id,
                 options_for_select(Provider.all.map { |obj| [obj['name'], obj['id']] } + [['Other', 999]] ),
                  { prompt: true, }, { class: 'form-control selectpicker' }
 
@@ -28,34 +27,28 @@
       = form.label :want_internet, class: 'form-check-label' do
         = form.check_box :want_internet, id: :internet_want_internet, class: 'form-check-input'
         Internet
-      -# = form.label :number_computers
-      -# = form.range_field :number_computers, id: :internet_number_computers, in:1..50, class: 'form-control'
       = form.select :number_computers,
                     options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 5] ]),
-                    { include_blank: 'Number of Computers' },
-                    { class: 'form-control selectpicker collapse', id: :number_computers}
+                    { prompt: 'Number of Computers' },
+                    { class: 'form-control selectpicker collapse', id: :internet_number_computers}
 
     .from-group.col-md-4
       = form.label :want_television, class: 'form-check-label' do
         = form.check_box :want_television, id: :internet_want_television, class: 'form-check-input'
         Television
-      -# = form.label :number_televisions
-      -# = form.range_field :number_computers, id: :internet_number_computers, in:1..50, class: 'form-control'
       = form.select :number_televisions,
                     options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 5] ]),
-                    { include_blank: 'Number of Televisions' },
-                    { class: 'form-control selectpicker collapse', id: :number_televisions}
+                    { prompt: 'Number of Televisions' },
+                    { class: 'form-control selectpicker collapse', id: :internet_number_televisions}
 
     .from-group.col-md-4
       = form.label :want_phone, class: 'form-check-label' do
         = form.check_box :want_phone, id: :internet_want_phone, class: 'form-check-input'
         Phones
-      -# = form.label :number_phones, 'adsf'
-      -# = form.range_field :number_computers, id: :internet_number_computers, in:1..50, class: 'form-control'
       = form.select :number_phones,
                     options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 5] ]),
-                    { include_blank: 'Number of Phones' },
-                    { class: 'form-control selectpicker collapse' , id: :number_phones}
+                    { prompt: 'Number of Phones' },
+                    { class: 'form-control selectpicker collapse' , id: :internet_number_phones}
 
 
   %hr.my-5/

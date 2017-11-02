@@ -27,32 +27,51 @@
       }
     });
 
+
+
     $("#internet_want_internet").change(function(){
       console.log($(this).val());
       if ($(this).is(':checked')){
-        $("#number_computers").addClass("show");
+        $("#internet_number_computers").addClass("show");
       }else{
-        $("#number_computers").removeClass("show");
+        $("#internet_number_computers").removeClass("show");
       }
     });
+
+    if ($("#internet_want_internet").is(':checked')){
+      console.log('checkededed');
+      $("#internet_number_computers").addClass("show");
+    }
+
 
     $("#internet_want_television").change(function(){
       console.log($(this).val());
       if ($(this).is(':checked')){
-        $("#number_televisions").addClass("show");
+        $("#internet_number_televisions").addClass("show");
       }else{
-        $("#number_televisions").removeClass("show");
+        $("#internet_number_televisions").removeClass("show");
       }
     });
+
+    if ($("#internet_want_television").is(':checked')){
+      console.log('checkededed');
+      $("#internet_number_televisions").addClass("show");
+    }
+
 
     $("#internet_want_phone").change(function(){
       console.log($(this).val());
       if ($(this).is(':checked')){
-        $("#number_phones").addClass("show");
+        $("#internet_number_phones").addClass("show");
       }else{
-        $("#number_phones").removeClass("show");
+        $("#internet_number_phones").removeClass("show");
       }
     });
+
+    if ($("#internet_want_phone").is(':checked')){
+      console.log('checkededed');
+      $("#internet_number_phones").addClass("show");
+    }
 
 
   });
