@@ -1,48 +1,35 @@
+-# = link_to 'Back', voips_path
+
+%h1
+  = 'Maxsip Order for ' + @voip.first_name + ' ' + @voip.last_name + ' ' + 'at ' + @voip.business_name
 %p
-  %strong Phone choice:
-  = @voip.phone_choice
-%p
-  %strong First name:
-  = @voip.first_name
-%p
-  %strong Last name:
-  = @voip.last_name
-%p
-  %strong Email:
-  = @voip.email
-%p
-  %strong Phone:
-  = @voip.phone
-%p
-  %strong Business name:
-  = @voip.business_name
-%p
-  %strong Number phones:
-  = @voip.number_phones
-%p
-  %strong Street address 1:
-  = @voip.street_address_1
-%p
-  %strong Street address 2:
-  = @voip.street_address_2
-%p
-  %strong City:
-  = @voip.city
-%p
-  %strong State:
-  = @voip.state
-%p
-  %strong Zip:
-  = @voip.zip
-%p
-  %strong Best time:
-  = @voip.best_time
-%p
-  %strong Best way:
-  = @voip.best_way
-%p
-  %strong Also interested:
-  = @voip.also_interested
-= link_to 'Edit', edit_voip_path(@voip)
-|
-= link_to 'Back', voips_path
+  Is
+  = ' NOT ' unless @voip.also_interested
+  intersested in Internet.
+
+%hr/
+
+.row
+  .col-md-6
+    %h2 Contact
+    %ul.list-unstyled
+      %li= @voip.first_name + ' ' + @voip.last_name
+      %li= mail_to @voip.email
+      %li= tel_to @voip.phone
+
+    %p.mt-4= 'Best to contact by ' + @voip.best_way + ' in the ' + @voip.best_time
+
+  .col-md-6
+    %h2 Business Info
+    %ul.list-unstyled
+      %li= @voip.business_name
+      %li= tel_to @voip.business_phone
+      %li= @voip.street_address_1
+      - unless  @voip.street_address_2 == ''
+        %li= @voip.street_address_2
+      %li= @voip.city + ', ' + @voip.state + ' ' + @voip.zip
+
+%hr/
+
+= link_to 'Edit', edit_voip_path(@voip), class: 'btn btn-success'
+= link_to 'Destroy', @voip, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'

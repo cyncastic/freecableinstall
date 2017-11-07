@@ -75,6 +75,7 @@ class VoipsController < ApplicationController
                                    :email,
                                    :phone,
                                    :business_name,
+                                   :business_phone,
                                    :number_phones,
                                    :street_address_1,
                                    :street_address_2,

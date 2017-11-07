@@ -1,13 +1,12 @@
 %h1 VOIP Sign Ups
 
-%table.table.table.table-hover
+%table.table.table-hover.w-100
   %thead.thead-inverse
     %tr
-      %th Phone
-      %th Number
+      %th Order
       %th Name
-      %th Email
-      %th Phone
+      -# %th Email
+      -# %th Phone
       %th Business
       -# %th Street address 1
       -# %th Street address 2
@@ -15,16 +14,17 @@
       -# %th Zip
       -# %th Best time
       -# %th Best way
-      %th ISP?
+      -# %th ISP?
       %th{ style: 'width: 1%; white-space: no-wrap;' }
   %tbody
     - @voips.each do |voip|
       %tr
-        %td= voip.phone_choice
-        %td= voip.number_phones
+        %td
+          = voip.number_phones.to_s + ' ' + voip.phone_choice
+          = 's' if voip.number_phones > 1
         %td= link_to voip.first_name + ' ' + voip.last_name, voip
-        %td= mail_to voip.email
-        %td= tel_to voip.phone
+        -# %td= mail_to voip.email
+        -# %td= tel_to voip.phone
         %td= voip.business_name
         -# %td= voip.street_address_1
         -# %td= voip.street_address_2
@@ -32,7 +32,7 @@
         -# %td= voip.zip
         -# %td= voip.best_time
         -# %td= voip.best_way
-        %td= voip.also_interested
+        -# %td= voip.also_interested
         %td
           -# = link_to 'Show', voip, class: 'btn btn-warning btn-sm'
           -# = link_to 'Edit', edit_voip_path(voip)

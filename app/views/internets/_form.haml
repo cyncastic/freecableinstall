@@ -1,4 +1,4 @@
-= form_with(model: internet, local: true, class: 'container', id: 'needs-validation', :html => {:novalidate => true}) do |form|
+= form_with(model: internet, local: true, class: 'container', id: 'needs-validation', html: { novalidate: true } ) do |form|
   -# Show errors as needed
   - if internet.errors.any?
     #error_explanation
@@ -13,9 +13,11 @@
 
   .form-group
     = form.label :provider_id, class: 'control-label required'
-    #isps= form.select :provider_id,
+    #isps
+      = form.select :provider_id,
                 options_for_select(Provider.all.map { |obj| [obj['name'], obj['id']] } + [['Other', 999]] ),
-                 { prompt: true, }, { class: 'form-control selectpicker' }
+                 { prompt: true, }, { class: 'form-control selectpicker', required: true }
+      .invalid-feedback Please provide the Business Name
 
   .form-group#otherisp.collapse
     %input.form-control{ name: 'other', placeholder:  'Other Provider' }/
@@ -66,10 +68,12 @@
   .form-group
     = form.label :email, class: 'control-label required'
     = form.email_field :email, id: :internet_email, class: 'form-control', required: true
+    .invalid-feedback Please provide your Email Address
 
   .form-group
     = form.label :phone, class: 'control-label required'
     = form.telephone_field :phone, id: :internet_phone, class: 'form-control', required: true
+    .invalid-feedback Please provide your Telephone Number
 
   .form-row
     .form-group.col-md-6
@@ -89,15 +93,18 @@
 
   .form-group
     = form.label :business_name, class: 'control-label required'
-    = form.text_field :business_name, id: :internet_business_name, class: 'form-control'
+    = form.text_field :business_name, id: :internet_business_name, class: 'form-control', required: true
+    .invalid-feedback Please provide the Business Name
 
   .form-group
     = form.label :business_phone, class: 'control-label required'
-    = form.telephone_field :business_phone, id: :internet_business_phone, class: 'form-control'
+    = form.telephone_field :business_phone, id: :internet_business_phone, class: 'form-control', required: true
+    .invalid-feedback Please provide the Business Phone Number
 
   .form-group
     = form.label :street_address_1, class: 'control-label required'
-    = form.text_field :street_address_1, id: :internet_street_address_1, class: 'form-control'
+    = form.text_field :street_address_1, id: :internet_street_address_1, class: 'form-control', required: true
+    .invalid-feedback Please provide the Business Address
   .form-group
     = form.label :street_address_2
     = form.text_field :street_address_2, id: :internet_street_address_2, class: 'form-control'
@@ -105,14 +112,16 @@
   .form-row
     .form-group.col-md-6
       = form.label :city, class: 'control-label required'
-      = form.text_field :city, id: :internet_city, class: 'form-control'
+      = form.text_field :city, id: :internet_city, class: 'form-control', required: true
+      .invalid-feedback Please provide the Business City
     .form-group.col-md-3
       = form.label :state, class: 'control-label required'
-      = form.select :state, options_for_select(us_states), {}, {id: :internet_state, class: 'form-control selectpicker'}
-
+      = form.select :state, options_for_select(us_states), {}, {id: :internet_state, class: 'form-control selectpicker', required: true}
+      .invalid-feedback Please provide the Business State
     .form-group.col-md-3
       = form.label :zip, class: 'control-label required'
-      = form.text_field :zip, id: :internet_zip, class: 'form-control'
+      = form.text_field :zip, id: :internet_zip, class: 'form-control', required: true
+      .invalid-feedback Please provide the Business Zip Code
 
   .form-group
     = form.label :interested, class: 'form-check-label' do
