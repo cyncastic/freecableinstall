@@ -20,5 +20,6 @@ Rails.application.routes.draw do
   get 'test',      to: 'static#test'
   get 'resellers', to: 'static#resellers'
   get 'thankyou',  to: 'static#thankyou'
+  get 'admin',  to: 'static#admin'
 
 end

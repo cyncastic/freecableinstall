@@ -1,0 +1,16 @@
+%p This is the admin home page.  One day there will be useful things here.  Have two links.
+
+.list-group
+
+  = link_to internets_path, class: 'list-group-item list-group-item-action' do
+    Internet Signups
+    .badge.badge-pill.badge-info= Internet.all.length
+
+  = link_to voips_path, class: 'list-group-item list-group-item-action' do
+    VOIP Signups
+    .badge.badge-pill.badge-info= Voip.all.length
+
+  %a.list-group-item.list-group-item-action.disabled{ href: '#' }
+    Unchecked Orders
+    .badge.badge-pill.badge-secondary 0
+
