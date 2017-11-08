@@ -11,19 +11,19 @@
 
 .card-deck
   .card.bg-light.border-light.mb-4
-    =link_to internets_path do
+    =link_to new_internet_path do
       =image_tag 'internet.jpg', class: 'card-img-top', alt: 'Sign up for free internet installation.'
     .card-body
       %h4.card-title Internet
       %p.card-text.lead.tandcapply Order Now:  Internet, TV, and Telephone services, from your local provider with no installation charge.
     .card-footer
-      =link_to "Sign Up", internets_path, class: 'btn btn-info btn-lg w-100'
+      =link_to "Sign Up", new_internet_path, class: 'btn btn-info btn-lg w-100'
   .card.bg-light.border-light.mb-4
-    =link_to phones_path do
+    =link_to new_voip_path do
       =image_tag 'polycom.jpg', class: 'card-img-top', alt: 'Sign up for free Polycom VVX Business Class Phones.'
     .card-body
       %h4.card-title VOIP
       %p.card-text.lead.tandcapply Order Now: Free business telephone system (Hosted PBX).
       %a.text-center{ href: 'http://www.polycom.com/vvx' }=image_tag 'logos/polycomlogo.png'
     .card-footer
-      =link_to 'Sign Up', phones_path, class: 'btn btn-info btn-lg w-100'
+      =link_to 'Sign Up', new_voip_path, class: 'btn btn-info btn-lg w-100'
