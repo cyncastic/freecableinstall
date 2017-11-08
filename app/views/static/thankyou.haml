@@ -2,4 +2,14 @@
   .container
     %h1.display-4 Thank you for your inquiry!
     %p.lead  One of our account managers will be in touch with you shortly.
-    %p If you are also interested in {Internet | Phones } please click <a href="#">here</a>.
+
+    - if params[:from] == 'internet'
+      %p
+        If you are also interested in a free telephone system for your business, please
+        =link_to 'click here', new_voip_path, class: 'text-white'
+
+    - if params[:from] == 'voip'
+      %p
+        If you are also interested in a free internet installation for your business, please
+        =link_to 'click here', new_internet_path, class: 'text-white'
+

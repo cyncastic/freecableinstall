@@ -6,7 +6,6 @@ class StaticController < ApplicationController
   end
 
   def test
-    @provideroptions = Provider.all
   end
 
   def thankyou

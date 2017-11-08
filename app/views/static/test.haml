@@ -1,16 +1,4 @@
-- title 'Test Page'
-- meta_description 'Complete Business Internet and Telephone (Hosted PBX) Solutions!'
-- meta_keywords 'Polycom, VVX, business media phone, Polycom phones, Polycom VVX phones, VVX 500, VVX 1500, VVX 1500D,  VVX series'
-- meta_canonical 'http://freecableinstall.com/test'
-
-= @provideroptions.all.each {|e| puts e.inspect }
 
 %hr.my-5/
 
-=options_for_select(@provideroptions.map { |obj| [obj['name'], obj['id']] } + [['Other', 999]] )
-
-
-%hr.my-5/
-
-=options_for_select( [['1-5', 1]])
-
+.alert.alert-dark= request.env["HTTP_REFERER"]
