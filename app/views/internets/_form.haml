@@ -20,8 +20,8 @@
       .invalid-feedback Please provide the Business Name
 
   .form-group#otherisp.collapse
-    %input.form-control{ name: 'other', placeholder:  'Other Provider' }/
-    %small.form-text.text-muted Please provide the name of the ISP if it is not on the above list.
+    = form.label :other_provider, class: 'control-label required'
+    = form.text_field :other_provider, id: :internet_last_name, class: 'form-control'
 
 
   .form-row
@@ -39,7 +39,7 @@
         = form.check_box :want_television, id: :internet_want_television, class: 'form-check-input'
         Television
       = form.select :number_televisions,
-                    options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 5] ]),
+                    options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 4] ]),
                     { prompt: 'Number of Televisions' },
                     { class: 'form-control selectpicker collapse', id: :internet_number_televisions}
 
@@ -48,7 +48,7 @@
         = form.check_box :want_phone, id: :internet_want_phone, class: 'form-check-input'
         Phones
       = form.select :number_phones,
-                    options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 5] ]),
+                    options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 4] ]),
                     { prompt: 'Number of Phones' },
                     { class: 'form-control selectpicker collapse' , id: :internet_number_phones}
 
@@ -79,15 +79,15 @@
     .form-group.col-md-6
       = form.label :best_time
       = form.select :best_time,
-                    options_for_select([ ['Morning', 'Morning'], ['Afternoon', 'Afternoon'], ['Evening', 'Evening'] ]),
-                    {include_blank: 'Please Choose'},
-                    {class: 'form-control selectpicker'}
+                    options_for_select([ ['Morning', '1'], ['Afternoon', '2'], ['Evening', '3'] ]),
+                    { include_blank: 'Please Choose' },
+                    { class: 'form-control selectpicker', id: 'internet_best_time' }
     .form-group.col-md-6
       = form.label :best_way
       = form.select :best_way,
-                    options_for_select([ ['Phone', 'Phone'], ['Email', 'Email'] ]),
-                    {include_blank: 'Please Choose'},
-                    {class: 'form-control selectpicker'}
+                    options_for_select([ ['Phone', '1'], ['Email', '2'] ]),
+                    { include_blank: 'Please Choose' },
+                    { class: 'form-control selectpicker', id: 'internet_best_way' }
 
   %hr.my-5/
 
@@ -116,7 +116,10 @@
       .invalid-feedback Please provide the Business City
     .form-group.col-md-3
       = form.label :state, class: 'control-label required'
-      = form.select :state, options_for_select(us_states), {}, {id: :internet_state, class: 'form-control selectpicker', required: true}
+      = form.select :state,
+                    options_for_select(us_states),
+                    { prompt: 'Please Choose' },
+                    { id: :internet_state, class: 'form-control selectpicker', required: true }
       .invalid-feedback Please provide the Business State
     .form-group.col-md-3
       = form.label :zip, class: 'control-label required'

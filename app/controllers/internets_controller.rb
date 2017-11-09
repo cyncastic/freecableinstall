@@ -89,7 +89,8 @@ class InternetsController < ApplicationController
                                        :want_television,
                                        :want_phone,
                                        :number_televisions,
-                                       :number_phones
+                                       :number_phones,
+                                       :other_provider
                                        )
     end
 end
