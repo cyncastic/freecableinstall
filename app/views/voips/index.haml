@@ -20,8 +20,8 @@
     - @voips.each do |voip|
       %tr
         %td
-          = voip.number_phones.to_s + ' ' + voip.phone_choice
-          = 's' if voip.number_phones > 1
+          = voip.number_phones
+          = voip.phone_choice.to_s.pluralize(voip.number_phones)
         %td= link_to voip.first_name + ' ' + voip.last_name, voip
         -# %td= mail_to voip.email
         -# %td= tel_to voip.phone
