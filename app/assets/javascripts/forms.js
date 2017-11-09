@@ -20,7 +20,11 @@
 
     // Form interactivity for #otherisp
     var length = $("#isps select option").length-1;
-
+    if ($("#isps select option:last").is(":selected")){
+      $("#otherisp").addClass("show");
+    }else{
+      $("#otherisp").removeClass("show");
+    }
     $("#isps select").change(function(){
 
       if ($("#isps select option:last").is(":selected")){
