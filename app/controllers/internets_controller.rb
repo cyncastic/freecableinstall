@@ -18,7 +18,7 @@ class InternetsController < ApplicationController
   # GET /internets/new
   def new
     @internet = Internet.new
-    @provideroptions = Provider.all
+    @provideroptions = Provider.all.order('zorder ASC')
   end
 
   # GET /internets/1/edit

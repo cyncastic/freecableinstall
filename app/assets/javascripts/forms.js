@@ -17,17 +17,20 @@
     }
 
 
+
     // Form interactivity for #otherisp
+    var length = $("#isps select option").length-1;
 
     $("#isps select").change(function(){
-      if ($(this).val() == "999"){
+
+      if ($("#isps select option:last").is(":selected")){
         $("#otherisp").addClass("show");
       }else{
         $("#otherisp").removeClass("show");
       }
     });
 
-
+    //  wants internet
 
     $("#internet_want_internet").change(function(){
       console.log($(this).val());
@@ -43,6 +46,7 @@
       $("#internet_number_computers").addClass("show");
     }
 
+    //  wants television
 
     $("#internet_want_television").change(function(){
       console.log($(this).val());
@@ -58,6 +62,7 @@
       $("#internet_number_televisions").addClass("show");
     }
 
+    //  wants phones
 
     $("#internet_want_phone").change(function(){
       console.log($(this).val());
@@ -73,6 +78,7 @@
       $("#internet_number_phones").addClass("show");
     }
 
+    // end  Form interactivity for #otherisp
 
   });
 }());

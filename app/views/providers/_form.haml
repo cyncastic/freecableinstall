@@ -14,4 +14,8 @@
     = form.text_field :name, id: :provider_name, class: 'form-control', required: true
 
   .form-group
+    = form.label :zorder, class: 'control-label required'
+    = form.number_field :zorder, id: :provider_zorder, class: 'form-control', required: true
+
+  .form-group
     = form.submit class: 'btn btn-info btn-lg'

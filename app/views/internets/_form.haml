@@ -14,9 +14,7 @@
   .form-group
     = form.label :provider_id, class: 'control-label required'
     #isps
-      = form.select :provider_id,
-                options_for_select(Provider.all.map { |obj| [obj['name'], obj['id']] } + [['Other', 999]] ),
-                 { prompt: true, }, { class: 'form-control selectpicker', required: true }
+      = form.collection_select :provider_id, @provideroptions, :id, :name, {prompt: true}, {class: 'form-control selectpicker'}
       .invalid-feedback Please provide the Business Name
 
   .form-group#otherisp.collapse

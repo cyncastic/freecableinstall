@@ -4,11 +4,13 @@
   %thead.thead-inverse
     %tr
       %th Name
+      %th Order
       %th{ style: 'width: 1%; white-space: no-wrap;' }
   %tbody
     - @providers.each do |provider|
       %tr
         %td= provider.name
+        %td= provider.zorder
         %td{ style: 'width: 1%; white-space: nowrap;' }
           = link_to 'Edit', edit_provider_path(provider), class: 'btn btn-warning btn-sm'
           = link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'
