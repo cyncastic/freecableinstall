@@ -23,6 +23,7 @@ class InternetsController < ApplicationController
 
   # GET /internets/1/edit
   def edit
+    @provideroptions = Provider.all.order('zorder ASC')
   end
 
   # POST /internets
