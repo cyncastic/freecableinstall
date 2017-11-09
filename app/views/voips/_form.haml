@@ -1,7 +1,7 @@
 = form_with(model: voip, local: true, class: 'container', id: 'needs-validation', :html => {:novalidate => true}) do |form|
 
   - if voip.errors.any?
-    #error_explanation
+    #error_explanation.alert.alert-danger{ role: 'alert' }
       %h2
         = pluralize(voip.errors.count, "error")
         prohibited this voip from being saved:
@@ -42,7 +42,7 @@
     = form.label :number_phones, class: 'control-label required'
     = form.number_field :number_phones, min: 1, id: :voip_number_phones, class: 'form-control', required: true
 
-  %hr/
+  %hr.my-5/
 
   .form-row
     .form-group.col-md-6
@@ -75,8 +75,7 @@
                     { prompt: 'Please Choose' },
                     { id: :voip_best_way, class: 'form-control selectpicker', required: true }
 
-  %hr/
-
+  %hr.my-5/
 
   .form-group
     = form.label :business_name, class: 'control-label required'
@@ -111,7 +110,7 @@
 
 
 
-  .form-group
+  .form-group.my-4
     = form.label :also_interested, class: 'form-check-label' do
       = form.check_box :also_interested, id: :voip_also_interested, class: 'form-check-input'
       I am also interested in getting internet cable installed free for my business.

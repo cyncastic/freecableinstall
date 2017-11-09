@@ -1,7 +1,7 @@
 = form_with(model: provider, local: true, class: 'container', id: 'needs-validation') do |form|
 
   - if provider.errors.any?
-    #error_explanation
+    #error_explanation.alert.alert-danger{ role: 'alert' }
       %h2
         = pluralize(provider.errors.count, "error")
         prohibited this provider from being saved:

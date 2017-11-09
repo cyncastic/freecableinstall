@@ -29,10 +29,18 @@ body{
   }
 }
 
-.required::after{   color: #E9572C; }
+.required::after{ color: #E9572C; }
 .tandcapply::after{ color: #4CBFD8; }
 
 .bg-fred   { background: #E9572C; .tandcapply::after{ color: #FFFFFF; } }
 .bg-fgreen { background: #89C138; .tandcapply::after{ color: #FFFFFF; } }
 .bg-fblue  { background: #4CBFD8; .tandcapply::after{ color: #FFFFFF; } }
 .bg-fteal  { background: #69C7B5; .tandcapply::after{ color: #FFFFFF; } }
+
+
+.field_with_errors input{
+  border-color: #dc3545;
+}
+.field_with_errors ~ .invalid-feedback {
+  display: block;
+}
