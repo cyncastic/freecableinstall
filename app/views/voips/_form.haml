@@ -67,13 +67,13 @@
       = form.select :best_time,
                     options_for_select(best_times),
                     { prompt: 'Please Choose' },
-                    { id: :voip_best_time, class: 'form-control selectpicker', required: true }
+                    { id: :voip_best_time, class: 'form-control selectpicker' }
     .form-group.col-md-6
       = form.label :best_way
       = form.select :best_way,
                     options_for_select(best_ways),
                     { prompt: 'Please Choose' },
-                    { id: :voip_best_way, class: 'form-control selectpicker', required: true }
+                    { id: :voip_best_way, class: 'form-control selectpicker' }
 
   %hr.my-5/
 
