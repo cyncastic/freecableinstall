@@ -21,9 +21,11 @@
         %p.card-text.lead A powerful entry-level Business Media phone for today's cubicle workers
         %p.card-text Give your cubicle worker the best experience with this high quality UC Business Media Phone. Designed for a broad range of environments for small and medium businesses.
       .card-footer
-        = form.label :phone_choice_vvx301, for: 'voip_phone_choice_vvx301', class: 'form-check-label w-100' do
-          =form.radio_button :phone_choice, 'vvx301', id: 'voip_phone_choice_vvx301', class: 'form-check-input'
-          VVX 301
+        = form.label :quantity_vvx301, class: 'control-label'
+        = form.number_field :quantity_vvx301, min: 0, id: :voip_quantity_vvx301, class: 'form-control'
+        -# = form.label :phone_choice_vvx301, for: 'voip_phone_choice_vvx301', class: 'form-check-label w-100' do
+        -#   =form.radio_button :phone_choice, 'vvx301', id: 'voip_phone_choice_vvx301', class: 'form-check-input'
+        -#   VVX 301
 
     .card.bg-light.border-light.mb-4
       =image_tag 'vvx-401.jpg', alt: 'polycom vvx 401', class: 'card-img-top'
@@ -34,15 +36,11 @@
         %p.card-text.lead A color mid-range Business Media phone for enhanced call handling.
         %p.card-text Give your call attendant a high-quality, cost effective UC solution that will handle their moderate  call volume and provide them with the advanced telephony features they expect from a modern media phone.
       .card-footer
-        = form.label :phone_choice_vvx401, for: 'voip_phone_choice_vvx401', class: 'form-check-label w-100' do
-          =form.radio_button :phone_choice, 'vvx401', id: 'voip_phone_choice_vvx401', class: 'form-check-input'
-          VVX 401
-
-  .form-group
-    = form.label :number_phones, class: 'control-label required'
-    = form.number_field :number_phones, min: 1, id: :voip_number_phones, class: 'form-control', required: true
-
-  %hr.my-5/
+        = form.label :quantity_vvx401, class: 'control-label'
+        = form.number_field :quantity_vvx401, min: 0, id: :voip_quantity_vvx401, class: 'form-control'
+        -# = form.label :phone_choice_vvx401, for: 'voip_phone_choice_vvx401', class: 'form-check-label w-100' do
+        -#   =form.radio_button :phone_choice, 'vvx401', id: 'voip_phone_choice_vvx401', class: 'form-check-input'
+        -#   VVX 401
 
   .form-row
     .form-group.col-md-6
