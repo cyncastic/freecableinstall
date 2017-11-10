@@ -1,6 +1,6 @@
 class Voip < ApplicationRecord
 
-  has_one :provider
+  belongs_to :referrer
 
   # validates :provider_id, presence: true
 

@@ -1,6 +1,7 @@
 class Internet < ApplicationRecord
 
   belongs_to :provider
+  belongs_to :referrer
 
   validates :provider_id, presence: true
 

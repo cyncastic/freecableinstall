@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :referrers
   resources :voips
 
   get 'users/new'
