@@ -54,7 +54,7 @@
           Powered by
           %a.text-info{ href: 'http://maxsip.com' } Maxsip
           &copy; |
-          %a.text-info.tandcapply{ href: '#', 'data-toggle': 'modal', 'data-target': '#exampleModalLong', :remote => true } Terms and Condition
+          %a.text-info.tandcapply#tosmodalbtn{ 'data-href': '/tos', 'data-toggle': 'modal', 'data-target': '#exampleModalLong' } Terms and Condition
 
     / Terms and Conditions Modal
     #exampleModalLong.modal.fade{ 'aria-hidden': 'true', 'aria-labelledby': 'exampleModalLongTitle', role: 'dialog', tabindex: '-1' }
@@ -64,13 +64,16 @@
             %h5#exampleModalLongTitle.modal-title Terms and Conditions
             %button.close{ 'aria-label': 'Close', 'data-dismiss': 'modal', type: 'button' }
               %span{'aria-hidden': 'true' } ×
-          .modal-body= render partial: '/layouts/tos'
+          .modal-body
           .modal-footer
             %button.btn.btn-info{ 'data-dismiss': 'modal', type: 'button' } Close
 
     / Global Site Tag (gtag.js) - Google Analytics
     %script{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=UA-107489713-1' }
     :javascript
+
+
+
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments)};
       gtag('js', new Date());

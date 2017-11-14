@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   get 'phones',    to: 'static#phones'
 
+  get 'tos',  to: 'static#tos'
   get 'polycoms',  to: 'static#polycoms'
   get 'test',      to: 'static#test'
   get 'resellers', to: 'static#resellers'

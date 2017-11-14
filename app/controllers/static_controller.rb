@@ -14,4 +14,8 @@ class StaticController < ApplicationController
   def admin
   end
 
+  def tos
+    render :layout => false
+  end
+
 end
