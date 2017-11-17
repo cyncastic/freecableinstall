@@ -5,4 +5,8 @@ class VoipMailerPreview < ActionMailer::Preview
     VoipMailer.welcome_email(Voip.first)
   end
 
+  def new_signup_email
+    VoipMailer.new_signup_email(Voip.first)
+  end
+
 end

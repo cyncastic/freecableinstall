@@ -1,0 +1,36 @@
+%h1= 'Maxsip Order for ' + @voip.first_name + ' ' + @voip.last_name + ' ' + 'at ' + @voip.business_name
+
+%ul
+  %li=@voip.quantity_vvx301
+  %li=@voip.quantity_vvx401
+
+%p
+  Referred by
+  =@voip.referrer.name
+
+%p
+  Is
+  = ' NOT ' unless @voip.also_interested
+  intersested in Internet.
+
+%hr/
+
+.row
+  .col-md-6
+    %h2 Contact
+    %ul.list-unstyled
+      %li= @voip.first_name + ' ' + @voip.last_name
+      %li= mail_to @voip.email
+      %li= @voip.phone
+
+    %p.mt-4= 'Best to contact by ' + @voip.best_way + ' in the ' + @voip.best_time
+
+  .col-md-6
+    %h2 Business Info
+    %ul.list-unstyled
+      %li= @voip.business_name
+      %li= @voip.business_phone
+      %li= @voip.street_address_1
+      - unless  @voip.street_address_2 == ''
+        %li= @voip.street_address_2
+      %li= @voip.city + ', ' + @voip.state + ' ' + @voip.zip

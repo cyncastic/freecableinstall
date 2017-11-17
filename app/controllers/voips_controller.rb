@@ -32,6 +32,7 @@ class VoipsController < ApplicationController
       if @voip.save
         # Tell the UserMailer to send a welcome email after save
         VoipMailer.welcome_email(@voip).deliver_now
+        VoipMailer.new_signup_email(@voip).deliver_now
         # Redirect upon a successful save
         format.html { redirect_to thankyou_path from: 'voip' }
         format.json { render :show, status: :created, location: @voip }
