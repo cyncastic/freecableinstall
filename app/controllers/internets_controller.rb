@@ -33,6 +33,8 @@ class InternetsController < ApplicationController
 
     respond_to do |format|
       if @internet.save
+        InternetMailer.welcome_email(@internet).deliver_now
+        InternetMailer.new_signup_email(@internet).deliver_now
         format.html { redirect_to thankyou_path from: 'internet' }
         format.json { render :show, status: :created, location: @internet }
       else

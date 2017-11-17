@@ -1,0 +1,46 @@
+-# = link_to 'Back', internets_path
+%h1
+  = @internet.provider.name + ' order for ' + @internet.first_name + ' ' + @internet.last_name
+  = ' at ' + @internet.business_name unless @internet.business_name == ''
+
+%dl.row.p-2
+  - if @internet.want_internet
+    %dt.col-sm-2 Computers:
+    %dd.col-sm-10= @internet.number_computers
+  - if @internet.want_television
+    %dt.col-sm-2 Televisions
+    %dd.col-sm-10=@internet.number_televisions
+  - if @internet.want_phone
+    %dt.col-sm-2 Phones
+    %dd.col-sm-10=@internet.number_phones
+
+%p
+  Is
+  = ' NOT ' unless @internet.interested
+  intersested in VOIP.
+
+%p
+  Referred by
+  =@internet.referrer.name
+
+%hr/
+
+.row
+  .col-md-6
+    %h2 Contact
+    %ul.list-unstyled
+      %li= @internet.first_name + ' ' + @internet.last_name
+      %li= mail_to @internet.email
+      %li= @internet.phone
+
+      %p.mt-4= 'Best to contact by ' + @internet.best_way + ' in the ' + @internet.best_time
+
+  .col-md-6
+    %h2 Business Info
+    %ul.list-unstyled
+      %li= @internet.business_name
+      %li= @internet.business_phone
+      %li= @internet.street_address_1
+      - unless  @internet.street_address_2 == ''
+        %li= @internet.street_address_2
+      %li= @internet.city + ', ' + @internet.state + ' ' + @internet.zip
