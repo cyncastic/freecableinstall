@@ -30,9 +30,13 @@ class VoipsController < ApplicationController
 
     respond_to do |format|
       if @voip.save
+        # Tell the UserMailer to send a welcome email after save
+        VoipMailer.welcome_email(@voip).deliver_now
+        # Redirect upon a successful save
         format.html { redirect_to thankyou_path from: 'voip' }
         format.json { render :show, status: :created, location: @voip }
       else
+        # Redirect upon an unsuccessful save
         format.html { render :new }
         format.json { render json: @voip.errors, status: :unprocessable_entity }
       end

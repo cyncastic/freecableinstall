@@ -1,11 +1,11 @@
 class VoipMailer < ApplicationMailer
 
-  default from: 'notifications@example.com'
+  default from: 'orders@freecableinstall.com'
 
-  def welcome_email(user)
-    @user = user
-    @url  = 'http://example.com/login'
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+  def welcome_email(voip)
+    @voip = voip
+    @url  = 'http://freecableinstall.com'
+    mail(to: @voip.email, subject: 'Welcome to My Awesome Site')
   end
 
 end
