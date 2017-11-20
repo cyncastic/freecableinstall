@@ -132,13 +132,17 @@
 
   .form-group.my-4
     = form.label :referrer_id, 'How did you hear about FreeCableInstall.com?', class: 'control-label'
-    = form.collection_select :referrer_id, Referrer.all.order('zorder ASC'), :id, :name, { prompt: true }, {class: 'form-control selectpicker'}
+    #referrers
+      = form.collection_select :referrer_id, Referrer.all.order('zorder ASC'), :id, :name, { prompt: true }, {class: 'form-control selectpicker'}
 
+  .form-group#otherreferrer.collapse
+    = form.label :other_referrer, class: 'control-label required'
+    = form.text_field :other_referrer, id: :internet_other_referrer, class: 'form-control'
 
   -# .form-group
   -#   .g-recaptcha{ 'data-sitekey': '6LelDDMUAAAAAGBBqJVyTMwgh2UpnhwhGJKR6w3d' }
   -#   -# Captcha
   -#   %script{ src: 'https://www.google.com/recaptcha/api.js' }
 
-  .form-group
+  .form-group.mt-5
     = form.submit 'Send Request', class: 'btn btn-info btn-lg'

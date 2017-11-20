@@ -69,6 +69,6 @@ class ReferrersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def referrer_params
-      params.require(:referrer).permit(:name)
+      params.require(:referrer).permit(:name, :zorder)
     end
 end

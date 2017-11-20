@@ -94,7 +94,8 @@ class InternetsController < ApplicationController
                                        :number_televisions,
                                        :number_phones,
                                        :other_provider,
-                                       :referrer_id
+                                       :referrer_id,
+                                       :other_referrer
                                        )
     end
 end

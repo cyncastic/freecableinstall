@@ -93,7 +93,8 @@ class VoipsController < ApplicationController
                                    :best_time,
                                    :best_way,
                                    :also_interested,
-                                   :referrer_id
+                                   :referrer_id,
+                                   :other_referrer
                                    )
     end
 end

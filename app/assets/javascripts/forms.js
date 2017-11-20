@@ -26,11 +26,26 @@
       $("#otherisp").removeClass("show");
     }
     $("#isps select").change(function(){
-
       if ($("#isps select option:last").is(":selected")){
         $("#otherisp").addClass("show");
       }else{
         $("#otherisp").removeClass("show");
+      }
+    });
+
+
+    // Form interactivity for #otherreferrer
+    var length = $("#referrers select option").length-1;
+    if ($("#isps select option:last").is(":selected")){
+      $("#otherreferrer").addClass("show");
+    }else{
+      $("#otherreferrer").removeClass("show");
+    }
+    $("#referrers select").change(function(){
+      if ($("#referrers select option:last").is(":selected")){
+        $("#otherreferrer").addClass("show");
+      }else{
+        $("#otherreferrer").removeClass("show");
       }
     });
 
