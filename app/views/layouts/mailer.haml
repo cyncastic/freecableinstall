@@ -220,7 +220,9 @@
                         / <![endif]
                         .img-container.center.autowidth{:align => "center", :style => "padding-right: 0px;  padding-left: 0px;"}
                           /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center">
-                          %img.center.autowidth{:align => "center", :alt => "Image", :border => "0", :src => "/assets/email-logo.png", :style => "outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 250px", :title => "Image", :width => "250"}/
+
+                          =image_tag "/assets/email-logo.png", width: 250, style: "outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 250px"
+
                           /[if mso] </td></tr></table>
                         / [if (!mso)&(!IE)]><!
                       / <![endif]
@@ -237,7 +239,9 @@
                         / <![endif]
                         .img-container.center.fullwidthOnMobile.fixedwidth{:align => "center", :style => "padding-right: 0px;  padding-left: 0px;"}
                           /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center">
-                          %img.center.fullwidthOnMobile.fixedwidth{:align => "center", :alt => "OK", :border => "0", :src => "/assets/okok.gif", :style => "outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 198.4px", :title => "OK", :width => "198.4"}/
+
+                          =image_tag "/assets/okok.gif", width: 200, :style => "outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 198.4px"
+
                           /[if mso] </td></tr></table>
                         /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
                         %div{:style => "color:#666;line-height:120%;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"}
