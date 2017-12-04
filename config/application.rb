@@ -15,8 +15,8 @@ module Freecableinstall
     config.exceptions_app = self.routes
 
     # Generating URLs in Action Mailer Views
-    config.action_mailer.default_url_options = { host: 'Freecableinstall.com' }
-    config.action_mailer.asset_host = 'https://Freecableinstall.com'
+    config.action_mailer.default_url_options = { host: 'example.com' }
+    # config.action_mailer.asset_host = 'https://Freecableinstall.com'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
