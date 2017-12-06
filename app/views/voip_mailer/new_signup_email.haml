@@ -1,36 +1,352 @@
-%h1= 'Maxsip Order for ' + @voip.first_name + ' ' + @voip.last_name + ' ' + 'at ' + @voip.business_name
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xmlns:o" => "urn:schemas-microsoft-com:office:office", "xmlns:v" => "urn:schemas-microsoft-com:vml"}
+  %head
+    /[if gte mso 9]
+      <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+      </xml>
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    / [if !mso]><!
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    / <![endif]
+    %title Template Base
+    / [if !mso]><!--
+    %link{:href => "https://fonts.googleapis.com/css?family=Roboto", :rel => "stylesheet", :type => "text/css"}/
+    / <![endif]
+    %style#media-query{:type => "text/css"}
+      :cdata
+        body {
+        margin: 0;
+        padding: 0; }
 
-%ul
-  %li=@voip.quantity_vvx301
-  %li=@voip.quantity_vvx401
+        table, tr, td {
+        vertical-align: top;
+        border-collapse: collapse; }
 
-%p
-  Referred by
-  =@voip.referrer.name
+        \.ie-browser table, .mso-container table {
+        table-layout: fixed; }
 
-%p
-  Is
-  = ' NOT ' unless @voip.also_interested
-  intersested in Internet.
+        * {
+        line-height: inherit; }
 
-%hr/
+        a[x-apple-data-detectors=true] {
+        color: inherit !important;
+        text-decoration: none !important; }
 
-.row
-  .col-md-6
-    %h2 Contact
-    %ul.list-unstyled
-      %li= @voip.first_name + ' ' + @voip.last_name
-      %li= mail_to @voip.email
-      %li= @voip.phone
+        [owa] .img-container div, [owa] .img-container button {
+        display: block !important; }
 
-    %p.mt-4= 'Best to contact by ' + @voip.best_way + ' in the ' + @voip.best_time
+        [owa] .fullwidth button {
+        width: 100% !important; }
 
-  .col-md-6
-    %h2 Business Info
-    %ul.list-unstyled
-      %li= @voip.business_name
-      %li= @voip.business_phone
-      %li= @voip.street_address_1
-      - unless  @voip.street_address_2 == ''
-        %li= @voip.street_address_2
-      %li= @voip.city + ', ' + @voip.state + ' ' + @voip.zip
+        [owa] .block-grid .col {
+        display: table-cell;
+        float: none !important;
+        vertical-align: top; }
+
+        \.ie-browser .num12, .ie-browser .block-grid, [owa] .num12, [owa] .block-grid {
+        width: 650px !important; }
+
+        \.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+        line-height: 100%; }
+
+        \.ie-browser .mixed-two-up .num4, [owa] .mixed-two-up .num4 {
+        width: 216px !important; }
+
+        \.ie-browser .mixed-two-up .num8, [owa] .mixed-two-up .num8 {
+        width: 432px !important; }
+
+        \.ie-browser .block-grid.two-up .col, [owa] .block-grid.two-up .col {
+        width: 325px !important; }
+
+        \.ie-browser .block-grid.three-up .col, [owa] .block-grid.three-up .col {
+        width: 216px !important; }
+
+        \.ie-browser .block-grid.four-up .col, [owa] .block-grid.four-up .col {
+        width: 162px !important; }
+
+        \.ie-browser .block-grid.five-up .col, [owa] .block-grid.five-up .col {
+        width: 130px !important; }
+
+        \.ie-browser .block-grid.six-up .col, [owa] .block-grid.six-up .col {
+        width: 108px !important; }
+
+        \.ie-browser .block-grid.seven-up .col, [owa] .block-grid.seven-up .col {
+        width: 92px !important; }
+
+        \.ie-browser .block-grid.eight-up .col, [owa] .block-grid.eight-up .col {
+        width: 81px !important; }
+
+        \.ie-browser .block-grid.nine-up .col, [owa] .block-grid.nine-up .col {
+        width: 72px !important; }
+
+        \.ie-browser .block-grid.ten-up .col, [owa] .block-grid.ten-up .col {
+        width: 65px !important; }
+
+        \.ie-browser .block-grid.eleven-up .col, [owa] .block-grid.eleven-up .col {
+        width: 59px !important; }
+
+        \.ie-browser .block-grid.twelve-up .col, [owa] .block-grid.twelve-up .col {
+        width: 54px !important; }
+
+        @media only screen and (min-width: 670px) {
+        \.block-grid {
+        width: 650px !important; }
+        \.block-grid .col {
+        vertical-align: top; }
+        \.block-grid .col.num12 {
+        width: 650px !important; }
+        \.block-grid.mixed-two-up .col.num4 {
+        width: 216px !important; }
+        \.block-grid.mixed-two-up .col.num8 {
+        width: 432px !important; }
+        \.block-grid.two-up .col {
+        width: 325px !important; }
+        \.block-grid.three-up .col {
+        width: 216px !important; }
+        \.block-grid.four-up .col {
+        width: 162px !important; }
+        \.block-grid.five-up .col {
+        width: 130px !important; }
+        \.block-grid.six-up .col {
+        width: 108px !important; }
+        \.block-grid.seven-up .col {
+        width: 92px !important; }
+        \.block-grid.eight-up .col {
+        width: 81px !important; }
+        \.block-grid.nine-up .col {
+        width: 72px !important; }
+        \.block-grid.ten-up .col {
+        width: 65px !important; }
+        \.block-grid.eleven-up .col {
+        width: 59px !important; }
+        \.block-grid.twelve-up .col {
+        width: 54px !important; } }
+
+        @media (max-width: 670px) {
+        \.block-grid, .col {
+        min-width: 320px !important;
+        max-width: 100% !important;
+        display: block !important; }
+        \.block-grid {
+        width: calc(100% - 40px) !important; }
+        \.col {
+        width: 100% !important; }
+        \.col > div {
+        margin: 0 auto; }
+        img.fullwidth, img.fullwidthOnMobile {
+        max-width: 100% !important; }
+        \.no-stack .col {
+        min-width: 0 !important;
+        display: table-cell !important; }
+        \.no-stack.two-up .col {
+        width: 50% !important; }
+        \.no-stack.mixed-two-up .col.num4 {
+        width: 33% !important; }
+        \.no-stack.mixed-two-up .col.num8 {
+        width: 66% !important; }
+        \.no-stack.three-up .col.num4 {
+        width: 33% !important; }
+        \.no-stack.four-up .col.num3 {
+        width: 25% !important; } }
+  %body.clean-body{:style => "margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #89C138"}
+    %style#media-query-bodytag{:type => "text/css"}
+      :cdata
+        @media (max-width: 520px) {
+        \.block-grid {
+        min-width: 320px!important;
+        max-width: 100%!important;
+        width: 100%!important;
+        display: block!important;
+        }
+
+        \.col {
+        min-width: 320px!important;
+        max-width: 100%!important;
+        width: 100%!important;
+        display: block!important;
+        }
+
+        \.col > div {
+        margin: 0 auto;
+        }
+
+        img.fullwidth {
+        max-width: 100%!important;
+        }
+        img.fullwidthOnMobile {
+        max-width: 100%!important;
+        }
+        \.no-stack .col {
+        min-width: 0!important;
+        display: table-cell!important;
+        }
+        \.no-stack.two-up .col {
+        width: 50%!important;
+        }
+        \.no-stack.mixed-two-up .col.num4 {
+        width: 33%!important;
+        }
+        \.no-stack.mixed-two-up .col.num8 {
+        width: 66%!important;
+        }
+        \.no-stack.three-up .col.num4 {
+        width: 33%!important
+        }
+        \.no-stack.four-up .col.num3 {
+        width: 25%!important
+        }
+        }
+    /[if IE] <div class="ie-browser">
+    /[if mso] <div class="mso-container">
+    %table.nl-container{:cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #89C138;width: 100%"}
+      %tbody
+        %tr{:style => "vertical-align: top"}
+          %td{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top"}
+            /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #89C138;">
+            %div{:style => "background-color:transparent;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:#FFFFFF;">
+                  /[if (mso)|(IE)] <td align="center" width="650" style=" width:650px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 20px solid #E9572C; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 20px solid #E9572C; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        .img-container.center.autowidth{:align => "center", :style => "padding-right: 0px;  padding-left: 0px;"}
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center">
+
+
+
+                          =image_tag 'emails/email-logo2.png', width: 400, align: 'center', style: 'outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 400px', class: 'center autowidth'
+
+
+
+                          /[if mso] </td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-color:transparent;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:#FFFFFF;">
+                  /[if (mso)|(IE)] <td align="center" width="650" style=" width:650px; padding-right: 10px; padding-left: 10px; padding-top:10px; padding-bottom:10px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:10px; padding-bottom:10px; padding-right: 10px; padding-left: 10px;"}
+                        / <![endif]
+                        %div{:style => "padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"}
+                          /[if (mso)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px;padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><table width="90%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td>
+                          %div{:align => "center"}
+                            %div{:style => "border-top: 6px solid #69C7B5; width:90%; line-height:6px; height:6px; font-size:6px;"}  
+                          /[if (mso)] </td></tr></table></td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-color:transparent;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:#FFFFFF;">
+                  /[if (mso)|(IE)] <td align="center" width="650" style=" width:650px; padding-right: 40px; padding-left: 40px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 40px; padding-left: 40px;"}
+                        / <![endif]
+                        /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px; padding-top: 20px; padding-bottom: 20px;">
+                        %div{:style => "line-height:150%;color:#555555;font-family:'', Tahoma, Verdana, Segoe, sans-serif; padding-right: 20px; padding-left: 20px; padding-top: 20px; padding-bottom: 20px;"}
+                          %div{:style => "font-size:12px;line-height:18px;color:#555555;font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
+                            %p{:style => "margin: 0;font-size: 14px;line-height: 21px"}
+
+
+
+
+
+                              %h1= 'Maxsip Order for ' + @voip.first_name + ' ' + @voip.last_name + ' ' + 'at ' + @voip.business_name
+
+                              %ul
+                                %li=pluralize @voip.quantity_vvx301, 'VVX 301'
+                                %li=pluralize @voip.quantity_vvx401, 'VVX 401'
+
+                              %p
+                                Referred by
+                                =@voip.referrer.name
+
+                              %p
+                                Is
+                                = ' NOT ' unless @voip.also_interested
+                                intersested in Internet.
+
+                              %hr{ style: 'border: 1px #69C7B5 dashed;' }/
+
+                              .row
+                                .col-md-6
+                                  %h2 Contact
+                                  %ul.list-unstyled
+                                    %li= @voip.first_name + ' ' + @voip.last_name
+                                    %li= mail_to @voip.email, @voip.email, style: 'color: #4CBFD8; font-weight: bold;'
+                                    %li= @voip.phone
+
+                                  %p.mt-4= 'Best to contact by ' + @voip.best_way + ' in the ' + @voip.best_time
+
+                                .col-md-6
+                                  %h2 Business Info
+                                  %ul.list-unstyled
+                                    %li= @voip.business_name
+                                    %li= @voip.business_phone
+                                    %li= @voip.street_address_1
+                                    - unless  @voip.street_address_2 == ''
+                                      %li= @voip.street_address_2
+                                    %li= @voip.city + ', ' + @voip.state + ' ' + @voip.zip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        /[if mso] </td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-color:transparent;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:#FFFFFF;">
+                  /[if (mso)|(IE)] <td align="center" width="650" style=" width:650px; padding-right: 10px; padding-left: 10px; padding-top:10px; padding-bottom:10px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 20px solid #E9572C; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 20px solid #E9572C; border-right: 0px solid transparent; padding-top:10px; padding-bottom:10px; padding-right: 10px; padding-left: 10px;"}
+                        / <![endif]
+                        %div{:style => "padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"}
+                          /[if (mso)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px;padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><table width="90%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td>
+                          %div{:align => "center"}
+                            %div{:style => "border-top: 6px solid #69C7B5; width:90%; line-height:6px; height:6px; font-size:6px;"}  
+                          /[if (mso)] </td></tr></table></td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            /[if (mso)|(IE)] </td></tr></table>
+    /[if (mso)|(IE)] </div>
