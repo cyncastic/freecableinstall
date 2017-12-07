@@ -1,0 +1,33 @@
+
+%h2 VOIP Signups
+.form-group
+  %textarea.form-control.disabled{ style: 'height:8em;', readonly: true }
+    = @voips.map { |voip| voip.first_name + ' ' +  voip.last_name + ' <' + voip.email + '>' }.join(', ').html_safe
+.form-group.mb-5
+  %a.btn.btn-lg.btn-primary{ href: "#" } Save To Clipboard
+
+
+%h2 Internet Signups
+.form-group
+  %textarea.form-control.disabled{ style: 'height:8em;', readonly: true }
+    = @internets.map { |internet| internet.first_name + ' ' +  internet.last_name + ' <' + internet.email + '>' }.join(',').html_safe
+
+.form-group
+  %a.btn.btn-lg.btn-primary{ href: "#" } Save To Clipboard
+
+:javascript
+
+  var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+
+  copyTextareaBtn.addEventListener('click', function(event) {
+    var copyTextarea = document.querySelector('.js-copytextarea');
+    copyTextarea.select();
+
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Copying text command was ' + msg);
+    } catch (err) {
+      console.log('Oops, unable to copy');
+    }
+  });

@@ -18,4 +18,9 @@ class StaticController < ApplicationController
     render :layout => false
   end
 
+  def mail
+    @voips = Voip.select('distinct on (email) *')
+    @internets = Internet.select('distinct on (email) *')
+  end
+
 end

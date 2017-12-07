@@ -30,5 +30,6 @@ Rails.application.routes.draw do
   get 'thankyou',  to: 'static#thankyou'
   get 'analytics',  to: 'static#analytics'
   get 'admin',  to: 'static#admin'
+  get 'mail',  to: 'static#mail'
 
 end
