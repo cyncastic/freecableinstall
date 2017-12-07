@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171207163158) do
+ActiveRecord::Schema.define(version: 20171207163630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20171207163158) do
     t.integer "number_phones"
     t.integer "provider_id"
     t.string "other_provider"
-    t.integer "referrer_id"
+    t.integer "referrer_id", default: 9999
     t.string "other_referrer", default: "None"
   end
 
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20171207163158) do
     t.integer "quantity_vvx401", default: 0
     t.string "business_phone"
     t.integer "quantity_vvx301", default: 0
-    t.integer "referrer_id"
+    t.integer "referrer_id", default: 9999
     t.string "other_referrer", default: "None"
   end
 
