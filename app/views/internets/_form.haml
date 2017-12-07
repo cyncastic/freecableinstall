@@ -136,7 +136,7 @@
       = form.collection_select :referrer_id, Referrer.all.order('zorder ASC'), :id, :name, { prompt: true }, {class: 'form-control selectpicker'}
 
   .form-group#otherreferrer.collapse
-    = form.label :other_referrer, class: 'control-label required'
+    = form.label :other_referrer, class: 'control-label'
     = form.text_field :other_referrer, id: :internet_other_referrer, class: 'form-control'
 
   -# .form-group
