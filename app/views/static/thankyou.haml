@@ -1,15 +1,18 @@
-.jumbotron.bg-fblue.text-white
-  .container
-    %h1.display-4 Thank you for your inquiry!
-    %p.lead  One of our account managers will be in touch with you shortly.
+.jumbotron.bg-fblue.text-white.text-center
 
-    - if params[:from] == 'internet'
-      %p
-        If you are also interested in a free telephone system for your business, please
-        =link_to 'click here', new_voip_path, class: 'text-white'
+  %h1.display-3 Thank you for your inquiry!
 
-    - if params[:from] == 'voip'
-      %p
-        If you are also interested in a free internet installation for your business, please
-        =link_to 'click here', new_internet_path, class: 'text-white'
+  %p.lead  One of our account managers will be in touch with you shortly.
+
+  %hr.my-4/
+
+  - if params[:from] == 'internet'
+    %p
+      If you are also interested in a free telephone system for your business, please
+      =link_to 'click here', new_voip_path, class: 'text-white underlined'
+
+  - if params[:from] == 'voip'
+    %p
+      If you are also interested in a free internet installation for your business, please
+      =link_to 'click here', new_internet_path, class: 'text-white underlined'
 

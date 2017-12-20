@@ -2,3 +2,23 @@
 %hr.my-5/
 
 .alert.alert-dark= request.env["HTTP_REFERER"]
+
+.svglogos
+  =image_tag 'logos/polycom.svg', alt: 'Polycom'
+  =image_tag 'logos/verizon.svg', alt: 'Verizon'
+  =image_tag 'logos/charter-spectrum.svg', alt: 'Spectrum'
+  =image_tag 'logos/optimum.svg', alt: 'Optimum'
+  =image_tag 'logos/att.svg', alt: 'AT&am;T'
+  =image_tag 'logos/comcast.svg', alt: 'Comcast'
+
+
+:css
+
+  .svglogos{
+  width: 220px;
+  marging: 0 auto;
+  border: 10px #333 solid;
+  }
+  .svglogos img{
+    width: 200px;
+  }

@@ -33,7 +33,7 @@
           %a{ href: '/' }= render partial: '/layouts/svglogo'
         = render partial: '/layouts/nav'
 
-    .container
+    .container-fluid
 
       - if flash[:danger]
         .alert.alert-danger.alert-dismissible.fade.show{ role: 'alert' }
@@ -71,9 +71,6 @@
     / Global Site Tag (gtag.js) - Google Analytics
     %script{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=UA-107489713-1' }
     :javascript
-
-
-
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments)};
       gtag('js', new Date());

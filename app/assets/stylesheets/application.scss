@@ -13,9 +13,12 @@
  *= require_self
  */
 @import 'bootstrap';
+
 @import 'main';
+
 @import 'navbar';
-@import 'response';
+@import 'jumbo';
+@import 'partners';
 
 // I should NOT have to do this...  for some reason its set to block?!?!
 .was-validated .form-control:valid ~ .invalid-feedback,

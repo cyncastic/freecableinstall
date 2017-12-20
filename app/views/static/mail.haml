@@ -3,8 +3,8 @@
 .form-group
   %textarea.form-control.disabled{ style: 'height:8em;', readonly: true }
     = @voips.map { |voip| voip.first_name + ' ' +  voip.last_name + ' <' + voip.email + '>' }.join(', ').html_safe
-.form-group.mb-5
-  %a.btn.btn-lg.btn-primary{ href: "#" } Save To Clipboard
+-# .form-group.mb-5
+-#   %a.btn.btn-primary{ href: "#" } Save To Clipboard
 
 
 %h2 Internet Signups
@@ -12,8 +12,8 @@
   %textarea.form-control.disabled{ style: 'height:8em;', readonly: true }
     = @internets.map { |internet| internet.first_name + ' ' +  internet.last_name + ' <' + internet.email + '>' }.join(',').html_safe
 
-.form-group
-  %a.btn.btn-lg.btn-primary{ href: "#" } Save To Clipboard
+-# .form-group
+-#   %a.btn.btn-primary{ href: "#" } Save To Clipboard
 
 :javascript
 
