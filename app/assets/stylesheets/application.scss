@@ -13,21 +13,8 @@
  *= require_self
  */
 @import 'bootstrap';
-
 @import 'main';
-
 @import 'navbar';
 @import 'jumbo';
+@import 'forms';
 @import 'partners';
-
-// I should NOT have to do this...  for some reason its set to block?!?!
-.was-validated .form-control:valid ~ .invalid-feedback,
-.was-validated .form-control:valid ~ .invalid-tooltip,
-.form-control.is-valid ~ .invalid-feedback,
-.form-control.is-valid ~ .invalid-tooltip,
-.was-validated .custom-select:valid ~ .invalid-feedback,
-.was-validated .custom-select:valid ~ .invalid-tooltip,
-.custom-select.is-valid ~ .invalid-feedback,
-.custom-select.is-valid ~ .invalid-tooltip{
-  display: none;
-}

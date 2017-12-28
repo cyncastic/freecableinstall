@@ -1,0 +1,29 @@
+.field_with_errors input{
+  border-color: #dc3545;
+}
+
+.field_with_errors ~ .invalid-feedback {
+  display: block;
+}
+
+.form-group label{
+  text-transform: capitalize ;
+}
+
+.btn:hover {
+  //color: #7795f8;
+  transform: translateY(-1px);
+  //box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+}
+
+// I should NOT have to do this...  for some reason its set to block?!?!
+.was-validated .form-control:valid ~ .invalid-feedback,
+.was-validated .form-control:valid ~ .invalid-tooltip,
+.form-control.is-valid ~ .invalid-feedback,
+.form-control.is-valid ~ .invalid-tooltip,
+.was-validated .custom-select:valid ~ .invalid-feedback,
+.was-validated .custom-select:valid ~ .invalid-tooltip,
+.custom-select.is-valid ~ .invalid-feedback,
+.custom-select.is-valid ~ .invalid-tooltip{
+  display: none;
+}

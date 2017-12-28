@@ -9,6 +9,15 @@ body{
   overflow-y: scroll;
 }
 
+.bg-fred   { background: #E9572C; .tandcapply::after{ color: #FFFFFF; } }
+.bg-fgreen { background: #89C138; .tandcapply::after{ color: #FFFFFF; } }
+.bg-fblue  { background: #4CBFD8; .tandcapply::after{ color: #FFFFFF; } }
+.bg-fteal  { background: #69C7B5; .tandcapply::after{ color: #FFFFFF; } }
+
+.underlined{
+  border-bottom: 2px solid white;
+}
+
 .tandcapply, .required{
   &::after{
   content: " *";
@@ -17,31 +26,5 @@ body{
   position: absolute;
   }
 }
-
 .required::after{ color: #E9572C; }
 .tandcapply::after{ color: #4CBFD8; }
-
-.bg-fred   { background: #E9572C; .tandcapply::after{ color: #FFFFFF; } }
-.bg-fgreen { background: #89C138; .tandcapply::after{ color: #FFFFFF; } }
-.bg-fblue  { background: #4CBFD8; .tandcapply::after{ color: #FFFFFF; } }
-.bg-fteal  { background: #69C7B5; .tandcapply::after{ color: #FFFFFF; } }
-
-
-.field_with_errors input{
-  border-color: #dc3545;
-}
-.field_with_errors ~ .invalid-feedback {
-  display: block;
-}
-
-.form-group label{ text-transform: capitalize ; }
-
-.btn:hover {
-  //color: #7795f8;
-  transform: translateY(-1px);
-  //box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
-}
-
-.underlined{
-  border-bottom: 2px solid white;
-}
