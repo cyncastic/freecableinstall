@@ -1,5 +1,6 @@
 (function() {
   "use strict";
+
   $(document).on('turbolinks:load', function() {
 
     $('#tosmodalbtn').on('click',function(){

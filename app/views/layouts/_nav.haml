@@ -28,7 +28,24 @@
   -else
     %li.nav-item=link_to 'VOIP', new_voip_path, class: 'text-warning nav-link'
 
-  %li.nav-item=link_to 'Resellers',   resellers_path,     class: 'text-warning nav-link'
+
+
+  - if logged_in?
+    %li.nav-item.dropdown
+      %a#navbarDropdown.nav-link.dropdown-toggle.text-warning{ 'aria-expanded': false, 'aria-haspopup': true, 'data-toggle': 'dropdown', href: '#', role: 'button' }
+        Resellers
+      .dropdown-menu{ 'aria-labelledby': 'navbarDropdown' }
+        %a.dropdown-item=link_to 'Resellers', new_reseller_path, class: 'text-warning nav-link'
+        .dropdown-divider
+        %a.dropdown-item
+          =link_to voips_path, class: 'text-warning nav-link' do
+            Sign Ups
+            .badge.badge-pill.badge-info= Reseller.all.length
+  -else
+    %li.nav-item=link_to 'Resellers',   new_reseller_path,     class: 'text-warning nav-link'
+
+
+
 
   - if logged_in?
     %li.nav-item.dropdown

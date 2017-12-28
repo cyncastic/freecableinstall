@@ -1,0 +1,53 @@
+= form_with(model: reseller, local: true, class: 'container', id: 'needs-validation', html: { novalidate: true } ) do |form|
+  -# Show errors as needed
+  - if reseller.errors.any?
+    #error_explanation.alert.alert-danger{ role: 'alert' }
+      %h4
+        = pluralize(reseller.errors.count, "error")
+        prohibited this reseller from being saved:
+      %ul
+        - reseller.errors.full_messages.each do |message|
+          %li= message
+  -# Begnining of form
+
+  .form-row
+    .form-group.col-md-6
+      = form.label :first_name, class: 'control-label required'
+      = form.text_field :first_name, id: :reseller_first_name, class: 'form-control', required: true
+      .invalid-feedback Please provide your First Name
+    .form-group.col-md-6
+      = form.label :last_name, class: 'control-label required'
+      = form.text_field :last_name, id: :reseller_last_name, class: 'form-control', required: true
+      .invalid-feedback Please provide your Last Name
+
+  .form-group
+    = form.label :email, class: 'control-label required'
+    = form.email_field :email, id: :reseller_email, class: 'form-control', required: true
+    .invalid-feedback Please provide your Email Address
+
+  .form-group
+    = form.label :phone, class: 'control-label required'
+    = form.telephone_field :phone, id: :reseller_phone, class: 'form-control', required: true
+    .invalid-feedback Please provide your Telephone Number
+
+  .form-row
+    .form-group.col-md-6
+      = form.label :best_time
+      = form.select :best_time,
+                    options_for_select(best_times),
+                    { prompt: 'Please Choose' },
+                    { id: :reseller_best_time, class: 'form-control selectpicker' }
+    .form-group.col-md-6
+      = form.label :best_way
+      = form.select :best_way,
+                    options_for_select(best_ways),
+                    { prompt: 'Please Choose' },
+                    { id: :reseller_best_way, class: 'form-control selectpicker' }
+
+  -# .form-group
+  -#   .g-recaptcha{ 'data-sitekey': '6LelDDMUAAAAAGBBqJVyTMwgh2UpnhwhGJKR6w3d' }
+  -#   -# Captcha
+  -#   %script{ src: 'https://www.google.com/recaptcha/api.js' }
+
+  .form-group.mt-5
+    = form.submit 'Send Request', class: 'btn btn-info btn-lg'

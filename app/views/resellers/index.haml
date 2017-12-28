@@ -1,0 +1,20 @@
+%h1 Resellers
+
+%table.table.table-hover.w-100
+  %thead.thead-inverse
+    %tr
+      %th Name
+      %th Email
+      %th Phone
+      %th{ style: 'width: 1%; white-space: no-wrap;' }
+  %tbody
+    - @resellers.each do |reseller|
+      %tr
+        %td= reseller.first_name + ' ' + reseller.last_name
+        -# %td= link_to reseller.first_name + ' ' + reseller.last_name, reseller
+        %td= mail_to reseller.email
+        %td= tel_to reseller.phone
+        %td
+          -# = link_to 'Show', reseller
+          -# = link_to 'Edit', edit_reseller_path(reseller)
+          = link_to 'Destroy', reseller, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
