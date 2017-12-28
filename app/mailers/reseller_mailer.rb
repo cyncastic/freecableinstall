@@ -2,14 +2,14 @@ class ResellerMailer < ApplicationMailer
 
   default from: 'resellers@freecableinstall.com'
 
-  def welcome_email(internet)
-    @internet = internet
+  def welcome_email(reseller)
+    @reseller = reseller
     @url  = 'http://freecableinstall.com'
-    mail(to: @internet.email, subject: 'Welcome to My Awesome Site')
+    mail(to: @reseller.email, subject: 'Welcome to My Awesome Site')
   end
 
-  def new_signup_email(internet)
-    @internet = internet
+  def new_signup_email(reseller)
+    @reseller = reseller
     @url  = 'http://freecableinstall.com'
     mail(to: 'john@maxsip.com', subject: 'Welcome to My Awesome Site')
   end

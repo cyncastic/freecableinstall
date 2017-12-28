@@ -271,7 +271,7 @@
 
                               -# = link_to 'Back', internets_path
                               %h1
-                                = @internet.provider.name + ' order for ' + @internet.first_name + ' ' + @internet.last_name
+                                = @internet.provider_id + ' order for ' + @internet.first_name + ' ' + @internet.last_name
                                 = ' at ' + @internet.business_name unless @internet.business_name == ''
 
                               %ul.row.p-2
