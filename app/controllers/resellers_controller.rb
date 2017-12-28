@@ -33,7 +33,7 @@ class ResellersController < ApplicationController
       if @reseller.save
         ResellerMailer.welcome_email(@reseller).deliver_now
         ResellerMailer.new_signup_email(@reseller).deliver_now
-        format.html { redirect_to thankyou_path, notice: 'Reseller was successfully created.' }
+        format.html { redirect_to thankyou_path from: 'reseller' }
         format.json { render :show, status: :created, location: @reseller }
       else
         format.html { render :new }
