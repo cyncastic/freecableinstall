@@ -1,6 +1,6 @@
 class StaticController < ApplicationController
 
-  skip_before_action :authorize, only: [:home, :resellers, :thankyou]
+  skip_before_action :authorize, only: [:home, :resellers, :thankyou, :tos]
 
   def home
   end

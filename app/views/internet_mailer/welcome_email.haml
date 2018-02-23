@@ -13,9 +13,10 @@
     / [if !mso]><!
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     / <![endif]
-    %title Template Base
+    %title
     / [if !mso]><!--
-    %link{:href => "https://fonts.googleapis.com/css?family=Roboto", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Montserrat", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato", :rel => "stylesheet", :type => "text/css"}/
     / <![endif]
     %style#media-query{:type => "text/css"}
       :cdata
@@ -49,85 +50,85 @@
         vertical-align: top; }
 
         \.ie-browser .num12, .ie-browser .block-grid, [owa] .num12, [owa] .block-grid {
-        width: 650px !important; }
+        width: 600px !important; }
 
         \.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
         line-height: 100%; }
 
         \.ie-browser .mixed-two-up .num4, [owa] .mixed-two-up .num4 {
-        width: 216px !important; }
+        width: 200px !important; }
 
         \.ie-browser .mixed-two-up .num8, [owa] .mixed-two-up .num8 {
-        width: 432px !important; }
+        width: 400px !important; }
 
         \.ie-browser .block-grid.two-up .col, [owa] .block-grid.two-up .col {
-        width: 325px !important; }
+        width: 300px !important; }
 
         \.ie-browser .block-grid.three-up .col, [owa] .block-grid.three-up .col {
-        width: 216px !important; }
+        width: 200px !important; }
 
         \.ie-browser .block-grid.four-up .col, [owa] .block-grid.four-up .col {
-        width: 162px !important; }
+        width: 150px !important; }
 
         \.ie-browser .block-grid.five-up .col, [owa] .block-grid.five-up .col {
-        width: 130px !important; }
+        width: 120px !important; }
 
         \.ie-browser .block-grid.six-up .col, [owa] .block-grid.six-up .col {
-        width: 108px !important; }
+        width: 100px !important; }
 
         \.ie-browser .block-grid.seven-up .col, [owa] .block-grid.seven-up .col {
-        width: 92px !important; }
+        width: 85px !important; }
 
         \.ie-browser .block-grid.eight-up .col, [owa] .block-grid.eight-up .col {
-        width: 81px !important; }
+        width: 75px !important; }
 
         \.ie-browser .block-grid.nine-up .col, [owa] .block-grid.nine-up .col {
-        width: 72px !important; }
+        width: 66px !important; }
 
         \.ie-browser .block-grid.ten-up .col, [owa] .block-grid.ten-up .col {
-        width: 65px !important; }
+        width: 60px !important; }
 
         \.ie-browser .block-grid.eleven-up .col, [owa] .block-grid.eleven-up .col {
-        width: 59px !important; }
-
-        \.ie-browser .block-grid.twelve-up .col, [owa] .block-grid.twelve-up .col {
         width: 54px !important; }
 
-        @media only screen and (min-width: 670px) {
+        \.ie-browser .block-grid.twelve-up .col, [owa] .block-grid.twelve-up .col {
+        width: 50px !important; }
+
+        @media only screen and (min-width: 620px) {
         \.block-grid {
-        width: 650px !important; }
+        width: 600px !important; }
         \.block-grid .col {
         vertical-align: top; }
         \.block-grid .col.num12 {
-        width: 650px !important; }
+        width: 600px !important; }
         \.block-grid.mixed-two-up .col.num4 {
-        width: 216px !important; }
+        width: 200px !important; }
         \.block-grid.mixed-two-up .col.num8 {
-        width: 432px !important; }
+        width: 400px !important; }
         \.block-grid.two-up .col {
-        width: 325px !important; }
+        width: 300px !important; }
         \.block-grid.three-up .col {
-        width: 216px !important; }
+        width: 200px !important; }
         \.block-grid.four-up .col {
-        width: 162px !important; }
+        width: 150px !important; }
         \.block-grid.five-up .col {
-        width: 130px !important; }
+        width: 120px !important; }
         \.block-grid.six-up .col {
-        width: 108px !important; }
+        width: 100px !important; }
         \.block-grid.seven-up .col {
-        width: 92px !important; }
+        width: 85px !important; }
         \.block-grid.eight-up .col {
-        width: 81px !important; }
+        width: 75px !important; }
         \.block-grid.nine-up .col {
-        width: 72px !important; }
+        width: 66px !important; }
         \.block-grid.ten-up .col {
-        width: 65px !important; }
+        width: 60px !important; }
         \.block-grid.eleven-up .col {
-        width: 59px !important; }
+        width: 54px !important; }
         \.block-grid.twelve-up .col {
-        width: 54px !important; } }
+        width: 50px !important; } }
 
-        @media (max-width: 670px) {
+        @media (max-width: 620px) {
         \.block-grid, .col {
         min-width: 320px !important;
         max-width: 100% !important;
@@ -152,8 +153,15 @@
         \.no-stack.three-up .col.num4 {
         width: 33% !important; }
         \.no-stack.four-up .col.num3 {
-        width: 25% !important; } }
-  %body.clean-body{:style => "margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #4CBFD8"}
+        width: 25% !important; }
+        \.mobile_hide {
+        min-height: 0px;
+        max-height: 0px;
+        max-width: 0px;
+        display: none;
+        overflow: hidden;
+        font-size: 0px; } }
+  %body.clean-body{:style => "margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #FFFFFF"}
     %style#media-query-bodytag{:type => "text/css"}
       :cdata
         @media (max-width: 520px) {
@@ -195,303 +203,381 @@
         width: 66%!important;
         }
         \.no-stack.three-up .col.num4 {
-        width: 33%!important
+        width: 33%!important;
         }
         \.no-stack.four-up .col.num3 {
-        width: 25%!important
+        width: 25%!important;
+        }
+        \.mobile_hide {
+        min-height: 0px!important;
+        max-height: 0px!important;
+        max-width: 0px!important;
+        display: none!important;
+        overflow: hidden!important;
+        font-size: 0px!important;
         }
         }
     /[if IE] <div class="ie-browser">
     /[if mso] <div class="mso-container">
-    %table.nl-container{:cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #4CBFD8;width: 100%"}
+    %table.nl-container{:cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #FFFFFF;width: 100%"}
       %tbody
         %tr{:style => "vertical-align: top"}
           %td{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top"}
-            /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #4CBFD8;">
+            /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #FFFFFF;">
             %div{:style => "background-color:transparent;"}
-              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;"}
-                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;"}
-                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:#FFFFFF;">
-                  /[if (mso)|(IE)] <td align="center" width="650" style=" width:650px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 5px solid #4CBFD8; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num12{:style => "min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;"}
-                    %div{:style => "background-color: transparent; width: 100% !important;"}
-                      / [if (!mso)&(!IE)]><!
-                      %div{:style => "border-top: 5px solid #4CBFD8; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"}
-                        / <![endif]
-                        .img-container.center.autowidth{:align => "center", :style => "padding-right: 0px;  padding-left: 0px;"}
-                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center">
-
-
-                          =image_tag 'emails/email-logo2.png', width: 400, align: 'center', style: 'outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 400px', class: 'center autowidth'
-
-
-
-
-                          /[if mso] </td></tr></table>
-                        / [if (!mso)&(!IE)]><!
-                      / <![endif]
-                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
-            %div{:style => "background-color:transparent;"}
-              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;"}
-                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;"}
-                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:#FFFFFF;">
-                  /[if (mso)|(IE)] <td align="center" width="650" style=" width:650px; padding-right: 10px; padding-left: 10px; padding-top:10px; padding-bottom:10px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num12{:style => "min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;"}
-                    %div{:style => "background-color: transparent; width: 100% !important;"}
-                      / [if (!mso)&(!IE)]><!
-                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:10px; padding-bottom:10px; padding-right: 10px; padding-left: 10px;"}
-                        / <![endif]
-                        %div{:style => "padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"}
-                          /[if (mso)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px;padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><table width="90%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td>
-                          %div{:align => "center"}
-                            %div{:style => "border-top: 6px solid #f5f5f5; width:90%; line-height:6px; height:6px; font-size:6px;"}  
-                          /[if (mso)] </td></tr></table></td></tr></table>
-                        / [if (!mso)&(!IE)]><!
-                      / <![endif]
-                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
-            %div{:style => "background-color:transparent;"}
-              .block-grid.mixed-two-up{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;"}
-                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;"}
-                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:#FFFFFF;">
-                  /[if (mso)|(IE)] <td align="center" width="217" style=" width:217px; padding-right: 20px; padding-left: 20px; padding-top:20px; padding-bottom:20px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num4{:style => "display: table-cell;vertical-align: top;max-width: 320px;min-width: 216px;"}
-                    %div{:style => "background-color: transparent; width: 100% !important;"}
-                      / [if (!mso)&(!IE)]><!
-                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:20px; padding-bottom:20px; padding-right: 20px; padding-left: 20px;"}
-                        / <![endif]
-                        .img-container.center.fixedwidth{:align => "center", :style => "padding-right: 0px;  padding-left: 0px;"}
-                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center">
-
-
-
-                          =image_tag 'emails/like-2.png', width: 150, align: 'center', style: 'outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 150px', class: 'center fixedwidth'
-
-
-
-
-                          /[if mso] </td></tr></table>
-                        / [if (!mso)&(!IE)]><!
-                      / <![endif]
-                  /[if (mso)|(IE)] </td><td align="center" width="433" style=" width:433px; padding-right: 20px; padding-left: 20px; padding-top:20px; padding-bottom:20px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num8{:style => "display: table-cell;vertical-align: top;min-width: 320px;max-width: 432px;"}
-                    %div{:style => "background-color: transparent; width: 100% !important;"}
-                      / [if (!mso)&(!IE)]><!
-                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:20px; padding-bottom:20px; padding-right: 20px; padding-left: 20px;"}
-                        / <![endif]
-                        /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 10px;">
-                        %div{:style => "font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;line-height:120%;color:#E9572C; padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 10px;"}
-                          %div{:style => "font-size:12px;line-height:14px;color:#E9572C;font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
-                            %p{:style => "margin: 0;font-size: 14px;line-height: 17px"}
-                              %span{:style => "font-size: 20px; line-height: 24px;"}
-                                %strong Step 1
-                        /[if mso] </td></tr></table>
-                        /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px;">
-                        %div{:style => "font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;line-height:150%;color:#555555; padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px;"}
-                          %div{:style => "font-size:12px;line-height:18px;color:#555555;font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
-                            %p{:style => "margin: 0;font-size: 14px;line-height: 21px"}
-
-
-
-                              Integer a lobortis ipsum. Sed vestibulum tempus mi, ac egestas nisl vehicula sit amet. In ut gravida libero. Fusce venenatis odio nec nisi condimentum, vel consequat elit consequat.
-
-
-
-
-                        /[if mso] </td></tr></table>
-                        / [if (!mso)&(!IE)]><!
-                      / <![endif]
-                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
-            %div{:style => "background-color:transparent;"}
-              .block-grid.mixed-two-up{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;"}
-                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;"}
-                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:#FFFFFF;">
-                  /[if (mso)|(IE)] <td align="center" width="217" style=" width:217px; padding-right: 20px; padding-left: 20px; padding-top:20px; padding-bottom:20px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num4{:style => "display: table-cell;vertical-align: top;max-width: 320px;min-width: 216px;"}
-                    %div{:style => "background-color: transparent; width: 100% !important;"}
-                      / [if (!mso)&(!IE)]><!
-                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:20px; padding-bottom:20px; padding-right: 20px; padding-left: 20px;"}
-                        / <![endif]
-                        .img-container.center.fixedwidth{:align => "center", :style => "padding-right: 0px;  padding-left: 0px;"}
-                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center">
-
-
-
-
-                          =image_tag 'emails/handshake.png', width: 150, align: 'center', style: 'outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 150px', class: 'center fixedwidth'
-
-
-
-                          /[if mso] </td></tr></table>
-                        / [if (!mso)&(!IE)]><!
-                      / <![endif]
-                  /[if (mso)|(IE)] </td><td align="center" width="433" style=" width:433px; padding-right: 20px; padding-left: 20px; padding-top:20px; padding-bottom:20px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num8{:style => "display: table-cell;vertical-align: top;min-width: 320px;max-width: 432px;"}
-                    %div{:style => "background-color: transparent; width: 100% !important;"}
-                      / [if (!mso)&(!IE)]><!
-                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:20px; padding-bottom:20px; padding-right: 20px; padding-left: 20px;"}
-                        / <![endif]
-                        /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 10px;">
-                        %div{:style => "font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;line-height:120%;color:#E9572C; padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 10px;"}
-                          %div{:style => "font-size:12px;line-height:14px;color:#E9572C;font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
-                            %p{:style => "margin: 0;font-size: 14px;line-height: 17px"}
-                              %span{:style => "font-size: 20px; line-height: 24px;"}
-                                %strong Step 2
-                        /[if mso] </td></tr></table>
-                        /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px;">
-                        %div{:style => "font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;line-height:150%;color:#555555; padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px;"}
-                          %div{:style => "font-size:12px;line-height:18px;color:#555555;font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
-                            %p{:style => "margin: 0;font-size: 14px;line-height: 21px"}
-
-
-
-                              Integer a lobortis ipsum. Sed vestibulum tempus mi, ac egestas nisl vehicula sit amet. In ut gravida libero. Fusce venenatis odio nec nisi condimentum, vel consequat elit consequat.
-
-
-
-
-                        /[if mso] </td></tr></table>
-                        / [if (!mso)&(!IE)]><!
-                      / <![endif]
-                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
-            %div{:style => "background-color:transparent;"}
-              .block-grid.mixed-two-up{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;"}
-                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;"}
-                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:#FFFFFF;">
-                  /[if (mso)|(IE)] <td align="center" width="217" style=" width:217px; padding-right: 20px; padding-left: 20px; padding-top:20px; padding-bottom:20px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num4{:style => "display: table-cell;vertical-align: top;max-width: 320px;min-width: 216px;"}
-                    %div{:style => "background-color: transparent; width: 100% !important;"}
-                      / [if (!mso)&(!IE)]><!
-                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:20px; padding-bottom:20px; padding-right: 20px; padding-left: 20px;"}
-                        / <![endif]
-                        .img-container.center.fixedwidth{:align => "center", :style => "padding-right: 0px;  padding-left: 0px;"}
-                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center">
-
-
-
-
-                          =image_tag 'emails/network.png', width: 150, align: 'center', style: 'outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 150px', class: 'center fixedwidth'
-
-
-
-                          /[if mso] </td></tr></table>
-                        / [if (!mso)&(!IE)]><!
-                      / <![endif]
-                  /[if (mso)|(IE)] </td><td align="center" width="433" style=" width:433px; padding-right: 20px; padding-left: 20px; padding-top:20px; padding-bottom:20px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num8{:style => "display: table-cell;vertical-align: top;min-width: 320px;max-width: 432px;"}
-                    %div{:style => "background-color: transparent; width: 100% !important;"}
-                      / [if (!mso)&(!IE)]><!
-                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:20px; padding-bottom:20px; padding-right: 20px; padding-left: 20px;"}
-                        / <![endif]
-                        /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 10px;">
-                        %div{:style => "font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;line-height:120%;color:#E9572C; padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 10px;"}
-                          %div{:style => "font-size:12px;line-height:14px;color:#E9572C;font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
-                            %p{:style => "margin: 0;font-size: 14px;line-height: 17px"}
-                              %span{:style => "font-size: 20px; line-height: 24px;"}
-                                %strong Step 3
-                        /[if mso] </td></tr></table>
-                        /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px;">
-                        %div{:style => "font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;line-height:150%;color:#555555; padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px;"}
-                          %div{:style => "font-size:12px;line-height:18px;color:#555555;font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
-                            %p{:style => "margin: 0;font-size: 14px;line-height: 21px"}
-
-
-
-                              Integer a lobortis ipsum. Sed vestibulum tempus mi, ac egestas nisl vehicula sit amet. In ut gravida libero. Fusce venenatis odio nec nisi condimentum, vel consequat elit consequat.
-
-
-
-                        /[if mso] </td></tr></table>
-                        / [if (!mso)&(!IE)]><!
-                      / <![endif]
-                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
-            %div{:style => "background-color:transparent;"}
-              .block-grid.mixed-two-up{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;"}
-                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;"}
-                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:#FFFFFF;">
-                  /[if (mso)|(IE)] <td align="center" width="217" style=" width:217px; padding-right: 20px; padding-left: 20px; padding-top:20px; padding-bottom:20px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num4{:style => "display: table-cell;vertical-align: top;max-width: 320px;min-width: 216px;"}
-                    %div{:style => "background-color: transparent; width: 100% !important;"}
-                      / [if (!mso)&(!IE)]><!
-                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:20px; padding-bottom:20px; padding-right: 20px; padding-left: 20px;"}
-                        / <![endif]
-                        .img-container.center.fixedwidth{:align => "center", :style => "padding-right: 0px;  padding-left: 0px;"}
-                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center">
-
-
-
-                          =image_tag 'emails/worldwide-1.png', width: 150, align: 'center', style: 'outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 150px', class: 'center fixedwidth'
-
-
-
-                          /[if mso] </td></tr></table>
-                        / [if (!mso)&(!IE)]><!
-                      / <![endif]
-                  /[if (mso)|(IE)] </td><td align="center" width="433" style=" width:433px; padding-right: 20px; padding-left: 20px; padding-top:20px; padding-bottom:20px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num8{:style => "display: table-cell;vertical-align: top;min-width: 320px;max-width: 432px;"}
-                    %div{:style => "background-color: transparent; width: 100% !important;"}
-                      / [if (!mso)&(!IE)]><!
-                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:20px; padding-bottom:20px; padding-right: 20px; padding-left: 20px;"}
-                        / <![endif]
-                        /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 10px;">
-                        %div{:style => "font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;line-height:120%;color:#E9572C; padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 10px;"}
-                          %div{:style => "font-size:12px;line-height:14px;color:#E9572C;font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
-                            %p{:style => "margin: 0;font-size: 14px;line-height: 17px"}
-                              %span{:style => "font-size: 20px; line-height: 24px;"}
-                                %strong Step 4
-                        /[if mso] </td></tr></table>
-                        /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px;">
-                        %div{:style => "font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;line-height:150%;color:#555555; padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px;"}
-                          %div{:style => "font-size:12px;line-height:18px;color:#555555;font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
-                            %p{:style => "margin: 0;font-size: 14px;line-height: 21px"}
-
-
-
-                              Integer a lobortis ipsum. Sed vestibulum tempus mi, ac egestas nisl vehicula sit amet. In ut gravida libero. Fusce venenatis odio nec nisi condimentum, vel consequat elit consequat.
-
-
-
-
-                        /[if mso] </td></tr></table>
-                        / [if (!mso)&(!IE)]><!
-                      / <![endif]
-                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
-            %div{:style => "background-color:transparent;"}
-              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;"}
-                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;"}
-                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:#FFFFFF;">
-                  /[if (mso)|(IE)] <td align="center" width="650" style=" width:650px; padding-right: 10px; padding-left: 10px; padding-top:10px; padding-bottom:10px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num12{:style => "min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;"}
-                    %div{:style => "background-color: transparent; width: 100% !important;"}
-                      / [if (!mso)&(!IE)]><!
-                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:10px; padding-bottom:10px; padding-right: 10px; padding-left: 10px;"}
-                        / <![endif]
-                        %div{:style => "padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"}
-                          /[if (mso)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px;padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><table width="90%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td>
-                          %div{:align => "center"}
-                            %div{:style => "border-top: 6px solid #f5f5f5; width:90%; line-height:6px; height:6px; font-size:6px;"}  
-                          /[if (mso)] </td></tr></table></td></tr></table>
-                        / [if (!mso)&(!IE)]><!
-                      / <![endif]
-                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
-            %div{:style => "background-color:transparent;"}
-              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
                 %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:transparent;"}
-                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 650px;"><tr class="layout-full-width" style="background-color:transparent;">
-                  /[if (mso)|(IE)] <td align="center" width="650" style=" width:650px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
-                  .col.num12{:style => "min-width: 320px;max-width: 650px;display: table-cell;vertical-align: top;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;">
+                  /[if (mso)|(IE)] <td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;"}
                     %div{:style => "background-color: transparent; width: 100% !important;"}
                       / [if (!mso)&(!IE)]><!
                       %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"}
                         / <![endif]
-                        %div{:style => "font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;line-height:120%;color:#FFFFFF; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"}
-                          %div{:style => "font-size:12px;line-height:14px;color:#FFFFFF;font-family:'Roboto', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
-                            %p{:style => "margin: 0;font-size: 14px;line-height: 17px;text-align: center"}
-                              %span{:style => "font-size: 10px; line-height: 12px;"} ﻿Copyright © 2017 FreeCableInstall.com All rights reserved.
-                              %br/
-                              %span{:style => "font-size: 10px; line-height: 12px;"}
-                                You’re receiving this message because you signed up at
-                                %a{:href => "https://freecableinstall.com", :rel => "noopener", :style => "color:#FFFFFF;text-decoration: underline;", :target => "_blank"} FreeCableInstall.com
-                        /[if mso] </td></tr></table>
+                        .img-container.center.autowidth{:align => "center", :style => "padding-right: 0px;  padding-left: 0px;"}
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px;line-height:0px;"><td style="padding-right: 0px; padding-left: 0px;" align="center">
+                          %img.center.autowidth{:align => "center", :alt => "Image", :border => "0", :src => "https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/116296_91871/editor_images/email-logo2-86294de5a47652ff1bfcab82a37bddd8fe5ddbb11c324daa891d758353c465d6.png", :style => "outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 400px", :title => "Image", :width => "400"}/
+                          /[if mso] </td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-image:url('https://dcqepv5djxfod.cloudfront.net/templates/default/61/sayagata-200px.gif');background-position:top center;background-repeat:repeat;;background-color:transparent"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:transparent;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-image:url('https://dcqepv5djxfod.cloudfront.net/templates/default/61/sayagata-200px.gif');background-position:top center;background-repeat:repeat;;background-color:transparent" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;">
+                  /[if (mso)|(IE)] <td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:15px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:15px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 30px; padding-bottom: 5px;">
+                          %div{:style => "line-height:120%;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#555555; padding-right: 10px; padding-left: 10px; padding-top: 30px; padding-bottom: 5px;"}
+                            %div{:style => "font-size:12px;line-height:14px;font-family:Montserrat, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#555555;text-align:left;"}
+                              %p{:style => "margin: 0;font-size: 12px;line-height: 14px;text-align: center"}
+                                %span{:style => "font-size: 48px; line-height: 57px;"}
+                                  %strong
+                                    %span{:style => "line-height: 57px; font-size: 48px;"} WELCOME
+                          /[if mso] </td></tr></table>
+                        %table.divider{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%", :width => "100%"}
+                          %tbody
+                            %tr{:style => "vertical-align: top"}
+                              %td.divider_inner{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top;padding-right: 10px;padding-left: 10px;padding-top: 15px;padding-bottom: 20px;min-width: 100%;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%"}
+                                %table.divider_content{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :height => "0px", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 10px solid #66C7E5;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%", :width => "15%"}
+                                  %tbody
+                                    %tr{:style => "vertical-align: top"}
+                                      %td{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%"}
+                                        %span  
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 5px; padding-bottom: 10px;">
+                          %div{:style => "line-height:120%;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#555555; padding-right: 10px; padding-left: 10px; padding-top: 5px; padding-bottom: 10px;"}
+                            %div{:style => "font-size:12px;line-height:14px;font-family:Montserrat, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#555555;text-align:left;"}
+                              %p{:style => "margin: 0;font-size: 14px;line-height: 17px;text-align: center"}
+                                %span{:style => "font-size: 20px; line-height: 24px;"}
+                                  %strong Thanks for choosing Free Cable Install! 
+                                %br/
+                          /[if mso] </td></tr></table>
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 25px; padding-left: 25px; padding-top: 5px; padding-bottom: 20px;">
+                          %div{:style => "line-height:180%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color:#555555; padding-right: 25px; padding-left: 25px; padding-top: 5px; padding-bottom: 20px;"}
+                            %div{:style => "font-size:12px;line-height:22px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
+                              %p{:style => "margin: 0;font-size: 14px;line-height: 25px;text-align: center"}
+                                %span{:style => "font-size: 16px; line-height: 28px;"}
+                                  %span{:style => "line-height: 28px; font-size: 16px;"} We’ll send you updates throughout the order process. Orders can take between 7-10 business days to complete before installation.  
+                          /[if mso] </td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-color:transparent;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:transparent;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;">
+                  /[if (mso)|(IE)] <td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        %table.divider{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%", :width => "100%"}
+                          %tbody
+                            %tr{:style => "vertical-align: top"}
+                              %td.divider_inner{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top;padding-right: 10px;padding-left: 10px;padding-top: 10px;padding-bottom: 10px;min-width: 100%;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%"}
+                                %table.divider_content{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 0px solid transparent;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%", :width => "100%"}
+                                  %tbody
+                                    %tr{:style => "vertical-align: top"}
+                                      %td{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%"}
+                                        %span
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-color:transparent;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:transparent;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;">
+                  /[if (mso)|(IE)] <td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        .img-container.center.autowidth.fullwidth{:align => "center", :style => "padding-right: 15px;  padding-left: 15px;"}
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px;line-height:0px;"><td style="padding-right: 15px; padding-left: 15px;" align="center">
+                          %div{:style => "line-height:15px;font-size:1px"}  
+                          %img.center.autowidth.fullwidth{:align => "center", :alt => "Image", :border => "0", :src => "https://dcqepv5djxfod.cloudfront.net/templates/default/61/mockup-ready.jpg", :style => "outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 570px", :title => "Image", :width => "570"}/
+                          %div{:style => "line-height:15px;font-size:1px"}  
+                          /[if mso] </td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-color:transparent;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:transparent;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;">
+                  /[if (mso)|(IE)] <td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 10px; padding-top: 5px; padding-bottom: 5px;">
+                          %div{:style => "line-height:120%;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#555555; padding-right: 0px; padding-left: 10px; padding-top: 5px; padding-bottom: 5px;"}
+                            %div{:style => "line-height:14px;font-size:12px;color:#555555;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;text-align:left;"}
+                              %p{:style => "margin: 0;line-height: 14px;text-align: center;font-size: 12px"}
+                                %span{:style => "line-height: 14px; font-size: 12px;"}
+                                  %b{:style => "font-size: 20px; font-family: Montserrat, \"Trebuchet MS\", \"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Tahoma, sans-serif;"} We also offer great deals on 
+                                  %span{:style => "line-height: 14px; font-size: 12px;"}
+                                    %span{:style => "font-size: 20px; line-height: 24px;"}
+                                      %b custom business
+                                  %b{:style => "font-size: 20px; font-family: Montserrat, \"Trebuchet MS\", \"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Tahoma, sans-serif;"}  phone systems. 
+                          /[if mso] </td></tr></table>
+                        .button-container.center{:align => "center", :style => "padding-right: 10px; padding-left: 10px; padding-top:15px; padding-bottom:20px;"}
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top:15px; padding-bottom:20px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:31pt; v-text-anchor:middle; width:213pt;" arcsize="12%" strokecolor="#66C7E5" fillcolor="transparent"><w:anchorlock/><v:textbox inset="0,0,0,0"><center style="color:#66C7E5; font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; font-size:14px;">
+                          %div{:style => "color: #66C7E5; background-color: transparent; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; max-width: 284px; width: 244px;width: auto; border-top: 2px solid #66C7E5; border-right: 2px solid #66C7E5; border-bottom: 2px solid #66C7E5; border-left: 2px solid #66C7E5; padding-top: 5px; padding-right: 20px; padding-bottom: 5px; padding-left: 20px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; text-align: center; mso-border-alt: none;"}
+                            %span{:style => "font-size:12px;line-height:24px;"}
+                              %span{"data-mce-style" => "font-size: 14px;", :style => "font-size: 14px; line-height: 28px;"}
+                                %strong Check deals on Hosted Phone Systems
+                          /[if mso] </center></v:textbox></v:roundrect></td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-color:transparent;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:transparent;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;">
+                  /[if (mso)|(IE)] <td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        %table.divider{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%", :width => "100%"}
+                          %tbody
+                            %tr{:style => "vertical-align: top"}
+                              %td.divider_inner{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top;padding-right: 10px;padding-left: 10px;padding-top: 10px;padding-bottom: 10px;min-width: 100%;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%"}
+                                %table.divider_content{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 0px solid transparent;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%", :width => "100%"}
+                                  %tbody
+                                    %tr{:style => "vertical-align: top"}
+                                      %td{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%"}
+                                        %span
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-image:url('https://dcqepv5djxfod.cloudfront.net/templates/default/61/bg-yeah.jpg');background-position:top center;background-repeat:no-repeat;;background-color:#66C7E5"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:transparent;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-image:url('https://dcqepv5djxfod.cloudfront.net/templates/default/61/bg-yeah.jpg');background-position:top center;background-repeat:no-repeat;;background-color:#66C7E5" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;">
+                  /[if (mso)|(IE)] <td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:20px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:20px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        .img-container.center.autowidth{:align => "center", :style => "padding-right: 0px;  padding-left: 0px;"}
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px;line-height:0px;"><td style="padding-right: 0px; padding-left: 0px;" align="center">
+                          %div{:style => "line-height:30px;font-size:1px"}  
+                          %img.center.autowidth{:align => "center", :alt => "Image", :border => "0", :src => "https://dcqepv5djxfod.cloudfront.net/templates/default/61/aa2e0cc1-3ed0-4c54-8063-a49c385fad3d.png", :style => "outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 380px", :title => "Image", :width => "380"}/
+                          /[if mso] </td></tr></table>
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 0px;">
+                          %div{:style => "line-height:150%;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#FFFFFF; padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 0px;"}
+                            %div{:style => "line-height:18px;font-family:Montserrat, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;font-size:12px;color:#FFFFFF;text-align:left;"}
+                              %p{:style => "margin: 0;line-height: 18px;text-align: center;font-size: 12px"}
+                                %span{:style => "font-size: 28px; line-height: 42px;"}
+                                  %strong Your business will be running smoothly with your new Internet powered by Free Cable Install. 
+                          /[if mso] </td></tr></table>
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;">
+                          %div{:style => "line-height:180%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color:#FFFFFF; padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;"}
+                            %div{:style => "line-height:22px;font-size:12px;color:#FFFFFF;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
+                              %p{:style => "margin: 0;line-height: 22px;text-align: center;font-size: 12px"}
+                                %span{:style => "font-size: 16px; line-height: 28px;"} We work with all the major cable providers to create relationships with businesses so they get the best services and a great deal only offered through us!
+                          /[if mso] </td></tr></table>
+                        .button-container.center{:align => "center", :style => "padding-right: 10px; padding-left: 10px; padding-top:15px; padding-bottom:30px;"}
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top:15px; padding-bottom:30px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:40pt; v-text-anchor:middle; width:121pt;" arcsize="6%" strokecolor="#FFFFFF" fillcolor="transparent"><w:anchorlock/><v:textbox inset="0,0,0,0"><center style="color:#ffffff; font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; font-size:18px;">
+                          %div{:style => "color: #ffffff; background-color: transparent; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; max-width: 162px; width: 122px;width: auto; border-top: 4px solid #FFFFFF; border-right: 4px solid #FFFFFF; border-bottom: 4px solid #FFFFFF; border-left: 4px solid #FFFFFF; padding-top: 5px; padding-right: 20px; padding-bottom: 5px; padding-left: 20px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; text-align: center; mso-border-alt: none;"}
+                            %span{:style => "font-size:12px;line-height:24px;"}
+                              %span{"data-mce-style" => "font-size: 18px; line-height: 28px;", :style => "font-size: 18px; line-height: 36px;"}
+                                %strong
+                                  %span{"data-mce-style" => "line-height: 28px;", :style => "line-height: 36px; font-size: 18px;"} Refer a friend
+                          /[if mso] </center></v:textbox></v:roundrect></td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-color:transparent;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:transparent;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;">
+                  /[if (mso)|(IE)] <td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        %table.divider{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%", :width => "100%"}
+                          %tbody
+                            %tr{:style => "vertical-align: top"}
+                              %td.divider_inner{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top;padding-right: 10px;padding-left: 10px;padding-top: 10px;padding-bottom: 10px;min-width: 100%;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%"}
+                                %table.divider_content{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 0px solid transparent;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%", :width => "100%"}
+                                  %tbody
+                                    %tr{:style => "vertical-align: top"}
+                                      %td{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%"}
+                                        %span
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-color:transparent;"}
+              .block-grid.three-up{:style => "Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:transparent;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;">
+                  /[if (mso)|(IE)] <td align="center" width="200" style=" width:200px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num4{:style => "max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        .img-container.center.autowidth.fullwidth{:align => "center", :style => "padding-right: 15px;  padding-left: 15px;"}
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px;line-height:0px;"><td style="padding-right: 15px; padding-left: 15px;" align="center">
+                          %div{:style => "line-height:15px;font-size:1px"}  
+                          %img.center.autowidth.fullwidth{:align => "center", :alt => "Image", :border => "0", :src => "https://dcqepv5djxfod.cloudfront.net/templates/default/61/c69f812f-a108-42af-aa74-0dd3184afd6d.jpg", :style => "outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 170px", :title => "Image", :width => "170"}/
+                          %div{:style => "line-height:15px;font-size:1px"}  
+                          /[if mso] </td></tr></table>
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 10px; padding-top: 10px; padding-bottom: 5px;">
+                          %div{:style => "line-height:150%;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#555555; padding-right: 0px; padding-left: 10px; padding-top: 10px; padding-bottom: 5px;"}
+                            %div{:style => "font-size:12px;line-height:18px;font-family:Montserrat, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#555555;text-align:left;"}
+                              %p{:style => "margin: 0;font-size: 14px;line-height: 21px;text-align: center"}
+                                %span{:style => "font-size: 16px; line-height: 24px;"}
+                                  %strong Business Internet 
+                          /[if mso] </td></tr></table>
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                          %div{:style => "line-height:180%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color:#555555; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"}
+                            %div{:style => "font-size:12px;line-height:22px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
+                              %p{:style => "margin: 0;font-size: 14px;line-height: 25px;text-align: center"} Choose from a range of fast business internet options and find a solution to meet your company’s needs
+                          /[if mso] </td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td><td align="center" width="200" style=" width:200px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num4{:style => "max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        .img-container.center.autowidth.fullwidth{:align => "center", :style => "padding-right: 15px;  padding-left: 15px;"}
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px;line-height:0px;"><td style="padding-right: 15px; padding-left: 15px;" align="center">
+                          %div{:style => "line-height:15px;font-size:1px"}  
+                          %img.center.autowidth.fullwidth{:align => "center", :alt => "Image", :border => "0", :src => "https://dcqepv5djxfod.cloudfront.net/templates/default/61/9c657b2a-9c9f-4601-8d70-64279eb98245.jpg", :style => "outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 170px", :title => "Image", :width => "170"}/
+                          %div{:style => "line-height:15px;font-size:1px"}  
+                          /[if mso] </td></tr></table>
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 10px; padding-top: 10px; padding-bottom: 5px;">
+                          %div{:style => "line-height:150%;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#555555; padding-right: 0px; padding-left: 10px; padding-top: 10px; padding-bottom: 5px;"}
+                            %div{:style => "font-size:12px;line-height:18px;font-family:Montserrat, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#555555;text-align:left;"}
+                              %p{:style => "margin: 0;font-size: 14px;line-height: 21px;text-align: center"}
+                                %span{:style => "font-size: 16px; line-height: 24px;"}
+                                  %strong Business Class Phones
+                          /[if mso] </td></tr></table>
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                          %div{:style => "line-height:180%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color:#555555; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"}
+                            %div{:style => "font-size:12px;line-height:22px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
+                              %p{:style => "margin: 0;font-size: 14px;line-height: 25px;text-align: center"}
+                                %span{:style => "font-size: 14px; line-height: 25px;"} Many offices need a fax line, fire alarm or even a basic phone to keep their office going.  
+                          /[if mso] </td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td><td align="center" width="200" style=" width:200px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num4{:style => "max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        .img-container.center.autowidth.fullwidth{:align => "center", :style => "padding-right: 15px;  padding-left: 15px;"}
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px;line-height:0px;"><td style="padding-right: 15px; padding-left: 15px;" align="center">
+                          %div{:style => "line-height:15px;font-size:1px"}  
+                          %img.center.autowidth.fullwidth{:align => "center", :alt => "Image", :border => "0", :src => "https://dcqepv5djxfod.cloudfront.net/templates/default/61/9e0a9ef1-15ad-414c-9ad3-a7fecccbb32a.jpg", :style => "outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 170px", :title => "Image", :width => "170"}/
+                          %div{:style => "line-height:15px;font-size:1px"}  
+                          /[if mso] </td></tr></table>
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 10px; padding-top: 10px; padding-bottom: 5px;">
+                          %div{:style => "line-height:150%;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#555555; padding-right: 0px; padding-left: 10px; padding-top: 10px; padding-bottom: 5px;"}
+                            %div{:style => "font-size:12px;line-height:18px;font-family:Montserrat, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;color:#555555;text-align:left;"}
+                              %p{:style => "margin: 0;font-size: 14px;line-height: 21px;text-align: center"}
+                                %span{:style => "font-size: 16px; line-height: 24px;"}
+                                  %strong Business Class TV
+                          /[if mso] </td></tr></table>
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                          %div{:style => "line-height:180%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color:#555555; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"}
+                            %div{:style => "font-size:12px;line-height:22px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
+                              %p{:style => "margin: 0;font-size: 14px;line-height: 25px;text-align: center"}
+                                %span{:style => "font-size: 14px; line-height: 25px;"} Do you have a waiting room or area that needs entertainment? Add TV services to get a bundled deal. 
+                          /[if mso] </td></tr></table>
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-color:transparent;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:transparent;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;">
+                  /[if (mso)|(IE)] <td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:10px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:10px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        %table.divider{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%", :width => "100%"}
+                          %tbody
+                            %tr{:style => "vertical-align: top"}
+                              %td.divider_inner{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top;padding-right: 10px;padding-left: 10px;padding-top: 10px;padding-bottom: 10px;min-width: 100%;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%"}
+                                %table.divider_content{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 0px solid transparent;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%", :width => "100%"}
+                                  %tbody
+                                    %tr{:style => "vertical-align: top"}
+                                      %td{:style => "word-break: break-word;border-collapse: collapse !important;vertical-align: top;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%"}
+                                        %span
+                        / [if (!mso)&(!IE)]><!
+                      / <![endif]
+                  /[if (mso)|(IE)] </td></tr></table></td></tr></table>
+            %div{:style => "background-color:#F9F9F9;"}
+              .block-grid{:style => "Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;"}
+                %div{:style => "border-collapse: collapse;display: table;width: 100%;background-color:transparent;"}
+                  /[if (mso)|(IE)] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#F9F9F9;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;">
+                  /[if (mso)|(IE)] <td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top">
+                  .col.num12{:style => "min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;"}
+                    %div{:style => "background-color: transparent; width: 100% !important;"}
+                      / [if (!mso)&(!IE)]><!
+                      %div{:style => "border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"}
+                        / <![endif]
+                        %div
+                          /[if mso] <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                          %div{:style => "line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color:#555555; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"}
+                            %div{:style => "font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"}
+                              %p{:style => "margin: 0;font-size: 14px;line-height: 17px;text-align: center"}
+                                %strong> © 2017 freecableinstall.com 
+                                 All rights reserved
+                          /[if mso] </td></tr></table>
                         / [if (!mso)&(!IE)]><!
                       / <![endif]
                   /[if (mso)|(IE)] </td></tr></table></td></tr></table>
