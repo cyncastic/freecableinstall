@@ -68,10 +68,11 @@
           .modal-footer
             %button.btn.btn-info{ 'data-dismiss': 'modal', type: 'button' } Close
 
-    / Global Site Tag (gtag.js) - Google Analytics
-    %script{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=UA-107489713-1' }
+    / Global site tag (gtag.js) - Google Analytics
+    %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=UA-107489713-1"}
     :javascript
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)};
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'UA-107489713-1');
