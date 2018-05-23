@@ -15,13 +15,13 @@
       -# %th Business phone
       -# %th Street address 1
       -# %th Street address 2
-      %th Location
+      -# %th Location
       -# %th Zip
       %th{ style: 'width: 1%; white-space: no-wrap;' }
   %tbody
     - @internets.each do |internet|
       %tr
-        %td= internet.provider.name
+        -# %td= internet.provider.name
         -# %td= internet.number_computers
         -# %td= internet.interested
         %td= link_to internet.first_name + ' ' + internet.last_name, internet
@@ -34,7 +34,7 @@
         -# %td= internet.business_phone
         -# %td= internet.street_address_1
         -# %td= internet.street_address_2
-        %td= internet.city + ', ' + internet.state
+        -# %td= internet.city + ', ' + internet.state
         -# %td= internet.zip
         %td
           -# = link_to 'Show', internet, class: 'btn btn-warning'

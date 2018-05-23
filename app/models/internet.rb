@@ -1,9 +1,9 @@
 class Internet < ApplicationRecord
 
-  belongs_to :provider
-  belongs_to :referrer
+  # belongs_to :provider
+  # belongs_to :referrer
 
-  validates :provider_id, presence: true
+  # validates :provider_id, presence: true
 
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -12,8 +12,8 @@ class Internet < ApplicationRecord
 
   validates :phone, numericality: true, presence: true
 
-  validates :business_phone, numericality: true, presence: true
+  # validates :business_phone, numericality: true, presence: true
 
-  validates :zip, presence: true, numericality: true, length: { minimum: 5, maximum: 5 }
+  # validates :zip, presence: true, numericality: true, length: { minimum: 5, maximum: 5 }
 
 end

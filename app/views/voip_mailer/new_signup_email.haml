@@ -268,20 +268,21 @@
 
 
 
-                              %h1= 'Maxsip Order for ' + @voip.first_name + ' ' + @voip.last_name + ' ' + 'at ' + @voip.business_name
+                              %h1= 'Maxsip Order for ' + @voip.first_name + ' ' + @voip.last_name
+                              -# %h1= 'Maxsip Order for ' + @voip.first_name + ' ' + @voip.last_name + ' ' + 'at ' + @voip.business_name
 
                               %ul
                                 %li=pluralize @voip.quantity_vvx301, 'VVX 301'
                                 %li=pluralize @voip.quantity_vvx401, 'VVX 401'
 
-                              %p
-                                Referred by
-                                =@voip.referrer.name
+                              -# %p
+                              -#   Referred by
+                              -#   =@voip.referrer.name
 
-                              %p
-                                Is
-                                = ' NOT ' unless @voip.also_interested
-                                intersested in Internet.
+                              -# %p
+                              -#   Is
+                              -#   = ' NOT ' unless @voip.also_interested
+                              -#   intersested in Internet.
 
                               %hr{ style: 'border: 1px #69C7B5 dashed;' }/
 
@@ -295,15 +296,15 @@
 
                                   %p.mt-4= 'Best to contact by ' + @voip.best_way + ' in the ' + @voip.best_time
 
-                                .col-md-6
-                                  %h2 Business Info
-                                  %ul.list-unstyled
-                                    %li= @voip.business_name
-                                    %li= @voip.business_phone
-                                    %li= @voip.street_address_1
-                                    - unless  @voip.street_address_2 == ''
-                                      %li= @voip.street_address_2
-                                    %li= @voip.city + ', ' + @voip.state + ' ' + @voip.zip
+                                -# .col-md-6
+                                -#   %h2 Business Info
+                                -#   %ul.list-unstyled
+                                -#     %li= @voip.business_name
+                                -#     %li= @voip.business_phone
+                                -#     %li= @voip.street_address_1
+                                -#     - unless  @voip.street_address_2 == ''
+                                -#       %li= @voip.street_address_2
+                                -#     %li= @voip.city + ', ' + @voip.state + ' ' + @voip.zip
 
 
 

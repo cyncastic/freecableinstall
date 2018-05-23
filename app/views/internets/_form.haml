@@ -11,47 +11,46 @@
 
   -# Begnining of form
 
-  .form-group
-    = form.label :provider_id, class: 'control-label required'
-    #isps
-      = form.collection_select :provider_id, Provider.all.order('zorder ASC'), :id, :name, {prompt: true}, {class: 'form-control selectpicker'}
-      .invalid-feedback Please provide the Business Name
+  -# .form-group
+  -#   = form.label :provider_id, class: 'control-label'
+  -#   #isps
+  -#     = form.collection_select :provider_id, Provider.all.order('zorder ASC'), :id, :name, {prompt: true}, {class: 'form-control selectpicker'}
+  -#     .invalid-feedback Please provide the Business Name
 
-  .form-group#otherisp.collapse
-    = form.label :other_provider, class: 'control-label required'
-    = form.text_field :other_provider, id: :internet_last_name, class: 'form-control'
-
-
-  .form-row
-    .from-group.col-md-4
-      = form.label :want_internet, class: 'form-check-label' do
-        = form.check_box :want_internet, id: :internet_want_internet, class: 'form-check-input'
-        Internet
-      = form.select :number_computers,
-                    options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 5] ]),
-                    { prompt: 'Number of Computers' },
-                    { class: 'form-control selectpicker collapse', id: :internet_number_computers}
-
-    .from-group.col-md-4
-      = form.label :want_television, class: 'form-check-label' do
-        = form.check_box :want_television, id: :internet_want_television, class: 'form-check-input'
-        Television
-      = form.select :number_televisions,
-                    options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 4] ]),
-                    { prompt: 'Number of Televisions' },
-                    { class: 'form-control selectpicker collapse', id: :internet_number_televisions}
-
-    .from-group.col-md-4
-      = form.label :want_phone, class: 'form-check-label' do
-        = form.check_box :want_phone, id: :internet_want_phone, class: 'form-check-input'
-        Phones
-      = form.select :number_phones,
-                    options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 4] ]),
-                    { prompt: 'Number of Phones' },
-                    { class: 'form-control selectpicker collapse' , id: :internet_number_phones}
+  -# .form-group#otherisp.collapse.d-none
+  -#   = form.label :other_provider, class: 'control-label'
+  -#   = form.text_field :other_provider, id: :internet_last_name, class: 'form-control'
 
 
-  %hr.my-5/
+  -# .form-row
+  -#   .from-group.col-md-4
+  -#     = form.label :want_internet, class: 'form-check-label' do
+  -#       = form.check_box :want_internet, id: :internet_want_internet, class: 'form-check-input'
+  -#       Internet
+  -#     = form.select :number_computers,
+  -#                   options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 5] ]),
+  -#                   { prompt: 'Number of Computers' },
+  -#                   { class: 'form-control selectpicker collapse', id: :internet_number_computers}
+
+  -#   .from-group.col-md-4
+  -#     = form.label :want_television, class: 'form-check-label' do
+  -#       = form.check_box :want_television, id: :internet_want_television, class: 'form-check-input'
+  -#       Television
+  -#     = form.select :number_televisions,
+  -#                   options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 4] ]),
+  -#                   { prompt: 'Number of Televisions' },
+  -#                   { class: 'form-control selectpicker collapse', id: :internet_number_televisions}
+
+  -#   .from-group.col-md-4
+  -#     = form.label :want_phone, class: 'form-check-label' do
+  -#       = form.check_box :want_phone, id: :internet_want_phone, class: 'form-check-input'
+  -#       Phones
+  -#     = form.select :number_phones,
+  -#                   options_for_select([ ['1-5', 1], ['6-10', 2], ['11-15', 3], ['16+', 4] ]),
+  -#                   { prompt: 'Number of Phones' },
+  -#                   { class: 'form-control selectpicker collapse' , id: :internet_number_phones}
+
+  -# %hr.my-5/
 
   .form-row
     .form-group.col-md-6
@@ -87,57 +86,57 @@
                     { prompt: 'Please Choose' },
                     { id: :internet_best_way, class: 'form-control selectpicker' }
 
-  %hr.my-5/
+  -# %hr.my-5/
 
-  .form-group
-    = form.label :business_name, class: 'control-label required'
-    = form.text_field :business_name, id: :internet_business_name, class: 'form-control', required: true
-    .invalid-feedback Please provide the Business Name
+  -# .form-group
+  -#   = form.label :business_name, class: 'control-label required'
+  -#   = form.text_field :business_name, id: :internet_business_name, class: 'form-control', required: true
+  -#   .invalid-feedback Please provide the Business Name
 
-  .form-group
-    = form.label :business_phone, class: 'control-label required'
-    = form.telephone_field :business_phone, id: :internet_business_phone, class: 'form-control', required: true
-    .invalid-feedback Please provide the Business Phone Number
+  -# .form-group
+  -#   = form.label :business_phone, class: 'control-label required'
+  -#   = form.telephone_field :business_phone, id: :internet_business_phone, class: 'form-control', required: true
+  -#   .invalid-feedback Please provide the Business Phone Number
 
-  .form-group
-    = form.label :street_address_1, class: 'control-label required'
-    = form.text_field :street_address_1, id: :internet_street_address_1, class: 'form-control', required: true
-    .invalid-feedback Please provide the Business Address
-  .form-group
-    = form.label :street_address_2
-    = form.text_field :street_address_2, id: :internet_street_address_2, class: 'form-control'
+  -# .form-group
+  -#   = form.label :street_address_1, class: 'control-label required'
+  -#   = form.text_field :street_address_1, id: :internet_street_address_1, class: 'form-control', required: true
+  -#   .invalid-feedback Please provide the Business Address
+  -# .form-group
+  -#   = form.label :street_address_2
+  -#   = form.text_field :street_address_2, id: :internet_street_address_2, class: 'form-control'
 
-  .form-row
-    .form-group.col-md-6
-      = form.label :city, class: 'control-label required'
-      = form.text_field :city, id: :internet_city, class: 'form-control', required: true
-      .invalid-feedback Please provide the Business City
-    .form-group.col-md-3
-      = form.label :state, class: 'control-label required'
-      = form.select :state,
-                    options_for_select(us_states),
-                    { prompt: 'Please Choose' },
-                    { id: :internet_state, class: 'form-control selectpicker', required: true }
-      .invalid-feedback Please provide the Business State
-    .form-group.col-md-3
-      = form.label :zip, class: 'control-label required'
-      = form.text_field :zip, id: :internet_zip, class: 'form-control', required: true
-      .invalid-feedback Please provide the Business Zip Code
+  -# .form-row
+  -#   .form-group.col-md-6
+  -#     = form.label :city, class: 'control-label required'
+  -#     = form.text_field :city, id: :internet_city, class: 'form-control', required: true
+  -#     .invalid-feedback Please provide the Business City
+  -#   .form-group.col-md-3
+  -#     = form.label :state, class: 'control-label required'
+  -#     = form.select :state,
+  -#                   options_for_select(us_states),
+  -#                   { prompt: 'Please Choose' },
+  -#                   { id: :internet_state, class: 'form-control selectpicker', required: true }
+  -#     .invalid-feedback Please provide the Business State
+  -#   .form-group.col-md-3
+  -#     = form.label :zip, class: 'control-label required'
+  -#     = form.text_field :zip, id: :internet_zip, class: 'form-control', required: true
+  -#     .invalid-feedback Please provide the Business Zip Code
 
-  .form-group.my-5
-    = form.label :interested, class: 'form-check-label' do
-      = form.check_box :interested, id: :internet_interested, class: 'form-check-input'
-      I Am Also Interested In A Free Telephone System
+  -# .form-group.my-5
+  -#   = form.label :interested, class: 'form-check-label' do
+  -#     = form.check_box :interested, id: :internet_interested, class: 'form-check-input'
+  -#     I Am Also Interested In A Free Telephone System
 
 
-  .form-group.my-4
-    = form.label :referrer_id, 'How did you hear about FreeCableInstall.com?', class: 'control-label'
-    #referrers
-      = form.collection_select :referrer_id, Referrer.all.order('zorder ASC'), :id, :name, {include_blank: 'Please select'}, {class: 'form-control selectpicker'}
+  -# .form-group.my-4
+  -#   = form.label :referrer_id, 'How did you hear about FreeCableInstall.com?', class: 'control-label'
+  -#   #referrers
+  -#     = form.collection_select :referrer_id, Referrer.all.order('zorder ASC'), :id, :name, {include_blank: 'Please select'}, {class: 'form-control selectpicker'}
 
-  .form-group#otherreferrer.collapse
-    = form.label :other_referrer, class: 'control-label'
-    = form.text_field :other_referrer, id: :internet_other_referrer, class: 'form-control'
+  -# .form-group#otherreferrer.collapse
+  -#   = form.label :other_referrer, class: 'control-label'
+  -#   = form.text_field :other_referrer, id: :internet_other_referrer, class: 'form-control'
 
   -# .form-group
   -#   .g-recaptcha{ 'data-sitekey': '6LelDDMUAAAAAGBBqJVyTMwgh2UpnhwhGJKR6w3d' }

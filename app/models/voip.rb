@@ -1,6 +1,6 @@
 class Voip < ApplicationRecord
 
-  belongs_to :referrer
+  # belongs_to :referrer
 
   # validates :provider_id, presence: true
 
@@ -16,11 +16,11 @@ class Voip < ApplicationRecord
   validates :phone, numericality: true,
                     presence: true
 
-  validates :business_phone, numericality: true,
-                             presence: true
+  # validates :business_phone, numericality: true,
+  #                            presence: true
 
-  validates :zip, presence: true,
-                  numericality: true,
-                  length: { minimum: 5, maximum: 5 }
+  # validates :zip, presence: true,
+  #                 numericality: true,
+  #                 length: { minimum: 5, maximum: 5 }
 
 end
