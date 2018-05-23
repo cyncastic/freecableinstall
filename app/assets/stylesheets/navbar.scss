@@ -18,6 +18,18 @@ nav{
       }
     }
   }
+  .phonenum{
+    position: absolute;
+    padding: 1em;
+    top: 6px;
+    right: 1em;
+    @include media-breakpoint-down(md) {
+      font-size: 1em;
+     }
+    @include media-breakpoint-down(sm) {
+      display: none;
+     }
+  }
 }
 
 .shrink{

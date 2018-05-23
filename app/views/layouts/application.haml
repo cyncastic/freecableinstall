@@ -28,10 +28,16 @@
 
     %nav.fixed-top
       %header
-        .text-center
-          -# =link_to image_tag('logo2.png'), root_path
-          %a{ href: '/' }= render partial: '/layouts/svglogo'
-        = render partial: '/layouts/nav'
+        %h5.phonenum.sticky-top.p-1.text-left.hidden-sm-down
+          Order By Phone:
+          =tel_to "888.888.8888"
+        .row
+          .col-sm.text-center
+            -# =link_to image_tag('logo2.png'), root_path
+            %a{ href: '/' }= render partial: '/layouts/svglogo'
+        .row.text-center
+          .col-sm= render partial: '/layouts/nav'
+
 
     .container-fluid
 
